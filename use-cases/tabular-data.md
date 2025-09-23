@@ -1,26 +1,28 @@
 ---
-title: Sharing Soil Observation Data on the Web Using CSV and Linked Data 
+title: Sharing Soil Observation Data on the Web Using tabular formats 
 
 ---
 
 # Introduction 
 
 Soil observation data is often shared in tabular formats, such as Excel, Access, CSV, Sqlite. 
-Which phenomena are observed, using which procedure, in which unit is often explained in a related 
-report or readme.txt document. This document provides a strategy on how to encode this information 
-in using a standardised approach, so also machines can parse this information. The document also provides 
-more generic information about capturing data in tabular formats.
+This document provides a strategy on how to increase the interoperability of tabular datasets.
+
+Which phenomena are observed, using which procedure, in which unit? These aspects are often explained in a related 
+report or readme.txt document. Unfortunately this information can not easily be read by machines. To increase findability 
+and interoperability of tabular datasets this document provides a strategy on how to encode this information 
+using a standardised approach. The document also provides more generic information about capturing data in tabular formats.
 
 
 # Excel as a dataformat
 
-Excel is a popular format to share data in the academic soil domain. The Excel format is however not endorsed by the FAIR principles, because it is a proprietary format. Another challenge of Excel is that the excel format is semi-structured, due to its nature of being a data processing tool. 
+Excel is a popular format to share data in the academic soil domain. The Excel format is however not endorsed by the FAIR principles, because it is a proprietary format. Another challenge of Excel is that the format is semi-structured. 
 
 In order to use the excel format as a data exchange format, consider the following aspects in order to facilitate data consumption in an automated way. 
 
 - An Excel document can have multiple sheets, each sheet is considered as a single table
 - The first line of the sheet is used to define the column headers of the table
-- Column headers are machine readible (no spaces and special characters, not start with a number)
+- Column headers are machine readible (no spaces and special characters)
 - Sheets do not use merged cells or computed fields
 - All values in a column (except the header) have a single common type (date, numeric, string)
 - Cells with textual content do not contain 'new line' characters
