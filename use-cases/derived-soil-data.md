@@ -1,0 +1,1 @@
+Derived soil data, such as soil property distribution predictions, agricultural decision support and soil health indicator changes are produced with conventional and pedometric approaches. An important factor to facilitate reuse is extensive description of lineage. Which source data and procedures have been used to derive the resulting product. 

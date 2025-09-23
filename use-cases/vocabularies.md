@@ -1,0 +1,1 @@
+- [Soil vocabularies](./vocabularies.md) (glossaries) are commonly produced at the start of projects, to align definitions between project partners. Vocabularies are also an important driver of findability and interoperabilty.
