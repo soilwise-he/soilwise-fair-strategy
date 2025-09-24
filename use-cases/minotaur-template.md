@@ -1,0 +1,1 @@
+- [Minotaur](./minotaur-template.md) provides a template to store soil observation data
