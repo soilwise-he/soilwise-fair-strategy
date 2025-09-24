@@ -99,7 +99,4 @@ This mechanism is used by Glosis Web Ontology. Depending on the type of client a
 
 Agreeing on and managing vocabularies is foundational to the success of Horizon Europe research projects. By ensuring consistency, discoverability, and interoperability of terms, research outputs become more usable and impactful within and beyond the project consortium. 
 
- 
-
- 
 
