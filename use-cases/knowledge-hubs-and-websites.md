@@ -1,5 +1,7 @@
 ---
 title: Strategy for Adopting FAIR Principles in Project Websites and Knowledge Hubs 
+author: Paul van Genuchten
+date: 2025-10-01
 audience: Administrators of project websites  Editors of the data management plans  Implementers of data and/or knowledge hubs  
 objective: The content of project websites and knowledge hubs should be accessible and citeable during and after the project
 ---
@@ -12,8 +14,6 @@ Project websites and especially knowledge hubs developed in large Horizon Europe
 
 This document provides a strategy on how to facilitate a process in which the content of an online system is operated and archived following the FAIR principles.  
 
- 
-
 # Archiving and Website Discontinuation 
 
 The end of a project is a crucial moment in the sustainability of the unique content shared via the project websites or knowledge hubs. It is also a busy period of finalising reports and funds may be exhausted. For that reason, we encourage to plan the end-of-life at the start of the project.  
@@ -23,8 +23,6 @@ A good practice is to archive the content of the system at intervals (as version
 - Archive the complete website content (including media, code, and metadata) using trusted repositories such as Zenodo. Below we provide some options on how to do this.   
 - Assign persistent identifiers (DOI) to archived versions to enable reliable citation.   
 - Provide a landing page or redirect with information about the archived content when the website is decommissioned. 
-
- 
 
 # Design considerations 
 
@@ -45,8 +43,6 @@ When using fancy user interactions in a website based on client side scripting, 
 
 Also relevant to mention is the [Robots.txt](https://en.m.wikipedia.org/wiki/Robots.txt) convention, which can be used to indicate that machines should not access (parts of) your website. 
 
- 
-
 # Which resources to archive 
 
 A project website or knowledge hub has various aspects which are of interest to persist for future analysis. 
@@ -57,8 +53,6 @@ A project website or knowledge hub has various aspects which are of interest to 
 - The source code of any dedicated software used by the system 
 
 Apply common privacy conventions when publishing data, especially for the site usage data. 
-
- 
 
 # How to extract and deposit the content  
 
@@ -103,18 +97,12 @@ In case you notice a project website which has actually been abandoned (without 
 
 As a site administrator you can use link checker tools (such as [Google search console](https://search.google.com/search-console) or [LinkChecker](https://pypi.org/project/LinkChecker/)) to regularly validate all hyperlinks on a website and ensure continued accuracy and integrity of external and internal references. If broken links are identified, consider updating or removing the link. Another mechanism to identify broken links is via the access and error logs of the webserver. Requests with a status 404 indicate a non-existing source. Consider setting up your webserver logging to include the referrer link, this request property indicates which page includes a link to the non-existing source. 
 
- 
-
 # Conclusion   
 Adopting FAIR principles for project websites and knowledge hubs ensures that digital content remains valuable, discoverable, and reusable over time. Through persistent identification, standardized metadata, and robust archiving strategies, projects can significantly enhance their impact and legacy. 
 
- 
+# Annex 1: Do's and Dont's 
 
- 
-
-Annex 1: Do's and Dont's 
-
-- Do not upload a project deliverable directly to the website. Deposit it in a trusted repository and reference the document with its persistent identification (DOI) from the website.   
+- Do not upload a project deliverable directly to a project website. Deposit it in a eligible repository and reference the document with its persistent identification (DOI) from the website.   
 - Keep the website compact, reference external sources for continued reading.   
 - Deposit versions of the website content in eligible repositories at intervals   
 - Add a sitemap.xml to your site with a complete index of the site   
