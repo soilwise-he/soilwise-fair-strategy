@@ -70,20 +70,20 @@ Each type of resource requires a dedicated extraction mechanism. Also consider h
 
 The extracted resources can be combined into a zip archive and deposited in an eligible research repository. With the deposit, relevant metadata can be provided. 
 
- 
-
-# Interoperable websites 
+# Interoperable content 
 
 The FAIR principles include a section on interoperability. Various mechanisms exist to increase interoperability of website content. 
 
-- [Schema.org](https://schema.org/docs/gs.html) is a set of conventions from the search engine community to embed structured content in a webpage.   
-- [Content negotiation](https://en.wikipedia.org/wiki/Content_negotiation) can guide the user to relevant content for each web request. Humans are directed to friendly html, while machines are directed to structured formats such as rdf, json or xml.   
-- News items on a website are typically shared via a [RSS protocol.](https://en.wikipedia.org/wiki/RSS)   
-- [Sitemap.xml](https://en.wikipedia.org/wiki/Sitemaps) is a convention to advertise which webpages are available within a website.    
+- [Schema.org](https://schema.org/docs/gs.html) is a set of conventions from the search engine community to embed structured content in a webpage.
+- News items on a website are typically shared via a [RSS protocol.](https://en.wikipedia.org/wiki/RSS)      
 - [Open Graph](https://ogp.me/) is a set of metadata tags which can be added to a website header. Open Graph is for example used by social media platforms (linkedin, teams) to summarise websites.    
-- [Llms.txt](https://llmstxt.org/) is a convention to share the content of a website with large language models. 
+- [Llms.txt](https://llmstxt.org/) is a convention to share the content of a website with large language models.
 
-Many of the common Content Management Systems integrate some of these practices in their platforms by default. Various validators are available to validate a website on interoperability mechanisms. 
+Many of the common Content Management Systems integrate these practices in their platforms by default, but may require some configuration to perform optimally. 
+The [Wordpress](https://wordpress.org/) software for example, it is often used to maintain Horizon Europe 
+project websites. It supports most of these conventions.
+
+Various validators are available to validate a website on these interoperability mechanisms. 
 
 - Schema.org can be validated with [validator.schema.org](https://validator.schema.org/)    
 - Open Graph can be validated with [opengraph.dev](https://opengraph.dev/)    
@@ -91,7 +91,11 @@ Many of the common Content Management Systems integrate some of these practices 
 
 Navigate to the validator website and paste the link of the webpage to be tested 
 
- 
+## Metadata oriented knowledge hubs
+
+If a knowledge and/or data hub is oriented on metadata descring a set of resources, the final archive of the content will benefit from a structured format using a standardised ontology, such as Dublin Core.
+Consider for example a CSV format with each row describing a resource, with metadata fields as columns (title, abstract, subject, license, creator, date). In this scenario you can use the 
+CSVW approach in the [use case tabular data](./tabular-data.md) to describe the CSV in an interoperable way. 
 
 # Detect and resolve broken links 
 
