@@ -200,7 +200,7 @@ If the map is derived from external datasets, include recommended citations for 
 ## 9. Summary Checklist
 
 | Component     | FAIR Requirement                              |
-| - |  |
+| -- | --  |
 | Point data    | Cited, licensed, persistent ID                |
 | Co-variates   | Versioned, referenced, licensed               |
 | Model details | Algorithm, parameters, validation, code ref   |
