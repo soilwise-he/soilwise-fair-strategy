@@ -158,8 +158,7 @@ Where derived imagery is small enough (e.g. aggregated rasters), include those l
 
 
 
-## 10. Closing Note
+## 10. Conclusion
 
-FAIR publication of earth imagery does not require full file deposition, but it does require traceability, transparency, and citable identifiers. By documenting access pathways, identifiers, transformations, and licensing, earth imagery remains a reusable component of FAIR soil data products.
+FAIR publication of earth imagery are challenging for full file deposition, but it does require traceability, transparency, and citable identifiers. By documenting access pathways, identifiers, transformations, and licensing, earth imagery remains a reusable component of derived data products.
 
-If you'd like templates for metadata tables, STAC-based citation snippets, or soil-covariate documentation, I can generate those too—just say the word!
