@@ -79,7 +79,7 @@ Each spectral library should have its own identifier and descriptive record with
 
 ## 4. Referencing Spectral Libraries
 
-### 4.1 For Calibration Campaigns
+### 4.1 For Calibration Samples
 
 When a sample subset undergoes both wet chemistry and spectrometry:
 
@@ -90,7 +90,7 @@ When a sample subset undergoes both wet chemistry and spectrometry:
 
 * Wet chemistry records should be clearly tied to corresponding spectral records, using the Sample ID.
 
-### 4.2 For Prediction Campaigns
+### 4.2 For Prediction Samples
 
 When only spectrometry is performed:
 
@@ -198,8 +198,8 @@ Since new campaigns may rely entirely on existing libraries:
 
 ## 10. Summary of Key Requirements
 
-| Element                   | Must Include                                                | Purpose                    |
-| - | -- | -- |
+| Element               | Must Include                                                | Purpose                    |
+| -- | -- | -- |
 | Sample Record         | Sample ID, collection data                                  | Traceability               |
 | Spectral Observation  | Sample ID, device metadata, spectral file, Library ID       | Reusability & reference    |
 | Wet Chemistry Record  | Sample ID, lab methods, analyte values                      | Calibration & validation   |
@@ -213,7 +213,3 @@ Since new campaigns may rely entirely on existing libraries:
 * Align with FAIR principles (Findable, Accessible, Interoperable, Reusable).
 * Use persistent identifiers and open metadata standards.
 * Plan for interoperability across institutions, countries, and legacy datasets.
-
-
-
-If you'd like this guidance reformatted (e.g. as a PDF, internal SOP, or data model blueprint), just tell me how you’d like to use it!
