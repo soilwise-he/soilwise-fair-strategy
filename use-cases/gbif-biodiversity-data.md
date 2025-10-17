@@ -66,7 +66,7 @@ Include:
 * If you update content (records, taxonomy, or coverage), revise the metadata too.
 * Annotate major updates with version numbers or changelogs.
 
-### ✅ Monitor quality feedback
+### Monitor quality feedback
 
 GBIF may flag:
 
@@ -142,7 +142,7 @@ Use this quick checklist:
 
 
 
-## 🟦 Final Takeaway
+## Final Takeaway
 
 GBIF provides the infrastructure for FAIR data, but providers control the quality and longevity. 
 By supplying structured data, rich metadata, stable identifiers, and clear versioning, you ensure 
