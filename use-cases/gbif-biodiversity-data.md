@@ -6,6 +6,9 @@ Platforms like [GBIF](https://gbif.org) can strongly support [FAIR data](https:/
 and users reference their data downloads properly. 
 This documents presents a strategy to help you make your biodiversity data as Findable, Accessible, Interoperable, and Reusable (FAIR) as possible.
 
+By design, datasets in GBIF are incremental, new biodiversity observations can arrive at a daily basis. An identifier is assigned to incremental datasets, 
+and the datasets are findable through OpenAire. However for users to reference the state of the dataset, when using it in their research. they can make an explicit download of
+the dataset. GBIF will create a persistent identifiation to that snapshot, which can be used as a reference. There is no need to deposit the extracted dataset separately.
 
 ##  1. Before Publishing: Prepare Your Dataset
 
