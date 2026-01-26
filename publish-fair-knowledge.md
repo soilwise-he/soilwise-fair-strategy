@@ -4,9 +4,18 @@ title: Guidelines on (Mission Soil) Data and Knowledge FAIRness and Findability
 authors:
 - Celine Blitz-Frayret
 - Paul van Genuchten
-date: 2025-07-20
-draft: true
+
 ---
+
+:::{.callout-warning}
+## Draft Version
+This document is a work in progress and not the final version.
+:::
+
+:::{.callout-warning}
+## Draft Version
+This document is a work in progress and not the final version.
+:::
 
 ## Introduction 
 

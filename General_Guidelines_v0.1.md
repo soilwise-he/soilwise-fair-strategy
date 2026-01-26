@@ -8,6 +8,11 @@ Project: An open access knowledge and data repository to safeguard soils (SoilWi
 draft: true
 ---
  
+:::{.callout-warning}
+## Draft Version
+This document is a work in progress and not the final version.
+:::
+
 Soil-related data and knowledge are essential for understanding and improving soil health, guiding sustainable land management, informing policy, and enabling scientific progress. Yet, these resources are often scattered, poorly documented, hard to access, or locked in incompatible formats. This fragmentation hampers their reuse, reduces their impact, and creates inefficiencies across projects and disciplines. 
 
 This strategy, developed within the SoilWise project, provides guidance to ensure that all data and knowledge generated, collected, or reused within Mission Soil projects are managed according to the FAIR principles – Findable, Accessible, Interoperable, and Reusable. 

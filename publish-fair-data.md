@@ -3,16 +3,21 @@ title: How to publish a FAIR dataset
 authors:
 - Celine Blitz-Frayret
 - Paul van Genuchten
-date: 2025-07-20
+
 ---
+
+:::{.callout-warning}
+## Draft Version
+This document is a work in progress and not the final version.
+:::
 
 # Contents
 
-- [Introduction : general FAIR strategy](#general-fair-strategy)
+- [Introduction: general FAIR strategy](#general-fair-strategy)
 - [Organize your data](#organize-your-data) 
 - [Collect informations about your dataset](#collect-informations-about-your-dataset) 
 - [Host informations on a repository](#host-informations-on-a-repository)
-– [Conclusion](#conclusion) 
+- [Conclusion](#conclusion) 
 
 
 # General FAIR strategy 
