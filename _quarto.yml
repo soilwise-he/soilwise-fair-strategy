@@ -1,0 +1,31 @@
+project:
+  type: website
+  render:
+    - "*.md"
+
+website:
+  title: "Soilwise project FAIR Strategy"
+  repo-url: https://github.com/soilwise-he/soilwise-fair-strategy
+  repo-actions: [edit, issue]
+  navbar:
+    logo: https://avatars.githubusercontent.com/u/144736920?s=200&v=4
+    logo-href: https://www.soilwise-he.eu
+    logo-alt: Soilwise logo
+    title: false
+    left:
+      - href: README.md
+        text: Home
+      - text: General guidelines 
+        href: General_Guidelines_v0.2.md
+      - text: Fair Data 
+        href: publish-fair-data.md
+      - text: Fair Knowledge 
+        href: publish-fair-knowledge.md
+      - text: Use Cases
+        href: use-cases/README.md
+
+  page-footer:
+    right: 
+      - text: The project receives funding from the European Union’s HORIZON Innovation Actions 2022 under grant agreement No. 101112838
+        href: https://cordis.europa.eu/project/id/101112838
+
