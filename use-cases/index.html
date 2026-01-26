@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Paul van Genuchten">
-<meta name="dcterms.date" content="2025-10-01">
 
-<title>Strategy for Adopting FAIR Principles in Project Websites and Knowledge Hubs – Soilwise project FAIR Strategy</title>
+<title>Use cases soil data – Soilwise project FAIR Strategy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Fair Knowledge</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../use-cases/index.html"> 
+    <a class="nav-link active" href="../use-cases/index.html" aria-current="page"> 
 <span class="menu-text">Use Cases</span></a>
   </li>  
 </ul>
@@ -129,26 +127,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Strategy for Adopting FAIR Principles in Project Websites and Knowledge Hubs</h1>
+<h1 class="title">Use cases soil data</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Paul van Genuchten </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">October 1, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -158,131 +144,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>The FAIR principles (Findability, Accessibility, Interoperability, and Reusability) are essential guidelines for enhancing the utility of digital assets. This strategy outlines how to integrate these principles into the development, maintenance, and archiving of project websites and data and/or knowledge hubs, which are developed as part of a research project. Central in this strategy is to establish robust archiving practices for long-term content preservation, because due to their nature, project websites and knowledge hubs have a high likelihood of content alteration and discontinuation.</p>
-<p>Project websites and especially knowledge hubs developed in large Horizon Europe projects have a tendency to contain unique information which is not available elsewhere on the web. Due to the project timeline, the websites and hubs tend to be unmaintained after the project, handed over to a second party, abandoned or discontinued. If not carefully archived this unique information has a high risk of being lost. The project websites are ofter referenced from journal articles and (progress) reports. A progress report typically aims to reference a specific state of the deliverable, which is difficult if the content of the system is dynamic. For both scenario’s, it is of interest to persist the state of the system at intervals, but at least at project finalisation, to facilitate consistent access to the content and accurate citation.</p>
-<p>This document provides a strategy on how to facilitate a process in which the content of an online system is operated and archived following the FAIR principles.</p>
-</section>
-<section id="archiving-and-website-discontinuation" class="level1">
-<h1>Archiving and Website Discontinuation</h1>
-<p>The end of a project is a crucial moment in the sustainability of the unique content shared via the project websites or knowledge hubs. It is also a busy period of finalising reports and funds may be exhausted. For that reason, we encourage to plan the end-of-life at the start of the project.</p>
-<p>A good practice is to archive the content of the system at intervals (as versions of a dataset), with the first version being an empty archive. In this way users can better understand the development of the content during the project lifecycle, and your team already gets familiar with the process. We provide some recommendations related to the archival process below:</p>
+<p>A selection of use cases, combined with dedicated guidance on how to increase FAIR aspect of a data or knowledge publication.</p>
 <ul>
-<li>Archive the complete website content (including media, code, and metadata) using trusted repositories such as Zenodo. Below we provide some options on how to do this.<br>
-</li>
-<li>Assign persistent identifiers (DOI) to archived versions to enable reliable citation.<br>
-</li>
-<li>Provide a landing page or redirect with information about the archived content when the website is decommissioned.</li>
-</ul>
-</section>
-<section id="design-considerations" class="level1">
-<h1>Design considerations</h1>
-<p>The archival process itself will benefit from considerations of content archival during the design phase.</p>
-<p>Consider minimizing unique content on the website, it decreases the need to archive the content and reduces the impact of project/website discontinuation. Unique content can be prevented by:</p>
-<ul>
-<li>Deposit research outputs (videos, journal articles, slide decks, policy briefs, reports) in eligible research repositories and reference the content by their persistent identifier (DOI) from the website.<br>
-</li>
-<li>Import metadata of relevant knowledge sources from repositories (Cordis, OpenAire), while keeping a reference to their source. By automating the imports, your website will automatically be kept up to date.</li>
-</ul>
-<p>A lot of frustration around discontinued project websites originates from the fact that the domain name of a website is often taken over by commercial entities after discontinuation. The result may be that a user ends up in an online casino after clicking a link in a report. Some measures are encouraged to prevent this situation.</p>
-<ul>
-<li>Avoid setting up a dedicated domain for a project website; instead, consider using a subdomain of a trusted domain (e.g., institutional domain) to reduce the risk of domain hijacking (<a href="https://myproject.crea.gov.it/">https://myproject.crea.gov.it</a> vs https://myproject.eu).<br>
-</li>
-<li>Else, retain ownership of the domain name after discontinuation and redirect it to a persistent archival location or informational landing page.<br>
-</li>
-<li>Do not refer directly to project websites from reports, reference an archived version of the website instead, or reference the website via a persistent identifier (DOI).</li>
-</ul>
-<p>When using fancy user interactions in a website based on client side scripting, consider that these functionalities are not always available to `machines` which navigate through the website. The result may be that some of the content is not findable in search engines or will not be downloaded or parsed by tools like httrack. You may be able to resolve part of this issue by providing a Sitemap.xml index. Some javascript frameworks provide <a href="https://en.wikipedia.org/wiki/Server-side_scripting#Server-side_rendering">server side rendering</a> to resolve the issue.</p>
-<p>Also relevant to mention is the <a href="https://en.m.wikipedia.org/wiki/Robots.txt">Robots.txt</a> convention, which can be used to indicate that machines should not access (parts of) your website.</p>
-</section>
-<section id="which-resources-to-archive" class="level1">
-<h1>Which resources to archive</h1>
-<p>A project website or knowledge hub has various aspects which are of interest to persist for future analysis.</p>
-<ul>
-<li>The main content of the system, this data is often stored in a database, in a folder or in a version management system (git).<br>
-</li>
-<li>The access logs (usage) of the system indicate the popularity of various sections of the system<br>
-</li>
-<li>The graphical design of the system (including the source files)<br>
-</li>
-<li>The source code of any dedicated software used by the system</li>
-</ul>
-<p>Apply common privacy conventions when publishing data, especially for the site usage data.</p>
-</section>
-<section id="how-to-extract-and-deposit-the-content" class="level1">
-<h1>How to extract and deposit the content</h1>
-<p>Each type of resource requires a dedicated extraction mechanism. Also consider how users will consume this data, when accessing it from a research repository. The FAIR principles suggest to share content in open formats, such as html, csv, sqlite and txt. We provide some suggestions below for typical software used in this area:</p>
-<ul>
-<li>Tools like <a href="https://www.httrack.com/">Httrack</a> can create a local copy of any website. Users can browse the website from their local computer, after downloading it from a repository.<br>
-</li>
-<li>Content Management Systems such as <a href="https://quarto.org/">Quarto</a> and <a href="https://wordpress.org/">Wordpress</a> have an option to export their content as pdf or html.<br>
-</li>
-<li>A copy or dump of the website database may be challenging to access for some, but useful to others, because the content is well structured.</li>
-</ul>
-<p>The extracted resources can be combined into a zip archive and deposited in an eligible research repository. With the deposit, relevant metadata can be provided.</p>
-</section>
-<section id="interoperable-content" class="level1">
-<h1>Interoperable content</h1>
-<p>The FAIR principles include a section on interoperability. Various mechanisms exist to increase interoperability of website content.</p>
-<ul>
-<li><a href="https://schema.org/docs/gs.html">Schema.org</a> is a set of conventions from the search engine community to embed structured content in a webpage.</li>
-<li>News items on a website are typically shared via a <a href="https://en.wikipedia.org/wiki/RSS">RSS protocol.</a><br>
-</li>
-<li><a href="https://ogp.me/">Open Graph</a> is a set of metadata tags which can be added to a website header. Open Graph is for example used by social media platforms (linkedin, teams) to summarise websites.<br>
-</li>
-<li><a href="https://llmstxt.org/">Llms.txt</a> is a convention to share the content of a website with large language models.</li>
-</ul>
-<p>Many of the common Content Management Systems integrate these practices in their platforms by default, but may require some configuration to perform optimally. The <a href="https://wordpress.org/">Wordpress</a> software for example, it is often used to maintain Horizon Europe project websites. It supports most of these conventions.</p>
-<p>Various validators are available to validate a website on these interoperability mechanisms.</p>
-<ul>
-<li>Schema.org can be validated with <a href="https://validator.schema.org/">validator.schema.org</a><br>
-</li>
-<li>Open Graph can be validated with <a href="https://opengraph.dev/">opengraph.dev</a><br>
-</li>
-<li>RSS feeds can be verified with <a href="https://www.rssboard.org/rss-validator/">rssboard.org/rss-validator</a></li>
-</ul>
-<p>Navigate to the validator website and paste the link of the webpage to be tested</p>
-<section id="metadata-oriented-knowledge-hubs" class="level2">
-<h2 class="anchored" data-anchor-id="metadata-oriented-knowledge-hubs">Metadata oriented knowledge hubs</h2>
-<p>If a knowledge and/or data hub is oriented on metadata descring a set of resources, the final archive of the content will benefit from a structured format using a standardised ontology, such as Dublin Core. Consider for example a CSV format with each row describing a resource, with metadata fields as columns (title, abstract, subject, license, creator, date). In this scenario you can use the CSVW approach in the <a href="../use-cases/tabular-data.html">use case tabular data</a> to describe the CSV in an interoperable way.</p>
-</section>
-</section>
-<section id="detect-and-resolve-broken-links" class="level1">
-<h1>Detect and resolve broken links</h1>
-<p>In case you notice a project website which has actually been abandoned (without proper archival) or a single page being (re)moved. You may be able to recover some of that content from <a href="https://en.m.wikipedia.org/wiki/List_of_web_archiving_initiatives">internet archives.</a> These initiatives copy parts of the internet daily. Also consider to notify the site administrator, usually the institute which had been the lead of the research consortium. Also consider that the link may be temporarily unavailable (due to a server or routing error).</p>
-<p>As a site administrator you can use link checker tools (such as <a href="https://search.google.com/search-console">Google search console</a> or <a href="https://pypi.org/project/LinkChecker/">LinkChecker</a>) to regularly validate all hyperlinks on a website and ensure continued accuracy and integrity of external and internal references. If broken links are identified, consider updating or removing the link. Another mechanism to identify broken links is via the access and error logs of the webserver. Requests with a status 404 indicate a non-existing source. Consider setting up your webserver logging to include the referrer link, this request property indicates which page includes a link to the non-existing source.</p>
-</section>
-<section id="conclusion" class="level1">
-<h1>Conclusion</h1>
-<p>Adopting FAIR principles for project websites and knowledge hubs ensures that digital content remains valuable, discoverable, and reusable over time. Through persistent identification, standardized metadata, and robust archiving strategies, projects can significantly enhance their impact and legacy.</p>
-</section>
-<section id="annex-1-dos-and-donts" class="level1">
-<h1>Annex 1: Do’s and Dont’s</h1>
-<ul>
-<li>Do not upload a project deliverable directly to a project website. Deposit it in a eligible repository and reference the document with its persistent identification (DOI) from the website.<br>
-</li>
-<li>Keep the website compact, reference external sources for continued reading.<br>
-</li>
-<li>Deposit versions of the website content in eligible repositories at intervals<br>
-</li>
-<li>Add a sitemap.xml to your site with a complete index of the site<br>
-</li>
-<li>Add a robots.txt file to your site, indicating to crawlers not to access certain parts of your site<br>
-</li>
-<li>Use a subdomain from a sustainable domain for your project website<br>
-</li>
-<li>If you set up a dedicated domain for your website, acquire it for at least 20 years<br>
-</li>
-<li>If you link to a resource (from a report or website) always link to its persistent identifier, not to the actual file location<br>
-</li>
-<li>Validate the integrity of internal and external links on your website at intervals<br>
-</li>
-<li>If you encounter a link to a non-existing source, consider using internet archives to recover the content</li>
+<li><a href="../use-cases/tabular-data.html">Tabular Soil Observation Data</a> is a common format to share Soil data.</li>
+<li><a href="../use-cases/soil-property-indicator-maps.html">Soil property and indicator maps</a>, such as soil property distribution predictions, agricultural decision support and soil health indicator changes are produced with conventional and pedometric approaches. An important factor to facilitate reuse is extensive description of lineage. Which source data and procedures have been used to derive the resulting product.</li>
+<li><a href="../use-cases/bonares.html">Bonares</a> is a repository for archiving results of long term field experiments. With each deposit contributors are invited to submit metadata at the dataset level, as well as at the column level; which phenomena is observed in the experiment, in which unit and with which procedure.</li>
+<li><a href="../use-cases/earth-imagery.html">Earth imagery</a> such as satelite and drone data are increasingly used to better understand soils and their interaction with climate, landscape and crops. Imagery data is often used as a predictor of soil property distribution. Due to their size and origin imagery data is usually not deposited in formal repositories, but available from mass storage such as Google Earth Engine, Copernicus or Amazon Cloud, which can be a challenge for citation of the material.</li>
+<li><a href="../use-cases/inspire-geopackage.html">INSPIRE geopackage</a> for soil data is an approach to store data in a relational database while conforming to the INSPIRE Soil datamodel. Traditionally INSPIRE Soil Observation data were required to be shared using a dedicated xml encoding, which was quite a challenge for both data procucers and consumers. The Good Practice using GeoPackage specifically for soil data has been prepared by the EJP Soil H2020 programme.</li>
+<li><a href="../use-cases/knowledge-hubs-and-websites.html">Project Websites and Knowledge Hubs</a> benefit from archival of their content at various stages during and after the realisation and maintenance of the website. A deposit of the website content is persistently citable using DOI and the risk of information loss at website discontinuation is limited.</li>
+<li><a href="../use-cases/vocabularies.html">Soil vocabularies</a> (glossaries) are commonly produced at the start of projects, to align definitions between project partners. Vocabularies are also an important driver of findability and interoperabilty.</li>
+<li><a href="../use-cases/spectroscopy.html">Spectroscopy</a> is a novel approach to observe soil properties on a soil samples efficiently. The properties are predicted based on a library of reference samples which are assessed both with wet chemistry as well as spectrometry. A common practice is to deposit the spectra of the observations as part of the data as well as a reference to the spectral library used for the prediction.</li>
+<li><a href="../use-cases/minotaur-template.html">Minotaur template</a> provides a template to store soil observation data</li>
 </ul>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -693,7 +568,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/edit/main/use-cases/knowledge-hubs-and-websites.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/edit/main/use-cases/index.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
