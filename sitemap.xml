@@ -2,74 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/vocabularies.html</loc>
-    <lastmod>2026-01-26T14:22:30.651Z</lastmod>
+    <lastmod>2026-01-26T14:35:51.320Z</lastmod>
   </url>
   <url>
     <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/spectroscopy.html</loc>
-    <lastmod>2026-01-26T14:22:30.651Z</lastmod>
-  </url>
-  <url>
-    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/minotaur-template.html</loc>
-    <lastmod>2026-01-26T14:22:30.651Z</lastmod>
-  </url>
-  <url>
-    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/inspire-xml.html</loc>
-    <lastmod>2026-01-26T14:22:30.650Z</lastmod>
-  </url>
-  <url>
-    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/index.html</loc>
-    <lastmod>2026-01-26T14:22:30.650Z</lastmod>
-  </url>
-  <url>
-    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/gbif-biodiversity-data.html</loc>
-    <lastmod>2026-01-26T14:22:30.650Z</lastmod>
-  </url>
-  <url>
-    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/bonares.html</loc>
-    <lastmod>2026-01-26T14:22:30.650Z</lastmod>
-  </url>
-  <url>
-    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/publish-fair-data.html</loc>
-    <lastmod>2026-01-26T14:22:30.650Z</lastmod>
-  </url>
-  <url>
-    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/General_Guidelines_v0.2.html</loc>
-    <lastmod>2026-01-26T14:22:30.649Z</lastmod>
-  </url>
-  <url>
-    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/General_Guidelines_v0.1.html</loc>
-    <lastmod>2026-01-26T14:22:30.649Z</lastmod>
-  </url>
-  <url>
-    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/index.html</loc>
-    <lastmod>2026-01-26T14:22:30.649Z</lastmod>
-  </url>
-  <url>
-    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/publish-fair-knowledge.html</loc>
-    <lastmod>2026-01-26T14:22:30.650Z</lastmod>
-  </url>
-  <url>
-    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/earth-imagery.html</loc>
-    <lastmod>2026-01-26T14:22:30.650Z</lastmod>
-  </url>
-  <url>
-    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/glosis.html</loc>
-    <lastmod>2026-01-26T14:22:30.650Z</lastmod>
-  </url>
-  <url>
-    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/inspire-geopackage.html</loc>
-    <lastmod>2026-01-26T14:22:30.650Z</lastmod>
+    <lastmod>2026-01-26T14:35:51.320Z</lastmod>
   </url>
   <url>
     <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/knowledge-hubs-and-websites.html</loc>
-    <lastmod>2026-01-26T14:22:30.650Z</lastmod>
+    <lastmod>2026-01-26T14:35:51.320Z</lastmod>
+  </url>
+  <url>
+    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/inspire-geopackage.html</loc>
+    <lastmod>2026-01-26T14:35:51.319Z</lastmod>
+  </url>
+  <url>
+    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/glosis.html</loc>
+    <lastmod>2026-01-26T14:35:51.319Z</lastmod>
+  </url>
+  <url>
+    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/earth-imagery.html</loc>
+    <lastmod>2026-01-26T14:35:51.319Z</lastmod>
+  </url>
+  <url>
+    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/publish-fair-data.html</loc>
+    <lastmod>2026-01-26T14:35:51.319Z</lastmod>
+  </url>
+  <url>
+    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/General_Guidelines_v0.2.html</loc>
+    <lastmod>2026-01-26T14:35:51.319Z</lastmod>
+  </url>
+  <url>
+    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/General_Guidelines_v0.1.html</loc>
+    <lastmod>2026-01-26T14:35:51.318Z</lastmod>
+  </url>
+  <url>
+    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/index.html</loc>
+    <lastmod>2026-01-26T14:35:51.319Z</lastmod>
+  </url>
+  <url>
+    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/gbif-biodiversity-data.html</loc>
+    <lastmod>2026-01-26T14:35:51.319Z</lastmod>
+  </url>
+  <url>
+    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/index.html</loc>
+    <lastmod>2026-01-26T14:35:51.319Z</lastmod>
+  </url>
+  <url>
+    <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/inspire-xml.html</loc>
+    <lastmod>2026-01-26T14:35:51.320Z</lastmod>
   </url>
   <url>
     <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/soil-property-indicator-maps.html</loc>
-    <lastmod>2026-01-26T14:22:30.651Z</lastmod>
+    <lastmod>2026-01-26T14:35:51.320Z</lastmod>
   </url>
   <url>
     <loc>https://soilwise-he.github.io/soilwise-fair-strategy/use-cases/tabular-data.html</loc>
-    <lastmod>2026-01-26T14:22:30.651Z</lastmod>
+    <lastmod>2026-01-26T14:35:51.320Z</lastmod>
   </url>
 </urlset>

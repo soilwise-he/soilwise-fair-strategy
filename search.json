@@ -91,130 +91,200 @@
     "text": "Align with FAIR principles (Findable, Accessible, Interoperable, Reusable).\nUse persistent identifiers and open metadata standards.\nPlan for interoperability across institutions, countries, and legacy datasets."
   },
   {
-    "objectID": "use-cases/minotaur-template.html",
-    "href": "use-cases/minotaur-template.html",
-    "title": "Soilwise project FAIR Strategy",
+    "objectID": "use-cases/knowledge-hubs-and-websites.html",
+    "href": "use-cases/knowledge-hubs-and-websites.html",
+    "title": "Strategy for Adopting FAIR Principles in Project Websites and Knowledge Hubs",
     "section": "",
-    "text": "Minotaur provides a template to store soil observation data on biodiversity. The template was developed within the EJP SOIL project Minotaur to upload relevant data and metadata on soil biodiversity. It was used to collect information across EU countries on soil biodiversity to be organized in an information system developed with the OpenAdom platform (see also https://zenodo.org/records/14245502)."
+    "text": "The FAIR principles (Findability, Accessibility, Interoperability, and Reusability) are essential guidelines for enhancing the utility of digital assets. This strategy outlines how to integrate these principles into the development, maintenance, and archiving of project websites and data and/or knowledge hubs, which are developed as part of a research project. Central in this strategy is to establish robust archiving practices for long-term content preservation, because due to their nature, project websites and knowledge hubs have a high likelihood of content alteration and discontinuation.\nProject websites and especially knowledge hubs developed in large Horizon Europe projects have a tendency to contain unique information which is not available elsewhere on the web. Due to the project timeline, the websites and hubs tend to be unmaintained after the project, handed over to a second party, abandoned or discontinued. If not carefully archived this unique information has a high risk of being lost. The project websites are ofter referenced from journal articles and (progress) reports. A progress report typically aims to reference a specific state of the deliverable, which is difficult if the content of the system is dynamic. For both scenario’s, it is of interest to persist the state of the system at intervals, but at least at project finalisation, to facilitate consistent access to the content and accurate citation.\nThis document provides a strategy on how to facilitate a process in which the content of an online system is operated and archived following the FAIR principles."
   },
   {
-    "objectID": "use-cases/inspire-xml.html",
-    "href": "use-cases/inspire-xml.html",
-    "title": "INSPIRE XML",
+    "objectID": "use-cases/knowledge-hubs-and-websites.html#metadata-oriented-knowledge-hubs",
+    "href": "use-cases/knowledge-hubs-and-websites.html#metadata-oriented-knowledge-hubs",
+    "title": "Strategy for Adopting FAIR Principles in Project Websites and Knowledge Hubs",
+    "section": "Metadata oriented knowledge hubs",
+    "text": "Metadata oriented knowledge hubs\nIf a knowledge and/or data hub is oriented on metadata descring a set of resources, the final archive of the content will benefit from a structured format using a standardised ontology, such as Dublin Core. Consider for example a CSV format with each row describing a resource, with metadata fields as columns (title, abstract, subject, license, creator, date). In this scenario you can use the CSVW approach in the use case tabular data to describe the CSV in an interoperable way."
+  },
+  {
+    "objectID": "use-cases/inspire-geopackage.html",
+    "href": "use-cases/inspire-geopackage.html",
+    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
     "section": "",
-    "text": "Publish two complementary outputs:\n\nAn INSPIRE-compliant GML dataset + OGC services (WFS/WMS/Download), encoded using the INSPIRE Soil application schema (GML/XSD) and the associated technical guidelines. This enables interoperability with European infrastructures and geospatial clients. (inspire-mif.github.io)\nA repository-grade package (RDF metadata / DCAT or Dublin Core + dataset landing page + DOI) containing the canonical INSPIRE GML dump, service endpoints, validation report and human-friendly exports (CSV, GeoPackage). Index the dataset in your institutional repository so non-GIS consumers can find and cite it.\n\nTogether these make your soil observations discoverable, machine-actionable and citable across both geospatial and academic ecosystems. (inspire-mif.github.io)"
+    "text": "This strategy outlines an approach for adopting the INSPIRE Good Practice (GP) on GeoPackage (GPKG) as a compliant encoding for soil data. The objective is to enhance interoperability, simplify data exchange, and support the delivery of INSPIRE-compliant datasets in a modern, efficient format. The transition from existing GML-based implementations to GeoPackage aligns with INSPIRE’s recommendations for improving usability and performance in geospatial data delivery."
   },
   {
-    "objectID": "use-cases/inspire-xml.html#map-your-domain-to-inspire-feature-types",
-    "href": "use-cases/inspire-xml.html#map-your-domain-to-inspire-feature-types",
-    "title": "INSPIRE XML",
-    "section": "Map your domain to INSPIRE feature types",
-    "text": "Map your domain to INSPIRE feature types\nCore INSPIRE Soil feature types (conceptual equivalents you should map to) include (see INSPIRE docs for exact class names / UML):\n\nSoilBody / SoilProfile — macroscopic bodies / profiles. Map your site/profile/horizon constructs here. (inspire-mif.github.io)\nSoilObservation / SoilRelatedProperty — thematic observations and derived properties (may use ISO 19156/OM for measurement representation). (inspire-mif.github.io)\nSamplingFeatures / Sample — link physical samples to SoilProfile and SoilBody features.\nSpatial features / geometries — use ISO/OGC geometry encodings in GML (boundedBy, geometryMember).\n\nCreate a mapping table: your source column → INSPIRE UML attribute / association → target GML element / XSD element. (I can generate a starter mapping table for your CSV if you paste 3–8 sample rows.)"
+    "objectID": "use-cases/inspire-geopackage.html#inspire-directive-overview",
+    "href": "use-cases/inspire-geopackage.html#inspire-directive-overview",
+    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
+    "section": "INSPIRE Directive Overview",
+    "text": "INSPIRE Directive Overview\nThe INSPIRE Directive (2007/2/EC) was established to build a European Union spatial data infrastructure that supports environmental policies and activities affecting the environment. Among the 34 data themes listed in Annex III of the Directive, soil is included as one of them. For each theme a common conceptual data model has been suggested, with the aim to be adopted by member states to store and share environmental data. Today the INSPIRE directive is gradually superseded by the regulation on high value datasets. Soil data has been identified as one of the high value datasets."
   },
   {
-    "objectID": "use-cases/inspire-xml.html#units-vocabularies-controlled-lists",
-    "href": "use-cases/inspire-xml.html#units-vocabularies-controlled-lists",
-    "title": "INSPIRE XML",
-    "section": "Units, vocabularies & controlled lists",
-    "text": "Units, vocabularies & controlled lists\n\nNormalise measurement units and codes before encoding. INSPIRE expects consistent vocabularies and enumerations where the application schema prescribes them. Where INSPIRE uses code lists, re-use those or document your extension. (inspire-mif.github.io)"
+    "objectID": "use-cases/inspire-geopackage.html#good-practice-on-geopackage-encodings",
+    "href": "use-cases/inspire-geopackage.html#good-practice-on-geopackage-encodings",
+    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
+    "section": "Good Practice on GeoPackage Encodings",
+    "text": "Good Practice on GeoPackage Encodings\nThe INSPIRE Good Practice on GeoPackage Encodings describes an encoding for delivering of spatial data which is lighter and more user-friendly than conventional GML encodings. The practice is facilitated by the SQLite-based GeoPackage encoding (OGC standard), which is widely supported by modern GIS software."
   },
   {
-    "objectID": "use-cases/inspire-xml.html#gml-encoding-recommendations",
-    "href": "use-cases/inspire-xml.html#gml-encoding-recommendations",
-    "title": "INSPIRE XML",
-    "section": "GML encoding recommendations",
-    "text": "GML encoding recommendations\n\nUse the INSPIRE application schema XSD (provided with the technical guidelines) to encode feature instances. Validate generated GML against those XSDs. (inspire-mif.github.io)\nRepresent observations that are temporal or measured quantities following ISO 19156 (Observations & Measurements) where possible (INSPIRE guidance refers to O&M patterns). (inspire-mif.github.io)"
+    "objectID": "use-cases/inspire-geopackage.html#the-inspire-soil-conceptual-data-model",
+    "href": "use-cases/inspire-geopackage.html#the-inspire-soil-conceptual-data-model",
+    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
+    "section": "The INSPIRE Soil conceptual data model",
+    "text": "The INSPIRE Soil conceptual data model\nThe INSPIRE conceptual data model is based on the Open Geospatial Consortium model for Observations, Measurements and Samples. For each observation made on a feature of interest (a plot, profile or horizon) either in the field or in a laboratory, the model prescribes to capture along with the observed result, also the observed soil property, the observation procedure and the unit of measure."
   },
   {
-    "objectID": "use-cases/inspire-xml.html#transformation-tools-practical-tips",
-    "href": "use-cases/inspire-xml.html#transformation-tools-practical-tips",
-    "title": "INSPIRE XML",
-    "section": "Transformation tools & practical tips",
-    "text": "Transformation tools & practical tips\n\nHALE (HUMBOLDT Alignment Editor) — widely used to map relational/CSV source schemas to INSPIRE GML; can be automated and reused. See practical examples where SOTER→INSPIRE alignments used HALE. (isric.org)\nScripting/ETL — Python (GDAL/OGR, lxml), FME, or custom tools can generate GML if you prefer code-based pipelines. For complex mappings, HALE + scripts work well.\nDatastore — keep canonical geometries and attributes in PostGIS; publish GML via GeoServer, pygeoapi or an INSPIRE-capable WFS provider."
+    "objectID": "use-cases/inspire-geopackage.html#assessment-phase",
+    "href": "use-cases/inspire-geopackage.html#assessment-phase",
+    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
+    "section": "Assessment Phase",
+    "text": "Assessment Phase\n\nReview current data holdings and GML-based INSPIRE compliance.\n\nIdentify gaps in encoding capabilities or data model compliance.\n\nAssess tools and workflows currently used for data transformation and publication."
   },
   {
-    "objectID": "use-cases/inspire-xml.html#validation-testing",
-    "href": "use-cases/inspire-xml.html#validation-testing",
-    "title": "INSPIRE XML",
-    "section": "Validation & testing",
-    "text": "Validation & testing\n\nUse the INSPIRE Abstract Test Suite and available validation services to check conformance to the Soil data specification and GML application schemas. Capture and publish validation reports with dataset DOI. (GitHub)\nRun XSD validation, schema-aware tests (cardinality, mandatory elements), and domain checks (units, allowed codes)."
+    "objectID": "use-cases/inspire-geopackage.html#data-model-alignment",
+    "href": "use-cases/inspire-geopackage.html#data-model-alignment",
+    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
+    "section": "Data Model Alignment",
+    "text": "Data Model Alignment\n\nMap the INSPIRE Soil data model to a schema compatible with GeoPackage.\n\nEnsure the representation of complex features (e.g., nested observations, relationships).\n\nMaintain semantic alignment with INSPIRE data specifications using code lists and controlled vocabularies."
   },
   {
-    "objectID": "use-cases/inspire-xml.html#metadata-repository-deposit",
-    "href": "use-cases/inspire-xml.html#metadata-repository-deposit",
-    "title": "INSPIRE XML",
-    "section": "Metadata & repository deposit",
-    "text": "Metadata & repository deposit\n\nProduce ISO 19115/19139 metadata for the GML dataset and publish this alongside or embedded in the repository record. Also publish a DCAT or Dublin Core landing-page record for the academic repository. (INSPIRE Knowledge Base)\nRepository package should contain: canonical GML dump (.xml/.gml), XSDs used, mapping spec (HALE project or mapping files), validation report(s), a GeoPackage/CSV extract, README and license. Mint a DOI for the package."
+    "objectID": "use-cases/inspire-geopackage.html#toolchain-development",
+    "href": "use-cases/inspire-geopackage.html#toolchain-development",
+    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
+    "section": "Toolchain Development",
+    "text": "Toolchain Development\n\nSelect or develop tools for transforming existing datasets into GeoPackage format.\n\nAutomate validation workflows using tools such as ETF Validator or HALE Studio.\n\nEnsure export scripts support relevant feature types and attribute mappings."
   },
   {
-    "objectID": "use-cases/index.html",
-    "href": "use-cases/index.html",
-    "title": "Use cases soil data",
+    "objectID": "use-cases/inspire-geopackage.html#pilot-and-testing",
+    "href": "use-cases/inspire-geopackage.html#pilot-and-testing",
+    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
+    "section": "Pilot and Testing",
+    "text": "Pilot and Testing\n\nProduce a pilot GeoPackage dataset for selected regions or features.\n\nValidate data encoding using INSPIRE ETF testing services.\n\nGather feedback from internal and external stakeholders."
+  },
+  {
+    "objectID": "use-cases/inspire-geopackage.html#full-roll-out",
+    "href": "use-cases/inspire-geopackage.html#full-roll-out",
+    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
+    "section": "Full Roll-Out",
+    "text": "Full Roll-Out\n\nImplement full-scale transformation of Soil data to GeoPackage.\n\nUpdate metadata to reflect the new encoding format.\n\nPublish datasets via download services in accordance with INSPIRE TG requirements."
+  },
+  {
+    "objectID": "use-cases/glosis.html",
+    "href": "use-cases/glosis.html",
+    "title": "Glosis Web Ontology",
     "section": "",
-    "text": "A selection of use cases, combined with dedicated guidance on how to increase FAIR aspect of a data or knowledge publication.\n\nTabular Soil Observation Data is a common format to share Soil data.\nSoil property and indicator maps, such as soil property distribution predictions, agricultural decision support and soil health indicator changes are produced with conventional and pedometric approaches. An important factor to facilitate reuse is extensive description of lineage. Which source data and procedures have been used to derive the resulting product.\nBonares is a repository for archiving results of long term field experiments. With each deposit contributors are invited to submit metadata at the dataset level, as well as at the column level; which phenomena is observed in the experiment, in which unit and with which procedure.\nEarth imagery such as satelite and drone data are increasingly used to better understand soils and their interaction with climate, landscape and crops. Imagery data is often used as a predictor of soil property distribution. Due to their size and origin imagery data is usually not deposited in formal repositories, but available from mass storage such as Google Earth Engine, Copernicus or Amazon Cloud, which can be a challenge for citation of the material.\nINSPIRE geopackage for soil data is an approach to store data in a relational database while conforming to the INSPIRE Soil datamodel. Traditionally INSPIRE Soil Observation data were required to be shared using a dedicated xml encoding, which was quite a challenge for both data procucers and consumers. The Good Practice using GeoPackage specifically for soil data has been prepared by the EJP Soil H2020 programme.\nProject Websites and Knowledge Hubs benefit from archival of their content at various stages during and after the realisation and maintenance of the website. A deposit of the website content is persistently citable using DOI and the risk of information loss at website discontinuation is limited.\nSoil vocabularies (glossaries) are commonly produced at the start of projects, to align definitions between project partners. Vocabularies are also an important driver of findability and interoperabilty.\nSpectroscopy is a novel approach to observe soil properties on a soil samples efficiently. The properties are predicted based on a library of reference samples which are assessed both with wet chemistry as well as spectrometry. A common practice is to deposit the spectra of the observations as part of the data as well as a reference to the spectral library used for the prediction.\nMinotaur template provides a template to store soil observation data"
+    "text": "Use the GloSIS ontology network (master module + domain modules) to represent soil profiles, plots, samples, observations, and laboratory procedures in RDF. ([GitHub][1])\nReuse the formal patterns GloSIS relies on: SOSA/SSN for observations, GeoSPARQL for geospatial, QUDT for units/quantities and SKOS for code lists. This increases compatibility with other environmental/observational data. ([arXiv][2])\nProduce: (a) an RDF dataset (Turtle or TriG) derived from your source spreadsheets/CSV/DB, (b) SHACL validation shapes, (c) a machine-readable dataset landing page (DCAT/Dublin Core + citation + DOI), and (d) a SPARQL endpoint / triple store for programmatic reuse and discovery."
   },
   {
-    "objectID": "use-cases/gbif-biodiversity-data.html",
-    "href": "use-cases/gbif-biodiversity-data.html",
-    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
-    "section": "",
-    "text": "Platforms like GBIF can strongly support FAIR data. But only if data providers set things up properly and users reference their data downloads properly. This documents presents a strategy to help you make your biodiversity data as Findable, Accessible, Interoperable, and Reusable (FAIR) as possible.\nBy design, datasets in GBIF are incremental, new biodiversity observations can arrive at a daily basis. An identifier is assigned to incremental datasets, and the datasets are findable through OpenAire. However for users to reference the state of the dataset, when using it in their research. they can make an explicit download of the dataset. GBIF will create a persistent identifiation to that snapshot, which can be used as a reference. There is no need to deposit the extracted dataset separately.\n\n\n\n\n\nMaintain your source data in a version-controlled or otherwise documented system.\nKeep track of changes so you can update GBIF intentionally and transparently.\n\n\n\n\n\nStructure data clearly using DwC terms (e.g., occurrenceID, eventDate, scientificName).\nAvoid custom field names unless necessary—and document them.\n\n\n\n\n\nUse a standard open license like CC0 or CC BY 4.0, as required by GBIF.\nClearly define attribution expectations in your metadata.\n\n\n\n\n\nUse stable, provider-managed occurrenceIDs, not row numbers or UUIDs that change.\nAvoid reassigning IDs across updates.\n\n\n\n\n\n\n\n\nEnsure the source repository (IPT, DiGIR, BioCASE, etc.) is up-to-date and maintained.\nUse HTTPS endpoints where possible.\n\n\n\n\nInclude:\n\nDataset purpose and scope\nGeographic and taxonomic coverage\nMethods, sampling protocols, and data quality notes\nContact details and institutional information\nUpdate frequency and version history\n\n\n\n\n\nGBIF assigns a concept DOI for the dataset.\nConfirm the DOI resolves correctly and includes citation guidance.\nIf you publish major revisions, consider creating a new versioned DOI.\n\n\n\n\n\n\n\n\nIf you update content (records, taxonomy, or coverage), revise the metadata too.\nAnnotate major updates with version numbers or changelogs.\n\n\n\n\nGBIF may flag:\n\nDuplicate IDs\nInvalid coordinates\nTaxonomic mismatches\nMissing fields\n\nRespond and correct issues promptly to preserve usability.\n\n\n\nEncourage users to:\n\nCite download DOIs for snapshots (not just the dataset DOI).\nReach out if clarifications are needed.\n\n\n\n\n\n\n\n\nTaxonomy: match to recognised checklists whenever appropriate.\nLocations: use standardized coordinate systems and georeferencing protocols.\nDates: follow ISO 8601 (e.g., YYYY-MM-DD).\n\n\n\n\nExample additions:\n\nSampling methods (samplingProtocol)\nBasis of record (materialSample, humanObservation, etc.)\nLife stage, sex, habitat\nCitations or related literature\n\n\n\n\nWhen possible, connect:\n\nSpecimen records → collection codes (GRBio, CETAF IDs)\nTaxon concepts → WoRMS, Catalogue of Life\nProjects → institutional repositories or scientific publications\n\n\n\n\n\n\n\n\nProvide a preferred citation format in the metadata.\nEncourage users to use download DOIs for stability.\n\n\n\n\nState whether data will be:\n\nStatic (no updates)\nPeriodically updated\nContinuously synchronized\n\n\n\n\n\nUse this quick checklist:\n\n\n\n\n\n\n\nFAIR Principle\nYou’re doing well if…\n\n\n\n\nFindable\nThe dataset has a DOI, clear title, and searchable metadata.\n\n\nAccessible\nData can be downloaded without barriers and has an open license.\n\n\nInteroperable\nDarwin Core terms and standard vocabularies are used consistently.\n\n\nReusable\nMetadata explains methods, identifiers are stable, and updates are traceable.\n\n\n\n\n\n\nGBIF provides the infrastructure for FAIR data, but providers control the quality and longevity. By supplying structured data, rich metadata, stable identifiers, and clear versioning, you ensure users can reliably find, cite, and reuse your dataset far into the future."
+    "objectID": "use-cases/glosis.html#identify-and-model-core-entities-map-your-schema-glosis",
+    "href": "use-cases/glosis.html#identify-and-model-core-entities-map-your-schema-glosis",
+    "title": "Glosis Web Ontology",
+    "section": "Identify and model core entities (map your schema → GloSIS)",
+    "text": "Identify and model core entities (map your schema → GloSIS)\nMinimum entities you should model:\n\nSite (area investigated) → GloSIS GL_Site / site-plot module. ([w3id.org][3])\nPlot (sampling plot) → GL_Plot. ([w3id.org][3])\nProfile / Horizon → GL_Profile, Layer/Horizon classes (layer-horizon module). ([w3id.org][4])\nSample (physical sample from horizon/plot) → link to sample identifier, date, collector, GPS geometry.\nObservation / Measurement → use SOSA Observation as GloSIS aligns observations with SOSA/OM ontology patterns (e.g., measurement event, result, observedProperty). Use QUDT units for numeric results. ([arXiv][2])\nProcedure / Lab method → GloSIS procedure module for standardized lab codes and method reference lists. ([GitHub][5])\n\nTip: Prefer modeling the observation event (SOSA Observation) that points to a FeatureOfInterest (the sample or horizon) and a Result that carries numeric value + unit."
   },
   {
-    "objectID": "use-cases/gbif-biodiversity-data.html#before-publishing-prepare-your-dataset",
-    "href": "use-cases/gbif-biodiversity-data.html#before-publishing-prepare-your-dataset",
-    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
-    "section": "",
-    "text": "Maintain your source data in a version-controlled or otherwise documented system.\nKeep track of changes so you can update GBIF intentionally and transparently.\n\n\n\n\n\nStructure data clearly using DwC terms (e.g., occurrenceID, eventDate, scientificName).\nAvoid custom field names unless necessary—and document them.\n\n\n\n\n\nUse a standard open license like CC0 or CC BY 4.0, as required by GBIF.\nClearly define attribution expectations in your metadata.\n\n\n\n\n\nUse stable, provider-managed occurrenceIDs, not row numbers or UUIDs that change.\nAvoid reassigning IDs across updates."
+    "objectID": "use-cases/glosis.html#use-persistent-resolvable-iris",
+    "href": "use-cases/glosis.html#use-persistent-resolvable-iris",
+    "title": "Glosis Web Ontology",
+    "section": "Use persistent, resolvable IRIs",
+    "text": "Use persistent, resolvable IRIs\n\nMint IRIs under your domain, e.g., https://data.example.org/soil/site/XXXX, .../sample/YYY, and ensure content negotiation serves HTML landing pages and RDF (Turtle).\nWhere possible, adopt w3id.org or the GloSIS w3id IRIs for ontology terms; GloSIS modules are available under stable w3id IRIs. ([w3id.org][3])"
   },
   {
-    "objectID": "use-cases/gbif-biodiversity-data.html#publishing-to-gbif-do-it-the-fair-way",
-    "href": "use-cases/gbif-biodiversity-data.html#publishing-to-gbif-do-it-the-fair-way",
-    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
-    "section": "",
-    "text": "Ensure the source repository (IPT, DiGIR, BioCASE, etc.) is up-to-date and maintained.\nUse HTTPS endpoints where possible.\n\n\n\n\nInclude:\n\nDataset purpose and scope\nGeographic and taxonomic coverage\nMethods, sampling protocols, and data quality notes\nContact details and institutional information\nUpdate frequency and version history\n\n\n\n\n\nGBIF assigns a concept DOI for the dataset.\nConfirm the DOI resolves correctly and includes citation guidance.\nIf you publish major revisions, consider creating a new versioned DOI."
+    "objectID": "use-cases/glosis.html#units-and-code-lists",
+    "href": "use-cases/glosis.html#units-and-code-lists",
+    "title": "Glosis Web Ontology",
+    "section": "Units and code lists",
+    "text": "Units and code lists\n\nMap measurement units to QUDT or a controlled URI list (e.g., grams per kg → QUDT URI). This avoids ambiguous strings such as “g/kg” vs “g per kg”. ([arXiv][2])\nLoad GloSIS codelists (they are provided as SKOS concept schemes in the GloSIS modules) and reuse them for categorical fields (texture, classification, colour). ([GitHub][1])"
   },
   {
-    "objectID": "use-cases/gbif-biodiversity-data.html#after-publishing-maintain-fairness-over-time",
-    "href": "use-cases/gbif-biodiversity-data.html#after-publishing-maintain-fairness-over-time",
-    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
-    "section": "",
-    "text": "If you update content (records, taxonomy, or coverage), revise the metadata too.\nAnnotate major updates with version numbers or changelogs.\n\n\n\n\nGBIF may flag:\n\nDuplicate IDs\nInvalid coordinates\nTaxonomic mismatches\nMissing fields\n\nRespond and correct issues promptly to preserve usability.\n\n\n\nEncourage users to:\n\nCite download DOIs for snapshots (not just the dataset DOI).\nReach out if clarifications are needed."
+    "objectID": "use-cases/glosis.html#provenance-citation",
+    "href": "use-cases/glosis.html#provenance-citation",
+    "title": "Glosis Web Ontology",
+    "section": "Provenance & citation",
+    "text": "Provenance & citation\n\nUse PROV-O to capture: who ingested data, original source (DB or CSV), transformation script version, and lab certificate/procedure identifiers.\nProvide dataset metadata: title, authors, affiliation, license, DOI, version, contact person — encode as Dublin Core / DCAT on the landing page and in a machine-readable dcat:Dataset RDF description."
   },
   {
-    "objectID": "use-cases/gbif-biodiversity-data.html#enhancing-reuse-and-interoperability",
-    "href": "use-cases/gbif-biodiversity-data.html#enhancing-reuse-and-interoperability",
-    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
-    "section": "",
-    "text": "Taxonomy: match to recognised checklists whenever appropriate.\nLocations: use standardized coordinate systems and georeferencing protocols.\nDates: follow ISO 8601 (e.g., YYYY-MM-DD).\n\n\n\n\nExample additions:\n\nSampling methods (samplingProtocol)\nBasis of record (materialSample, humanObservation, etc.)\nLife stage, sex, habitat\nCitations or related literature\n\n\n\n\nWhen possible, connect:\n\nSpecimen records → collection codes (GRBio, CETAF IDs)\nTaxon concepts → WoRMS, Catalogue of Life\nProjects → institutional repositories or scientific publications"
+    "objectID": "use-cases/glosis.html#validation-shacl",
+    "href": "use-cases/glosis.html#validation-shacl",
+    "title": "Glosis Web Ontology",
+    "section": "Validation (SHACL)",
+    "text": "Validation (SHACL)\n\nImplement SHACL shapes for:\n\nrequired properties (site must have geometry, sample must reference a profile/horizon),\nunit constraints (numeric observations must have associated QUDT unit),\nallowed SKOS codes for categorical fields,\ncardinality (e.g., each sample must have exactly one sampling date).\n\nRun SHACL during ETL and as a pre-publication gate."
   },
   {
-    "objectID": "use-cases/gbif-biodiversity-data.html#communicate-with-gbif-as-a-partner",
-    "href": "use-cases/gbif-biodiversity-data.html#communicate-with-gbif-as-a-partner",
-    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
+    "objectID": "use-cases/earth-imagery.html",
+    "href": "use-cases/earth-imagery.html",
+    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
     "section": "",
-    "text": "Provide a preferred citation format in the metadata.\nEncourage users to use download DOIs for stability.\n\n\n\n\nState whether data will be:\n\nStatic (no updates)\nPeriodically updated\nContinuously synchronized"
+    "text": "Earth observation data—such as satellite, airborne, and drone imagery—are increasingly used to model, understand, and predict soil properties, soil health indicators, and landscape interactions. While these datasets are often too large or externally hosted to deposit in traditional research repositories, they must still be FAIR: Findable, Accessible, Interoperable, and Reusable—especially when used as covariates in soil mapping or related earth system products.\nThis guidance explains how to properly reference, document, and ensure traceability of earth imagery in FAIR-compliant publications.\n\n\n\nUnlike traditional datasets:\n\nEarth imagery is high-volume and externally hosted.\nData is typically accessed from platforms or cloud services (e.g. Google Earth Engine, Copernicus, Amazon Web Services, NASA DAACs) rather than institutional repositories.\nFrequently updated versions (e.g. Sentinel, Landsat, PlanetScope) complicate referencing.\nDerived products (e.g. NDVI, texture layers, composites) often lack explicit citation metadata.\n\nDespite these challenges, FAIR publication requires persistent references, transparency of processing, and reproducibility.\n\n\n\n\n\nEven if large imagery files aren’t deposited in repositories:\n\nIdentify data source/platform (e.g. Google Earth Engine, Sentinel Hub, Copernicus DIAS).\nInclude dataset identifiers:\n\nMission/sensor (e.g. Sentinel-2 MSI, Landsat 8 OLI, PlanetScope)\nProduct name and processing level (e.g. L2A surface reflectance)\nTile or scene ID(s), date ranges, and spatial extent\nCloud collection ID or asset ID (if available)\n\nIf a derived layer (e.g. NDVI or PCA stack) was used, document the algorithm and input scenes.\n\n\n\n\nInstead of a repository deposit:\n\nDocument how and where imagery can be accessed.\n\nPlatform or API (e.g. COPERNICUS/S2_SR, LANDSAT/LC08/C02/T1_L2)\nAccess conditions (open data, license requirements, API keys)\nLinks to provider documentation (e.g. Copernicus Hub, USGS Earth Explorer)\n\n\nIf imagery access requires credentials, include:\n\nInstructions for obtaining access.\nReference to the licensing terms.\n\n\n\n\nTo promote reuse and linkage:\n\nRecord CRS (e.g. EPSG:4326 or UTM Zone 33N)\nSpecify file formats (e.g. GeoTIFF, COG, NetCDF, JPEG2000)\nUse machine-readable metadata formats where possible (e.g. STAC, ISO 19115)\n\n\n\n\nEnsure traceability and transparency by documenting:\n\nAcquisition dates or time windows\nPreprocessing steps (e.g. atmospheric correction, mosaicking, scaling)\nDerived layers created (e.g. vegetation index, bare soil index, elevation derivatives)\nVersion or revision number of the source dataset\nCitation or attribution guidelines of the data provider\n\n\n\n\n\nEven when imagery is not physically deposited, it must still be citable using a combination of:\n\nSource dataset name and identifier\nAccess platform/service\nAcquisition time window\nProcessing steps or composite method\nPersistent identifiers where available (e.g. DOI, STAC item ID, AWS S3 path, USGS/ESA scene ID)\n\n\n\n\nAt minimum, store or publish the following for each imagery product used as a covariate:\n\n\n\n\n\n\n\nMetadata Element\nRequirement\n\n\n\n\nData source/platform\ne.g. Copernicus, USGS, Planet, GEE, NASA DAAC\n\n\nSensor/mission\ne.g. Sentinel-2 MSI, Landsat 9 OLI\n\n\nProduct level\ne.g. L1C, L2A, BRDF corrected\n\n\nTemporal coverage\nExact date(s) or period\n\n\nSpatial footprint\nBounding box, region name, or tile ID\n\n\nResolution\nSpatial, temporal, spectral\n\n\nAccess URL or collection ID\nInclude STAC or cloud collection URI if available\n\n\nVersion or processing baseline\nRequired for reproducibility\n\n\nDerived indices/processes\ne.g. NDVI, mosaics, gap-filling, resampling\n\n\nLicense and attribution\ne.g. ESA Open Access License\n\n\nPersistent link (if any)\nDOI, handle, cloud object path\n\n\n\n\n\n\nWhen imagery is used to generate predictors for soil modeling:\n\nDocument computation steps (e.g. bands, indices, thresholds).\nRecord software, libraries, and versions (e.g. GEE script ID, Python/R code).\nProvide links or copies of scripts where possible.\nStore exact datasets and date filters.\n\nIf storing the derived product is infeasible:\n\nShare the workflow and references to input layers instead.\n\n\n\n\nWhen satellite or drone imagery is used as covariates in soil prediction or mapping:\n\nInclude full citation(s) in the metadata of the soil product.\nFor each covariate, mention:\n\nImagery source & version\nDate or period used\nTransformation or resampling method\nResolution and CRS\n\nProvide a data dictionary or table mapping covariate names to imagery sources.\n\n\n\n\nEven though imagery files aren’t uploaded:\n\nPublish metadata and citation details in the FAIR repository alongside the soil product.\nLink imagery inputs via:\n\nDOI placeholders (if available)\nCloud-native identifiers (STAC, S3 path, Earth Engine assets)\nDataset citation strings\n\n\nWhere derived imagery is small enough (e.g. aggregated rasters), include those layers directly.\n\n\n\n\n\n\n\n\n\n\nGoal\nWhat to Do\n\n\n\n\nEnsure Findability\nCite source, collection ID, tile/date info\n\n\nMake Accessible\nProvide access path or platform instructions\n\n\nSupport Interoperability\nUse standard CRS, formats, machine-readable metadata\n\n\nEnable Reuse\nDocument preprocessing, versions, licenses, and citations\n\n\n\n\n\n\nFAIR publication of earth imagery are challenging for full file deposition, but it does require traceability, transparency, and citable identifiers. By documenting access pathways, identifiers, transformations, and licensing, earth imagery remains a reusable component of derived data products."
   },
   {
-    "objectID": "use-cases/gbif-biodiversity-data.html#evaluate-your-fairness",
-    "href": "use-cases/gbif-biodiversity-data.html#evaluate-your-fairness",
-    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
+    "objectID": "use-cases/earth-imagery.html#purpose",
+    "href": "use-cases/earth-imagery.html#purpose",
+    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
     "section": "",
-    "text": "Use this quick checklist:\n\n\n\n\n\n\n\nFAIR Principle\nYou’re doing well if…\n\n\n\n\nFindable\nThe dataset has a DOI, clear title, and searchable metadata.\n\n\nAccessible\nData can be downloaded without barriers and has an open license.\n\n\nInteroperable\nDarwin Core terms and standard vocabularies are used consistently.\n\n\nReusable\nMetadata explains methods, identifiers are stable, and updates are traceable."
+    "text": "Earth observation data—such as satellite, airborne, and drone imagery—are increasingly used to model, understand, and predict soil properties, soil health indicators, and landscape interactions. While these datasets are often too large or externally hosted to deposit in traditional research repositories, they must still be FAIR: Findable, Accessible, Interoperable, and Reusable—especially when used as covariates in soil mapping or related earth system products.\nThis guidance explains how to properly reference, document, and ensure traceability of earth imagery in FAIR-compliant publications."
   },
   {
-    "objectID": "use-cases/gbif-biodiversity-data.html#final-takeaway",
-    "href": "use-cases/gbif-biodiversity-data.html#final-takeaway",
-    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
+    "objectID": "use-cases/earth-imagery.html#key-challenges",
+    "href": "use-cases/earth-imagery.html#key-challenges",
+    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
     "section": "",
-    "text": "GBIF provides the infrastructure for FAIR data, but providers control the quality and longevity. By supplying structured data, rich metadata, stable identifiers, and clear versioning, you ensure users can reliably find, cite, and reuse your dataset far into the future."
+    "text": "Unlike traditional datasets:\n\nEarth imagery is high-volume and externally hosted.\nData is typically accessed from platforms or cloud services (e.g. Google Earth Engine, Copernicus, Amazon Web Services, NASA DAACs) rather than institutional repositories.\nFrequently updated versions (e.g. Sentinel, Landsat, PlanetScope) complicate referencing.\nDerived products (e.g. NDVI, texture layers, composites) often lack explicit citation metadata.\n\nDespite these challenges, FAIR publication requires persistent references, transparency of processing, and reproducibility."
   },
   {
-    "objectID": "use-cases/bonares.html",
-    "href": "use-cases/bonares.html",
-    "title": "Soilwise project FAIR Strategy",
+    "objectID": "use-cases/earth-imagery.html#fair-principles-applied-to-earth-imagery",
+    "href": "use-cases/earth-imagery.html#fair-principles-applied-to-earth-imagery",
+    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
     "section": "",
-    "text": "Bonares is a repository for archiving results of long term field experiments. With each deposit contributors are invited to submit metadata at the dataset level, as well as at the column level; which phenomena is observed in the experiment, in which unit and with which procedure."
+    "text": "Even if large imagery files aren’t deposited in repositories:\n\nIdentify data source/platform (e.g. Google Earth Engine, Sentinel Hub, Copernicus DIAS).\nInclude dataset identifiers:\n\nMission/sensor (e.g. Sentinel-2 MSI, Landsat 8 OLI, PlanetScope)\nProduct name and processing level (e.g. L2A surface reflectance)\nTile or scene ID(s), date ranges, and spatial extent\nCloud collection ID or asset ID (if available)\n\nIf a derived layer (e.g. NDVI or PCA stack) was used, document the algorithm and input scenes.\n\n\n\n\nInstead of a repository deposit:\n\nDocument how and where imagery can be accessed.\n\nPlatform or API (e.g. COPERNICUS/S2_SR, LANDSAT/LC08/C02/T1_L2)\nAccess conditions (open data, license requirements, API keys)\nLinks to provider documentation (e.g. Copernicus Hub, USGS Earth Explorer)\n\n\nIf imagery access requires credentials, include:\n\nInstructions for obtaining access.\nReference to the licensing terms.\n\n\n\n\nTo promote reuse and linkage:\n\nRecord CRS (e.g. EPSG:4326 or UTM Zone 33N)\nSpecify file formats (e.g. GeoTIFF, COG, NetCDF, JPEG2000)\nUse machine-readable metadata formats where possible (e.g. STAC, ISO 19115)\n\n\n\n\nEnsure traceability and transparency by documenting:\n\nAcquisition dates or time windows\nPreprocessing steps (e.g. atmospheric correction, mosaicking, scaling)\nDerived layers created (e.g. vegetation index, bare soil index, elevation derivatives)\nVersion or revision number of the source dataset\nCitation or attribution guidelines of the data provider"
+  },
+  {
+    "objectID": "use-cases/earth-imagery.html#citation-practices-for-earth-imagery",
+    "href": "use-cases/earth-imagery.html#citation-practices-for-earth-imagery",
+    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "section": "",
+    "text": "Even when imagery is not physically deposited, it must still be citable using a combination of:\n\nSource dataset name and identifier\nAccess platform/service\nAcquisition time window\nProcessing steps or composite method\nPersistent identifiers where available (e.g. DOI, STAC item ID, AWS S3 path, USGS/ESA scene ID)"
+  },
+  {
+    "objectID": "use-cases/earth-imagery.html#recommended-metadata-fields",
+    "href": "use-cases/earth-imagery.html#recommended-metadata-fields",
+    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "section": "",
+    "text": "At minimum, store or publish the following for each imagery product used as a covariate:\n\n\n\n\n\n\n\nMetadata Element\nRequirement\n\n\n\n\nData source/platform\ne.g. Copernicus, USGS, Planet, GEE, NASA DAAC\n\n\nSensor/mission\ne.g. Sentinel-2 MSI, Landsat 9 OLI\n\n\nProduct level\ne.g. L1C, L2A, BRDF corrected\n\n\nTemporal coverage\nExact date(s) or period\n\n\nSpatial footprint\nBounding box, region name, or tile ID\n\n\nResolution\nSpatial, temporal, spectral\n\n\nAccess URL or collection ID\nInclude STAC or cloud collection URI if available\n\n\nVersion or processing baseline\nRequired for reproducibility\n\n\nDerived indices/processes\ne.g. NDVI, mosaics, gap-filling, resampling\n\n\nLicense and attribution\ne.g. ESA Open Access License\n\n\nPersistent link (if any)\nDOI, handle, cloud object path"
+  },
+  {
+    "objectID": "use-cases/earth-imagery.html#reproducibility-for-derived-covariates",
+    "href": "use-cases/earth-imagery.html#reproducibility-for-derived-covariates",
+    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "section": "",
+    "text": "When imagery is used to generate predictors for soil modeling:\n\nDocument computation steps (e.g. bands, indices, thresholds).\nRecord software, libraries, and versions (e.g. GEE script ID, Python/R code).\nProvide links or copies of scripts where possible.\nStore exact datasets and date filters.\n\nIf storing the derived product is infeasible:\n\nShare the workflow and references to input layers instead."
+  },
+  {
+    "objectID": "use-cases/earth-imagery.html#integration-in-fair-soil-products",
+    "href": "use-cases/earth-imagery.html#integration-in-fair-soil-products",
+    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "section": "",
+    "text": "When satellite or drone imagery is used as covariates in soil prediction or mapping:\n\nInclude full citation(s) in the metadata of the soil product.\nFor each covariate, mention:\n\nImagery source & version\nDate or period used\nTransformation or resampling method\nResolution and CRS\n\nProvide a data dictionary or table mapping covariate names to imagery sources."
+  },
+  {
+    "objectID": "use-cases/earth-imagery.html#repository-strategy",
+    "href": "use-cases/earth-imagery.html#repository-strategy",
+    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "section": "",
+    "text": "Even though imagery files aren’t uploaded:\n\nPublish metadata and citation details in the FAIR repository alongside the soil product.\nLink imagery inputs via:\n\nDOI placeholders (if available)\nCloud-native identifiers (STAC, S3 path, Earth Engine assets)\nDataset citation strings\n\n\nWhere derived imagery is small enough (e.g. aggregated rasters), include those layers directly."
+  },
+  {
+    "objectID": "use-cases/earth-imagery.html#summary-of-best-practices",
+    "href": "use-cases/earth-imagery.html#summary-of-best-practices",
+    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "section": "",
+    "text": "Goal\nWhat to Do\n\n\n\n\nEnsure Findability\nCite source, collection ID, tile/date info\n\n\nMake Accessible\nProvide access path or platform instructions\n\n\nSupport Interoperability\nUse standard CRS, formats, machine-readable metadata\n\n\nEnable Reuse\nDocument preprocessing, versions, licenses, and citations"
+  },
+  {
+    "objectID": "use-cases/earth-imagery.html#conclusion",
+    "href": "use-cases/earth-imagery.html#conclusion",
+    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "section": "",
+    "text": "FAIR publication of earth imagery are challenging for full file deposition, but it does require traceability, transparency, and citable identifiers. By documenting access pathways, identifiers, transformations, and licensing, earth imagery remains a reusable component of derived data products."
   },
   {
     "objectID": "publish-fair-data.html",
@@ -392,207 +462,116 @@
     "text": "Contents:\n\nGeneral Guidelines\nPublish fair data\nPublish fair knowledge\nSet of use cases in data and knowledge sharing"
   },
   {
-    "objectID": "publish-fair-knowledge.html",
-    "href": "publish-fair-knowledge.html",
-    "title": "Soilwise project FAIR Strategy",
+    "objectID": "use-cases/gbif-biodiversity-data.html",
+    "href": "use-cases/gbif-biodiversity-data.html",
+    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
     "section": "",
-    "text": "Guidelines on (Mission Soil) Data and Knowledge FAIRness and Findability\n\nIntroduction\n\nSoil is one of our most vital natural resources, yet it faces mounting pressures from climate change, land degradation, and unsustainable management. To protect and restore soils effectively, we need high-quality, accessible data and reliable knowledge. That’s where SoilWise Repository (SWR) comes in—the data and knowledge hub designed to gather all relevant resources across the soil domain, accessible through one access point.\nThis document lays out clear guidelines for all soil data publishers, mainly Mission Soil projects, to structure their data, knowledge and metadata in a way that makes them seamlessly discoverable through the SoilWise metadata catalogue. But this isn’t just about compliance—it’s about building a soil data and knowledge ecosystem where information flows freely, connects across disciplines, and drives meaningful action.\nIn the following sections, you’ll find practical recommendations on how to:\n\n…\n\nToo often, valuable soil data and knowledge remains fragmented, inaccessible, or incompatible with other resources—limiting its potential impact. A common approach to data and knowledge management is essential. Effective data and knowledge are only as powerful as the metadata that describes it. Without clear, standardised metadata, even the most valuable resources remain hidden, disconnected, or misinterpreted. Metadata acts as the bridge between data providers and users, ensuring that soil data can be easily found, understood, and integrated across different platforms and disciplines.\nTODO:\n- Purpose of SWR as a crossroad and single access point SWR harvests only Metadata\n\nWhat is in scope of this document and what is not\n\nThis document was created for Mission Soil projects as a guideline to summarise the approaches towards soil data and knowledge FAIRness and support the findability through SWR.\nTarget groups (?)\n\nGeneral Information\n\nNotes:\n\nThis section will be at the beginning of every “result-document”\n\nSWR introduction\n\nEmphasis on metadata role\n\nEnsuring FAIRness requires the use of open formats, proper metadata, and appropriate repositories.\n\n\n\nData\n\nDefinitions, intro, how to make decisions on where to store, what is harvested to SWR\nDivide data somehow? E.g. to soil measurements, spatial data analysis, other kinds of analysis… ?\n\nData management\n\n(describe by metadata, standardisation, links to other sources and deliverables, recommended formats, versioning (?)…)\n\nRaster Data\n\nRaster data represent spatial information in a grid format and are commonly used for soil-related variables such as soil moisture, organic carbon, texture, land cover, and remote sensing derivatives. In Mission Soil projects, raster data often originate from field monitoring, remote sensing, or model outputs.\nRaster data providers should store raster datasets in open, widely used formats, ensure spatial reference is correctly embedded, and accompany the data with complete metadata using recognized standards. Raster data should be findable via catalogues or repositories and accessible via persistent identifiers.\nRecommended Repositories\nData repositories should be trustworthy [link to what trustworthy means], persistent, and compliant with FAIR principles. Ideally, they should support DOI assignment, long-term storage, and community standards. Choose domain-specific repositories or general-purpose open repositories that support environmental data.\n\nZenodo – general-purpose repository supporting large files and FAIR compliance\n\nEUDAT B2SHARE / B2SAFE – supports long-term data preservation and metadata standards\n\nESDAC – specialized repository for EU-scale soil-related datasets\n\nDEIMS-SDR – for site-based environmental observations\n\nNotes:\n\nPersistent repositories, such as listed in:\n\nRegistry of Research Data Repositories: https://www.re3data.org\n\nSoil Sciences: https://www.re3data.org/search?query=&subjects[]=23101\n\nLink to List of SWR harvested repositories\n\nRecommended Formats\nPrefer open, standardized (ideally OGC-compliant [link]) formats that ensure interoperability and long-term readability. Formats should support georeferencing and metadata embedding. Avoid proprietary or poorly documented formats.\n\nGeoTIFF (.tif) – open, widely used format for georeferenced raster data\n\nNetCDF (.nc) – suitable for time-series and multidimensional environmental data\n\nHDF5 – flexible and scalable for structured raster outputs (e.g. from models)\n\nNotes:\n\nSWR harvests only metadata\n\nRecommended Metadata standards\nUse internationally recognized metadata standards that ensure discoverability, interoperability, and clarity. Metadata should describe the also raster dataset’s origin, scope, resolution, spatial and temporal extent, and processing history. Choose standards that are compatible with spatial data infrastructures and catalogue systems.\n\nISO 19115 / 19139 – robust and widely adopted geospatial metadata standards\n\nINSPIRE Metadata – for alignment with European environmental directives\n\nDublin Core – useful for basic descriptive metadata\n\nGeoTIFF internal tags – allow embedding georeferencing directly in the data file\n\nDataCite\n\nNotes:\n\nDC as a minimal requirement\n\nMetadata Management\nMetadata are essential to making data FAIR. Projects should treat metadata creation and maintenance as an integral part of data workflows. Metadata should be created at the time of data generation, maintained throughout the project, and updated when changes occur.\nNotes:\n\nLink to metadata filling manual\n\nList of recommended elements (link to more detailed descriptions and examples)\n\nEmphasis on interlinking with other assets, vocabularies, project, persistent identification\n\nRecommended Licences\nLicensing should be clear, standardized, and as open as possible. Use well-known licenses that facilitate reuse, attribution, and integration with other datasets. When data cannot be openly shared, clearly state the reasons and explore options for controlled access.\nNotes:\n\nStandardised licences, such as CCs\n\n\nVector data\n\nRecommended Repositories\nRecommended Formats\nRecommended Metadata standards\nMetadata Management\nRecommended Licences\n\nGeodatabase\n\nService\n\n3D Model\n\nTabular data\n\nNotes from UC2:\nVarious approaches exist to annotate CSV data to match the above user story \n\nIn the research community a convention is used to add a readme.txt to the zip file with the data, the readme.txt contains definitions for the columns in a semi-structured format. It’s a start, but preferably a fully structured format is used. \n\nhttps://csvw.org and https://www.w3.org/TR/tabular-data-primer are similar initiatives with a json-ld approach to tabular data (CSV) \n\nVarious metadata communities offer an approach to embed metadata about the data model into the metadata document that describes the dataset, such as: https://schema.org/variableMeasured, https://datapackage.org/standard/table-schema,  https://www.iso.org/standard/57303.html  \n\n\nKnowledge\n\nDefinitions (What is knowledge?), intro, how to make decisions on where to store, what is harvested to SWR\n\nKnowledge management\n\n+ Recommended persistent repositories for each subchapter\n\nPublication or Journal Papers\n\nGuideline or Manual\n\nMethodology\n\nOntology\n\nNote: Do not establish new ontologies\n\nRepository\n\nNote: Do not establish new repositories\n\nModel\n\nDeliverable\n\nText\n\nWebsite\n\nVideo\n\nNote:\n\nNot to endorse YouTube as an only repository\n\n\n\nAudio\n\nImage\n\nPresentation\n\nBest Practices and Tools\n\nInterview\n\nPolicy Documents\n\nSoftware\n\n+ include MIT licences\n\nValidation results (?)\nData and metadata validations, indicated in metadata\nMetadata\n\nDefinitions, intro, how to make decisions on where to store, what is harvested (list of repositories?)\n\nMetadata management\n\n(minimum metadata profile, formats, elements…)\nrecommendation could be to submit deliverable to official repositories e.g. Zenodo and reference it in CORDIS (where are wider options for metadata)\nWhich MD standards should be used?\n\nMission Soil Indication\n\nHow should projects indicate in metadata the link to their project\n(possibly part of subchapters above)\n\nSupport materials\n\nHow to fill metadata\n\nGeneral persistency guidelines\n\nWhat should be stored in a persistent repository? (web, manuals, videos, guidelines… store not only metadata, but think about the persistency of the products)\nDOIs and how to use them\nLinking to other knowledge (deliverables, …).\n.. see JRC meeting from 12. 2. 2025 for more details (cca between 20-50 min.)\nTo ensure FAIRness, raster data should be stored in open, standardized formats (preferably OGC-compliant), documented with complete metadata based on established standards, and shared through trustworthy repositories. Projects should assign clear and appropriate licenses that support data reuse, and whenever possible, enable open access.\n\nSensitive metadata handling\n\nVersioning\n\nVocabularies\n\nList of SWR harvested repositories\nFAQ\n\n\n\nWhat should I do to be findable in SWR?\n\nWhat should I do if I have a specific Metadata profile (e.g. with Ph measurements)\n\nHow should I reposit the sensitive assets?\n\nWhat is a definition of persistent repository?\n\n\nOther useful information\n\n(openAIRE guidelines, standards, metadata manuals, EC H2020 FAIR DM, Guidelines to the Rules on OA to Scientific Publications and OA to Research Data in Horizon 2020, FAIR Maturity Indicators, go-fair.org principles, EUDAT B2share, fairsharing.org, FAIR Data Self-Assessment Tool (!), FAIRsFAIR tools …)\nOpen Questions:\n\nShould we focus only on Mission Soil projects, or any potential Soil data/knowledge providers?\n\nGeneral guidelines, or SWR-oriented?\n\nWhat content should be included?\n\nTo what detail should we get (i.e. manuals for uploading / general description)?\n\nHow to handle big data?\n\nSoftware is Data (code) or Knowledge? (not relevant for end users)\n\nHow to store whole system (e.g. running platform with various content, such as Curiosoil Learning Hub)\n\nHow to handle big data?\n\nTODO:\n\nCreate guidelines on how to use existing vocabs and how to create their own when the existing is not sufficient\n\nWe will not create new\n\n2-pager\nhttps://ilvo.sharepoint.com/:p:/r/sites/HESoilWiseProject/Gedeelde%20documenten/General/Meetings/External/2024%20EU%20Mission%20Soil%20Week%20Brussels%20(12-14%20November%202024)/20241114_Cluster%20Data_afternoon.pptx?d=w5eccc1be6dd24bf19d73f665f91e9069&csf=1&web=1&e=sgwW85"
+    "text": "Platforms like GBIF can strongly support FAIR data. But only if data providers set things up properly and users reference their data downloads properly. This documents presents a strategy to help you make your biodiversity data as Findable, Accessible, Interoperable, and Reusable (FAIR) as possible.\nBy design, datasets in GBIF are incremental, new biodiversity observations can arrive at a daily basis. An identifier is assigned to incremental datasets, and the datasets are findable through OpenAire. However for users to reference the state of the dataset, when using it in their research. they can make an explicit download of the dataset. GBIF will create a persistent identifiation to that snapshot, which can be used as a reference. There is no need to deposit the extracted dataset separately.\n\n\n\n\n\nMaintain your source data in a version-controlled or otherwise documented system.\nKeep track of changes so you can update GBIF intentionally and transparently.\n\n\n\n\n\nStructure data clearly using DwC terms (e.g., occurrenceID, eventDate, scientificName).\nAvoid custom field names unless necessary—and document them.\n\n\n\n\n\nUse a standard open license like CC0 or CC BY 4.0, as required by GBIF.\nClearly define attribution expectations in your metadata.\n\n\n\n\n\nUse stable, provider-managed occurrenceIDs, not row numbers or UUIDs that change.\nAvoid reassigning IDs across updates.\n\n\n\n\n\n\n\n\nEnsure the source repository (IPT, DiGIR, BioCASE, etc.) is up-to-date and maintained.\nUse HTTPS endpoints where possible.\n\n\n\n\nInclude:\n\nDataset purpose and scope\nGeographic and taxonomic coverage\nMethods, sampling protocols, and data quality notes\nContact details and institutional information\nUpdate frequency and version history\n\n\n\n\n\nGBIF assigns a concept DOI for the dataset.\nConfirm the DOI resolves correctly and includes citation guidance.\nIf you publish major revisions, consider creating a new versioned DOI.\n\n\n\n\n\n\n\n\nIf you update content (records, taxonomy, or coverage), revise the metadata too.\nAnnotate major updates with version numbers or changelogs.\n\n\n\n\nGBIF may flag:\n\nDuplicate IDs\nInvalid coordinates\nTaxonomic mismatches\nMissing fields\n\nRespond and correct issues promptly to preserve usability.\n\n\n\nEncourage users to:\n\nCite download DOIs for snapshots (not just the dataset DOI).\nReach out if clarifications are needed.\n\n\n\n\n\n\n\n\nTaxonomy: match to recognised checklists whenever appropriate.\nLocations: use standardized coordinate systems and georeferencing protocols.\nDates: follow ISO 8601 (e.g., YYYY-MM-DD).\n\n\n\n\nExample additions:\n\nSampling methods (samplingProtocol)\nBasis of record (materialSample, humanObservation, etc.)\nLife stage, sex, habitat\nCitations or related literature\n\n\n\n\nWhen possible, connect:\n\nSpecimen records → collection codes (GRBio, CETAF IDs)\nTaxon concepts → WoRMS, Catalogue of Life\nProjects → institutional repositories or scientific publications\n\n\n\n\n\n\n\n\nProvide a preferred citation format in the metadata.\nEncourage users to use download DOIs for stability.\n\n\n\n\nState whether data will be:\n\nStatic (no updates)\nPeriodically updated\nContinuously synchronized\n\n\n\n\n\nUse this quick checklist:\n\n\n\n\n\n\n\nFAIR Principle\nYou’re doing well if…\n\n\n\n\nFindable\nThe dataset has a DOI, clear title, and searchable metadata.\n\n\nAccessible\nData can be downloaded without barriers and has an open license.\n\n\nInteroperable\nDarwin Core terms and standard vocabularies are used consistently.\n\n\nReusable\nMetadata explains methods, identifiers are stable, and updates are traceable.\n\n\n\n\n\n\nGBIF provides the infrastructure for FAIR data, but providers control the quality and longevity. By supplying structured data, rich metadata, stable identifiers, and clear versioning, you ensure users can reliably find, cite, and reuse your dataset far into the future."
   },
   {
-    "objectID": "use-cases/earth-imagery.html",
-    "href": "use-cases/earth-imagery.html",
-    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "objectID": "use-cases/gbif-biodiversity-data.html#before-publishing-prepare-your-dataset",
+    "href": "use-cases/gbif-biodiversity-data.html#before-publishing-prepare-your-dataset",
+    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
     "section": "",
-    "text": "Earth observation data—such as satellite, airborne, and drone imagery—are increasingly used to model, understand, and predict soil properties, soil health indicators, and landscape interactions. While these datasets are often too large or externally hosted to deposit in traditional research repositories, they must still be FAIR: Findable, Accessible, Interoperable, and Reusable—especially when used as covariates in soil mapping or related earth system products.\nThis guidance explains how to properly reference, document, and ensure traceability of earth imagery in FAIR-compliant publications.\n\n\n\nUnlike traditional datasets:\n\nEarth imagery is high-volume and externally hosted.\nData is typically accessed from platforms or cloud services (e.g. Google Earth Engine, Copernicus, Amazon Web Services, NASA DAACs) rather than institutional repositories.\nFrequently updated versions (e.g. Sentinel, Landsat, PlanetScope) complicate referencing.\nDerived products (e.g. NDVI, texture layers, composites) often lack explicit citation metadata.\n\nDespite these challenges, FAIR publication requires persistent references, transparency of processing, and reproducibility.\n\n\n\n\n\nEven if large imagery files aren’t deposited in repositories:\n\nIdentify data source/platform (e.g. Google Earth Engine, Sentinel Hub, Copernicus DIAS).\nInclude dataset identifiers:\n\nMission/sensor (e.g. Sentinel-2 MSI, Landsat 8 OLI, PlanetScope)\nProduct name and processing level (e.g. L2A surface reflectance)\nTile or scene ID(s), date ranges, and spatial extent\nCloud collection ID or asset ID (if available)\n\nIf a derived layer (e.g. NDVI or PCA stack) was used, document the algorithm and input scenes.\n\n\n\n\nInstead of a repository deposit:\n\nDocument how and where imagery can be accessed.\n\nPlatform or API (e.g. COPERNICUS/S2_SR, LANDSAT/LC08/C02/T1_L2)\nAccess conditions (open data, license requirements, API keys)\nLinks to provider documentation (e.g. Copernicus Hub, USGS Earth Explorer)\n\n\nIf imagery access requires credentials, include:\n\nInstructions for obtaining access.\nReference to the licensing terms.\n\n\n\n\nTo promote reuse and linkage:\n\nRecord CRS (e.g. EPSG:4326 or UTM Zone 33N)\nSpecify file formats (e.g. GeoTIFF, COG, NetCDF, JPEG2000)\nUse machine-readable metadata formats where possible (e.g. STAC, ISO 19115)\n\n\n\n\nEnsure traceability and transparency by documenting:\n\nAcquisition dates or time windows\nPreprocessing steps (e.g. atmospheric correction, mosaicking, scaling)\nDerived layers created (e.g. vegetation index, bare soil index, elevation derivatives)\nVersion or revision number of the source dataset\nCitation or attribution guidelines of the data provider\n\n\n\n\n\nEven when imagery is not physically deposited, it must still be citable using a combination of:\n\nSource dataset name and identifier\nAccess platform/service\nAcquisition time window\nProcessing steps or composite method\nPersistent identifiers where available (e.g. DOI, STAC item ID, AWS S3 path, USGS/ESA scene ID)\n\n\n\n\nAt minimum, store or publish the following for each imagery product used as a covariate:\n\n\n\n\n\n\n\nMetadata Element\nRequirement\n\n\n\n\nData source/platform\ne.g. Copernicus, USGS, Planet, GEE, NASA DAAC\n\n\nSensor/mission\ne.g. Sentinel-2 MSI, Landsat 9 OLI\n\n\nProduct level\ne.g. L1C, L2A, BRDF corrected\n\n\nTemporal coverage\nExact date(s) or period\n\n\nSpatial footprint\nBounding box, region name, or tile ID\n\n\nResolution\nSpatial, temporal, spectral\n\n\nAccess URL or collection ID\nInclude STAC or cloud collection URI if available\n\n\nVersion or processing baseline\nRequired for reproducibility\n\n\nDerived indices/processes\ne.g. NDVI, mosaics, gap-filling, resampling\n\n\nLicense and attribution\ne.g. ESA Open Access License\n\n\nPersistent link (if any)\nDOI, handle, cloud object path\n\n\n\n\n\n\nWhen imagery is used to generate predictors for soil modeling:\n\nDocument computation steps (e.g. bands, indices, thresholds).\nRecord software, libraries, and versions (e.g. GEE script ID, Python/R code).\nProvide links or copies of scripts where possible.\nStore exact datasets and date filters.\n\nIf storing the derived product is infeasible:\n\nShare the workflow and references to input layers instead.\n\n\n\n\nWhen satellite or drone imagery is used as covariates in soil prediction or mapping:\n\nInclude full citation(s) in the metadata of the soil product.\nFor each covariate, mention:\n\nImagery source & version\nDate or period used\nTransformation or resampling method\nResolution and CRS\n\nProvide a data dictionary or table mapping covariate names to imagery sources.\n\n\n\n\nEven though imagery files aren’t uploaded:\n\nPublish metadata and citation details in the FAIR repository alongside the soil product.\nLink imagery inputs via:\n\nDOI placeholders (if available)\nCloud-native identifiers (STAC, S3 path, Earth Engine assets)\nDataset citation strings\n\n\nWhere derived imagery is small enough (e.g. aggregated rasters), include those layers directly.\n\n\n\n\n\n\n\n\n\n\nGoal\nWhat to Do\n\n\n\n\nEnsure Findability\nCite source, collection ID, tile/date info\n\n\nMake Accessible\nProvide access path or platform instructions\n\n\nSupport Interoperability\nUse standard CRS, formats, machine-readable metadata\n\n\nEnable Reuse\nDocument preprocessing, versions, licenses, and citations\n\n\n\n\n\n\nFAIR publication of earth imagery are challenging for full file deposition, but it does require traceability, transparency, and citable identifiers. By documenting access pathways, identifiers, transformations, and licensing, earth imagery remains a reusable component of derived data products."
+    "text": "Maintain your source data in a version-controlled or otherwise documented system.\nKeep track of changes so you can update GBIF intentionally and transparently.\n\n\n\n\n\nStructure data clearly using DwC terms (e.g., occurrenceID, eventDate, scientificName).\nAvoid custom field names unless necessary—and document them.\n\n\n\n\n\nUse a standard open license like CC0 or CC BY 4.0, as required by GBIF.\nClearly define attribution expectations in your metadata.\n\n\n\n\n\nUse stable, provider-managed occurrenceIDs, not row numbers or UUIDs that change.\nAvoid reassigning IDs across updates."
   },
   {
-    "objectID": "use-cases/earth-imagery.html#purpose",
-    "href": "use-cases/earth-imagery.html#purpose",
-    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "objectID": "use-cases/gbif-biodiversity-data.html#publishing-to-gbif-do-it-the-fair-way",
+    "href": "use-cases/gbif-biodiversity-data.html#publishing-to-gbif-do-it-the-fair-way",
+    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
     "section": "",
-    "text": "Earth observation data—such as satellite, airborne, and drone imagery—are increasingly used to model, understand, and predict soil properties, soil health indicators, and landscape interactions. While these datasets are often too large or externally hosted to deposit in traditional research repositories, they must still be FAIR: Findable, Accessible, Interoperable, and Reusable—especially when used as covariates in soil mapping or related earth system products.\nThis guidance explains how to properly reference, document, and ensure traceability of earth imagery in FAIR-compliant publications."
+    "text": "Ensure the source repository (IPT, DiGIR, BioCASE, etc.) is up-to-date and maintained.\nUse HTTPS endpoints where possible.\n\n\n\n\nInclude:\n\nDataset purpose and scope\nGeographic and taxonomic coverage\nMethods, sampling protocols, and data quality notes\nContact details and institutional information\nUpdate frequency and version history\n\n\n\n\n\nGBIF assigns a concept DOI for the dataset.\nConfirm the DOI resolves correctly and includes citation guidance.\nIf you publish major revisions, consider creating a new versioned DOI."
   },
   {
-    "objectID": "use-cases/earth-imagery.html#key-challenges",
-    "href": "use-cases/earth-imagery.html#key-challenges",
-    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "objectID": "use-cases/gbif-biodiversity-data.html#after-publishing-maintain-fairness-over-time",
+    "href": "use-cases/gbif-biodiversity-data.html#after-publishing-maintain-fairness-over-time",
+    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
     "section": "",
-    "text": "Unlike traditional datasets:\n\nEarth imagery is high-volume and externally hosted.\nData is typically accessed from platforms or cloud services (e.g. Google Earth Engine, Copernicus, Amazon Web Services, NASA DAACs) rather than institutional repositories.\nFrequently updated versions (e.g. Sentinel, Landsat, PlanetScope) complicate referencing.\nDerived products (e.g. NDVI, texture layers, composites) often lack explicit citation metadata.\n\nDespite these challenges, FAIR publication requires persistent references, transparency of processing, and reproducibility."
+    "text": "If you update content (records, taxonomy, or coverage), revise the metadata too.\nAnnotate major updates with version numbers or changelogs.\n\n\n\n\nGBIF may flag:\n\nDuplicate IDs\nInvalid coordinates\nTaxonomic mismatches\nMissing fields\n\nRespond and correct issues promptly to preserve usability.\n\n\n\nEncourage users to:\n\nCite download DOIs for snapshots (not just the dataset DOI).\nReach out if clarifications are needed."
   },
   {
-    "objectID": "use-cases/earth-imagery.html#fair-principles-applied-to-earth-imagery",
-    "href": "use-cases/earth-imagery.html#fair-principles-applied-to-earth-imagery",
-    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "objectID": "use-cases/gbif-biodiversity-data.html#enhancing-reuse-and-interoperability",
+    "href": "use-cases/gbif-biodiversity-data.html#enhancing-reuse-and-interoperability",
+    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
     "section": "",
-    "text": "Even if large imagery files aren’t deposited in repositories:\n\nIdentify data source/platform (e.g. Google Earth Engine, Sentinel Hub, Copernicus DIAS).\nInclude dataset identifiers:\n\nMission/sensor (e.g. Sentinel-2 MSI, Landsat 8 OLI, PlanetScope)\nProduct name and processing level (e.g. L2A surface reflectance)\nTile or scene ID(s), date ranges, and spatial extent\nCloud collection ID or asset ID (if available)\n\nIf a derived layer (e.g. NDVI or PCA stack) was used, document the algorithm and input scenes.\n\n\n\n\nInstead of a repository deposit:\n\nDocument how and where imagery can be accessed.\n\nPlatform or API (e.g. COPERNICUS/S2_SR, LANDSAT/LC08/C02/T1_L2)\nAccess conditions (open data, license requirements, API keys)\nLinks to provider documentation (e.g. Copernicus Hub, USGS Earth Explorer)\n\n\nIf imagery access requires credentials, include:\n\nInstructions for obtaining access.\nReference to the licensing terms.\n\n\n\n\nTo promote reuse and linkage:\n\nRecord CRS (e.g. EPSG:4326 or UTM Zone 33N)\nSpecify file formats (e.g. GeoTIFF, COG, NetCDF, JPEG2000)\nUse machine-readable metadata formats where possible (e.g. STAC, ISO 19115)\n\n\n\n\nEnsure traceability and transparency by documenting:\n\nAcquisition dates or time windows\nPreprocessing steps (e.g. atmospheric correction, mosaicking, scaling)\nDerived layers created (e.g. vegetation index, bare soil index, elevation derivatives)\nVersion or revision number of the source dataset\nCitation or attribution guidelines of the data provider"
+    "text": "Taxonomy: match to recognised checklists whenever appropriate.\nLocations: use standardized coordinate systems and georeferencing protocols.\nDates: follow ISO 8601 (e.g., YYYY-MM-DD).\n\n\n\n\nExample additions:\n\nSampling methods (samplingProtocol)\nBasis of record (materialSample, humanObservation, etc.)\nLife stage, sex, habitat\nCitations or related literature\n\n\n\n\nWhen possible, connect:\n\nSpecimen records → collection codes (GRBio, CETAF IDs)\nTaxon concepts → WoRMS, Catalogue of Life\nProjects → institutional repositories or scientific publications"
   },
   {
-    "objectID": "use-cases/earth-imagery.html#citation-practices-for-earth-imagery",
-    "href": "use-cases/earth-imagery.html#citation-practices-for-earth-imagery",
-    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "objectID": "use-cases/gbif-biodiversity-data.html#communicate-with-gbif-as-a-partner",
+    "href": "use-cases/gbif-biodiversity-data.html#communicate-with-gbif-as-a-partner",
+    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
     "section": "",
-    "text": "Even when imagery is not physically deposited, it must still be citable using a combination of:\n\nSource dataset name and identifier\nAccess platform/service\nAcquisition time window\nProcessing steps or composite method\nPersistent identifiers where available (e.g. DOI, STAC item ID, AWS S3 path, USGS/ESA scene ID)"
+    "text": "Provide a preferred citation format in the metadata.\nEncourage users to use download DOIs for stability.\n\n\n\n\nState whether data will be:\n\nStatic (no updates)\nPeriodically updated\nContinuously synchronized"
   },
   {
-    "objectID": "use-cases/earth-imagery.html#recommended-metadata-fields",
-    "href": "use-cases/earth-imagery.html#recommended-metadata-fields",
-    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "objectID": "use-cases/gbif-biodiversity-data.html#evaluate-your-fairness",
+    "href": "use-cases/gbif-biodiversity-data.html#evaluate-your-fairness",
+    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
     "section": "",
-    "text": "At minimum, store or publish the following for each imagery product used as a covariate:\n\n\n\n\n\n\n\nMetadata Element\nRequirement\n\n\n\n\nData source/platform\ne.g. Copernicus, USGS, Planet, GEE, NASA DAAC\n\n\nSensor/mission\ne.g. Sentinel-2 MSI, Landsat 9 OLI\n\n\nProduct level\ne.g. L1C, L2A, BRDF corrected\n\n\nTemporal coverage\nExact date(s) or period\n\n\nSpatial footprint\nBounding box, region name, or tile ID\n\n\nResolution\nSpatial, temporal, spectral\n\n\nAccess URL or collection ID\nInclude STAC or cloud collection URI if available\n\n\nVersion or processing baseline\nRequired for reproducibility\n\n\nDerived indices/processes\ne.g. NDVI, mosaics, gap-filling, resampling\n\n\nLicense and attribution\ne.g. ESA Open Access License\n\n\nPersistent link (if any)\nDOI, handle, cloud object path"
+    "text": "Use this quick checklist:\n\n\n\n\n\n\n\nFAIR Principle\nYou’re doing well if…\n\n\n\n\nFindable\nThe dataset has a DOI, clear title, and searchable metadata.\n\n\nAccessible\nData can be downloaded without barriers and has an open license.\n\n\nInteroperable\nDarwin Core terms and standard vocabularies are used consistently.\n\n\nReusable\nMetadata explains methods, identifiers are stable, and updates are traceable."
   },
   {
-    "objectID": "use-cases/earth-imagery.html#reproducibility-for-derived-covariates",
-    "href": "use-cases/earth-imagery.html#reproducibility-for-derived-covariates",
-    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "objectID": "use-cases/gbif-biodiversity-data.html#final-takeaway",
+    "href": "use-cases/gbif-biodiversity-data.html#final-takeaway",
+    "title": "Strategy for ensuring FAIR biodiversiy data via GBIF",
     "section": "",
-    "text": "When imagery is used to generate predictors for soil modeling:\n\nDocument computation steps (e.g. bands, indices, thresholds).\nRecord software, libraries, and versions (e.g. GEE script ID, Python/R code).\nProvide links or copies of scripts where possible.\nStore exact datasets and date filters.\n\nIf storing the derived product is infeasible:\n\nShare the workflow and references to input layers instead."
+    "text": "GBIF provides the infrastructure for FAIR data, but providers control the quality and longevity. By supplying structured data, rich metadata, stable identifiers, and clear versioning, you ensure users can reliably find, cite, and reuse your dataset far into the future."
   },
   {
-    "objectID": "use-cases/earth-imagery.html#integration-in-fair-soil-products",
-    "href": "use-cases/earth-imagery.html#integration-in-fair-soil-products",
-    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "objectID": "use-cases/index.html",
+    "href": "use-cases/index.html",
+    "title": "Use cases soil data",
     "section": "",
-    "text": "When satellite or drone imagery is used as covariates in soil prediction or mapping:\n\nInclude full citation(s) in the metadata of the soil product.\nFor each covariate, mention:\n\nImagery source & version\nDate or period used\nTransformation or resampling method\nResolution and CRS\n\nProvide a data dictionary or table mapping covariate names to imagery sources."
+    "text": "A selection of use cases, combined with dedicated guidance on how to increase FAIR aspect of a data or knowledge publication.\n\nTabular Soil Observation Data is a common format to share Soil data.\nSoil property and indicator maps, such as soil property distribution predictions, agricultural decision support and soil health indicator changes are produced with conventional and pedometric approaches. An important factor to facilitate reuse is extensive description of lineage. Which source data and procedures have been used to derive the resulting product.\n\nEarth imagery such as satelite and drone data are increasingly used to better understand soils and their interaction with climate, landscape and crops. Imagery data is often used as a predictor of soil property distribution. Due to their size and origin imagery data is usually not deposited in formal repositories, but available from mass storage such as Google Earth Engine, Copernicus or Amazon Cloud, which can be a challenge for citation of the material.\nINSPIRE geopackage for soil data is an approach to store data in a relational database while conforming to the INSPIRE Soil datamodel. Traditionally INSPIRE Soil Observation data were required to be shared using a dedicated xml encoding, which was quite a challenge for both data procucers and consumers. The Good Practice using GeoPackage specifically for soil data has been prepared by the EJP Soil H2020 programme.\nProject Websites and Knowledge Hubs benefit from archival of their content at various stages during and after the realisation and maintenance of the website. A deposit of the website content is persistently citable using DOI and the risk of information loss at website discontinuation is limited.\nSoil vocabularies (glossaries) are commonly produced at the start of projects, to align definitions between project partners. Vocabularies are also an important driver of findability and interoperabilty.\nSpectroscopy is a novel approach to observe soil properties on a soil samples efficiently. The properties are predicted based on a library of reference samples which are assessed both with wet chemistry as well as spectrometry. A common practice is to deposit the spectra of the observations as part of the data as well as a reference to the spectral library used for the prediction."
   },
   {
-    "objectID": "use-cases/earth-imagery.html#repository-strategy",
-    "href": "use-cases/earth-imagery.html#repository-strategy",
-    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
+    "objectID": "use-cases/inspire-xml.html",
+    "href": "use-cases/inspire-xml.html",
+    "title": "INSPIRE XML",
     "section": "",
-    "text": "Even though imagery files aren’t uploaded:\n\nPublish metadata and citation details in the FAIR repository alongside the soil product.\nLink imagery inputs via:\n\nDOI placeholders (if available)\nCloud-native identifiers (STAC, S3 path, Earth Engine assets)\nDataset citation strings\n\n\nWhere derived imagery is small enough (e.g. aggregated rasters), include those layers directly."
+    "text": "Publish two complementary outputs:\n\nAn INSPIRE-compliant GML dataset + OGC services (WFS/WMS/Download), encoded using the INSPIRE Soil application schema (GML/XSD) and the associated technical guidelines. This enables interoperability with European infrastructures and geospatial clients. (inspire-mif.github.io)\nA repository-grade package (RDF metadata / DCAT or Dublin Core + dataset landing page + DOI) containing the canonical INSPIRE GML dump, service endpoints, validation report and human-friendly exports (CSV, GeoPackage). Index the dataset in your institutional repository so non-GIS consumers can find and cite it.\n\nTogether these make your soil observations discoverable, machine-actionable and citable across both geospatial and academic ecosystems. (inspire-mif.github.io)"
   },
   {
-    "objectID": "use-cases/earth-imagery.html#summary-of-best-practices",
-    "href": "use-cases/earth-imagery.html#summary-of-best-practices",
-    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
-    "section": "",
-    "text": "Goal\nWhat to Do\n\n\n\n\nEnsure Findability\nCite source, collection ID, tile/date info\n\n\nMake Accessible\nProvide access path or platform instructions\n\n\nSupport Interoperability\nUse standard CRS, formats, machine-readable metadata\n\n\nEnable Reuse\nDocument preprocessing, versions, licenses, and citations"
+    "objectID": "use-cases/inspire-xml.html#map-your-domain-to-inspire-feature-types",
+    "href": "use-cases/inspire-xml.html#map-your-domain-to-inspire-feature-types",
+    "title": "INSPIRE XML",
+    "section": "Map your domain to INSPIRE feature types",
+    "text": "Map your domain to INSPIRE feature types\nCore INSPIRE Soil feature types (conceptual equivalents you should map to) include (see INSPIRE docs for exact class names / UML):\n\nSoilBody / SoilProfile — macroscopic bodies / profiles. Map your site/profile/horizon constructs here. (inspire-mif.github.io)\nSoilObservation / SoilRelatedProperty — thematic observations and derived properties (may use ISO 19156/OM for measurement representation). (inspire-mif.github.io)\nSamplingFeatures / Sample — link physical samples to SoilProfile and SoilBody features.\nSpatial features / geometries — use ISO/OGC geometry encodings in GML (boundedBy, geometryMember).\n\nCreate a mapping table: your source column → INSPIRE UML attribute / association → target GML element / XSD element. (I can generate a starter mapping table for your CSV if you paste 3–8 sample rows.)"
   },
   {
-    "objectID": "use-cases/earth-imagery.html#conclusion",
-    "href": "use-cases/earth-imagery.html#conclusion",
-    "title": "Guidance for FAIR Publication and Citation of Earth Imagery in Soil Research",
-    "section": "",
-    "text": "FAIR publication of earth imagery are challenging for full file deposition, but it does require traceability, transparency, and citable identifiers. By documenting access pathways, identifiers, transformations, and licensing, earth imagery remains a reusable component of derived data products."
+    "objectID": "use-cases/inspire-xml.html#units-vocabularies-controlled-lists",
+    "href": "use-cases/inspire-xml.html#units-vocabularies-controlled-lists",
+    "title": "INSPIRE XML",
+    "section": "Units, vocabularies & controlled lists",
+    "text": "Units, vocabularies & controlled lists\n\nNormalise measurement units and codes before encoding. INSPIRE expects consistent vocabularies and enumerations where the application schema prescribes them. Where INSPIRE uses code lists, re-use those or document your extension. (inspire-mif.github.io)"
   },
   {
-    "objectID": "use-cases/glosis.html",
-    "href": "use-cases/glosis.html",
-    "title": "Glosis Web Ontology",
-    "section": "",
-    "text": "Use the GloSIS ontology network (master module + domain modules) to represent soil profiles, plots, samples, observations, and laboratory procedures in RDF. ([GitHub][1])\nReuse the formal patterns GloSIS relies on: SOSA/SSN for observations, GeoSPARQL for geospatial, QUDT for units/quantities and SKOS for code lists. This increases compatibility with other environmental/observational data. ([arXiv][2])\nProduce: (a) an RDF dataset (Turtle or TriG) derived from your source spreadsheets/CSV/DB, (b) SHACL validation shapes, (c) a machine-readable dataset landing page (DCAT/Dublin Core + citation + DOI), and (d) a SPARQL endpoint / triple store for programmatic reuse and discovery."
+    "objectID": "use-cases/inspire-xml.html#gml-encoding-recommendations",
+    "href": "use-cases/inspire-xml.html#gml-encoding-recommendations",
+    "title": "INSPIRE XML",
+    "section": "GML encoding recommendations",
+    "text": "GML encoding recommendations\n\nUse the INSPIRE application schema XSD (provided with the technical guidelines) to encode feature instances. Validate generated GML against those XSDs. (inspire-mif.github.io)\nRepresent observations that are temporal or measured quantities following ISO 19156 (Observations & Measurements) where possible (INSPIRE guidance refers to O&M patterns). (inspire-mif.github.io)"
   },
   {
-    "objectID": "use-cases/glosis.html#identify-and-model-core-entities-map-your-schema-glosis",
-    "href": "use-cases/glosis.html#identify-and-model-core-entities-map-your-schema-glosis",
-    "title": "Glosis Web Ontology",
-    "section": "Identify and model core entities (map your schema → GloSIS)",
-    "text": "Identify and model core entities (map your schema → GloSIS)\nMinimum entities you should model:\n\nSite (area investigated) → GloSIS GL_Site / site-plot module. ([w3id.org][3])\nPlot (sampling plot) → GL_Plot. ([w3id.org][3])\nProfile / Horizon → GL_Profile, Layer/Horizon classes (layer-horizon module). ([w3id.org][4])\nSample (physical sample from horizon/plot) → link to sample identifier, date, collector, GPS geometry.\nObservation / Measurement → use SOSA Observation as GloSIS aligns observations with SOSA/OM ontology patterns (e.g., measurement event, result, observedProperty). Use QUDT units for numeric results. ([arXiv][2])\nProcedure / Lab method → GloSIS procedure module for standardized lab codes and method reference lists. ([GitHub][5])\n\nTip: Prefer modeling the observation event (SOSA Observation) that points to a FeatureOfInterest (the sample or horizon) and a Result that carries numeric value + unit."
+    "objectID": "use-cases/inspire-xml.html#transformation-tools-practical-tips",
+    "href": "use-cases/inspire-xml.html#transformation-tools-practical-tips",
+    "title": "INSPIRE XML",
+    "section": "Transformation tools & practical tips",
+    "text": "Transformation tools & practical tips\n\nHALE (HUMBOLDT Alignment Editor) — widely used to map relational/CSV source schemas to INSPIRE GML; can be automated and reused. See practical examples where SOTER→INSPIRE alignments used HALE. (isric.org)\nScripting/ETL — Python (GDAL/OGR, lxml), FME, or custom tools can generate GML if you prefer code-based pipelines. For complex mappings, HALE + scripts work well.\nDatastore — keep canonical geometries and attributes in PostGIS; publish GML via GeoServer, pygeoapi or an INSPIRE-capable WFS provider."
   },
   {
-    "objectID": "use-cases/glosis.html#use-persistent-resolvable-iris",
-    "href": "use-cases/glosis.html#use-persistent-resolvable-iris",
-    "title": "Glosis Web Ontology",
-    "section": "Use persistent, resolvable IRIs",
-    "text": "Use persistent, resolvable IRIs\n\nMint IRIs under your domain, e.g., https://data.example.org/soil/site/XXXX, .../sample/YYY, and ensure content negotiation serves HTML landing pages and RDF (Turtle).\nWhere possible, adopt w3id.org or the GloSIS w3id IRIs for ontology terms; GloSIS modules are available under stable w3id IRIs. ([w3id.org][3])"
+    "objectID": "use-cases/inspire-xml.html#validation-testing",
+    "href": "use-cases/inspire-xml.html#validation-testing",
+    "title": "INSPIRE XML",
+    "section": "Validation & testing",
+    "text": "Validation & testing\n\nUse the INSPIRE Abstract Test Suite and available validation services to check conformance to the Soil data specification and GML application schemas. Capture and publish validation reports with dataset DOI. (GitHub)\nRun XSD validation, schema-aware tests (cardinality, mandatory elements), and domain checks (units, allowed codes)."
   },
   {
-    "objectID": "use-cases/glosis.html#units-and-code-lists",
-    "href": "use-cases/glosis.html#units-and-code-lists",
-    "title": "Glosis Web Ontology",
-    "section": "Units and code lists",
-    "text": "Units and code lists\n\nMap measurement units to QUDT or a controlled URI list (e.g., grams per kg → QUDT URI). This avoids ambiguous strings such as “g/kg” vs “g per kg”. ([arXiv][2])\nLoad GloSIS codelists (they are provided as SKOS concept schemes in the GloSIS modules) and reuse them for categorical fields (texture, classification, colour). ([GitHub][1])"
-  },
-  {
-    "objectID": "use-cases/glosis.html#provenance-citation",
-    "href": "use-cases/glosis.html#provenance-citation",
-    "title": "Glosis Web Ontology",
-    "section": "Provenance & citation",
-    "text": "Provenance & citation\n\nUse PROV-O to capture: who ingested data, original source (DB or CSV), transformation script version, and lab certificate/procedure identifiers.\nProvide dataset metadata: title, authors, affiliation, license, DOI, version, contact person — encode as Dublin Core / DCAT on the landing page and in a machine-readable dcat:Dataset RDF description."
-  },
-  {
-    "objectID": "use-cases/glosis.html#validation-shacl",
-    "href": "use-cases/glosis.html#validation-shacl",
-    "title": "Glosis Web Ontology",
-    "section": "Validation (SHACL)",
-    "text": "Validation (SHACL)\n\nImplement SHACL shapes for:\n\nrequired properties (site must have geometry, sample must reference a profile/horizon),\nunit constraints (numeric observations must have associated QUDT unit),\nallowed SKOS codes for categorical fields,\ncardinality (e.g., each sample must have exactly one sampling date).\n\nRun SHACL during ETL and as a pre-publication gate."
-  },
-  {
-    "objectID": "use-cases/inspire-geopackage.html",
-    "href": "use-cases/inspire-geopackage.html",
-    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
-    "section": "",
-    "text": "This strategy outlines an approach for adopting the INSPIRE Good Practice (GP) on GeoPackage (GPKG) as a compliant encoding for soil data. The objective is to enhance interoperability, simplify data exchange, and support the delivery of INSPIRE-compliant datasets in a modern, efficient format. The transition from existing GML-based implementations to GeoPackage aligns with INSPIRE’s recommendations for improving usability and performance in geospatial data delivery."
-  },
-  {
-    "objectID": "use-cases/inspire-geopackage.html#inspire-directive-overview",
-    "href": "use-cases/inspire-geopackage.html#inspire-directive-overview",
-    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
-    "section": "INSPIRE Directive Overview",
-    "text": "INSPIRE Directive Overview\nThe INSPIRE Directive (2007/2/EC) was established to build a European Union spatial data infrastructure that supports environmental policies and activities affecting the environment. Among the 34 data themes listed in Annex III of the Directive, soil is included as one of them. For each theme a common conceptual data model has been suggested, with the aim to be adopted by member states to store and share environmental data. Today the INSPIRE directive is gradually superseded by the regulation on high value datasets. Soil data has been identified as one of the high value datasets."
-  },
-  {
-    "objectID": "use-cases/inspire-geopackage.html#good-practice-on-geopackage-encodings",
-    "href": "use-cases/inspire-geopackage.html#good-practice-on-geopackage-encodings",
-    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
-    "section": "Good Practice on GeoPackage Encodings",
-    "text": "Good Practice on GeoPackage Encodings\nThe INSPIRE Good Practice on GeoPackage Encodings describes an encoding for delivering of spatial data which is lighter and more user-friendly than conventional GML encodings. The practice is facilitated by the SQLite-based GeoPackage encoding (OGC standard), which is widely supported by modern GIS software."
-  },
-  {
-    "objectID": "use-cases/inspire-geopackage.html#the-inspire-soil-conceptual-data-model",
-    "href": "use-cases/inspire-geopackage.html#the-inspire-soil-conceptual-data-model",
-    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
-    "section": "The INSPIRE Soil conceptual data model",
-    "text": "The INSPIRE Soil conceptual data model\nThe INSPIRE conceptual data model is based on the Open Geospatial Consortium model for Observations, Measurements and Samples. For each observation made on a feature of interest (a plot, profile or horizon) either in the field or in a laboratory, the model prescribes to capture along with the observed result, also the observed soil property, the observation procedure and the unit of measure."
-  },
-  {
-    "objectID": "use-cases/inspire-geopackage.html#assessment-phase",
-    "href": "use-cases/inspire-geopackage.html#assessment-phase",
-    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
-    "section": "Assessment Phase",
-    "text": "Assessment Phase\n\nReview current data holdings and GML-based INSPIRE compliance.\n\nIdentify gaps in encoding capabilities or data model compliance.\n\nAssess tools and workflows currently used for data transformation and publication."
-  },
-  {
-    "objectID": "use-cases/inspire-geopackage.html#data-model-alignment",
-    "href": "use-cases/inspire-geopackage.html#data-model-alignment",
-    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
-    "section": "Data Model Alignment",
-    "text": "Data Model Alignment\n\nMap the INSPIRE Soil data model to a schema compatible with GeoPackage.\n\nEnsure the representation of complex features (e.g., nested observations, relationships).\n\nMaintain semantic alignment with INSPIRE data specifications using code lists and controlled vocabularies."
-  },
-  {
-    "objectID": "use-cases/inspire-geopackage.html#toolchain-development",
-    "href": "use-cases/inspire-geopackage.html#toolchain-development",
-    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
-    "section": "Toolchain Development",
-    "text": "Toolchain Development\n\nSelect or develop tools for transforming existing datasets into GeoPackage format.\n\nAutomate validation workflows using tools such as ETF Validator or HALE Studio.\n\nEnsure export scripts support relevant feature types and attribute mappings."
-  },
-  {
-    "objectID": "use-cases/inspire-geopackage.html#pilot-and-testing",
-    "href": "use-cases/inspire-geopackage.html#pilot-and-testing",
-    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
-    "section": "Pilot and Testing",
-    "text": "Pilot and Testing\n\nProduce a pilot GeoPackage dataset for selected regions or features.\n\nValidate data encoding using INSPIRE ETF testing services.\n\nGather feedback from internal and external stakeholders."
-  },
-  {
-    "objectID": "use-cases/inspire-geopackage.html#full-roll-out",
-    "href": "use-cases/inspire-geopackage.html#full-roll-out",
-    "title": "Strategy Document for Adopting the INSPIRE Good Practice on GeoPackage for the Soil Data Theme",
-    "section": "Full Roll-Out",
-    "text": "Full Roll-Out\n\nImplement full-scale transformation of Soil data to GeoPackage.\n\nUpdate metadata to reflect the new encoding format.\n\nPublish datasets via download services in accordance with INSPIRE TG requirements."
-  },
-  {
-    "objectID": "use-cases/knowledge-hubs-and-websites.html",
-    "href": "use-cases/knowledge-hubs-and-websites.html",
-    "title": "Strategy for Adopting FAIR Principles in Project Websites and Knowledge Hubs",
-    "section": "",
-    "text": "The FAIR principles (Findability, Accessibility, Interoperability, and Reusability) are essential guidelines for enhancing the utility of digital assets. This strategy outlines how to integrate these principles into the development, maintenance, and archiving of project websites and data and/or knowledge hubs, which are developed as part of a research project. Central in this strategy is to establish robust archiving practices for long-term content preservation, because due to their nature, project websites and knowledge hubs have a high likelihood of content alteration and discontinuation.\nProject websites and especially knowledge hubs developed in large Horizon Europe projects have a tendency to contain unique information which is not available elsewhere on the web. Due to the project timeline, the websites and hubs tend to be unmaintained after the project, handed over to a second party, abandoned or discontinued. If not carefully archived this unique information has a high risk of being lost. The project websites are ofter referenced from journal articles and (progress) reports. A progress report typically aims to reference a specific state of the deliverable, which is difficult if the content of the system is dynamic. For both scenario’s, it is of interest to persist the state of the system at intervals, but at least at project finalisation, to facilitate consistent access to the content and accurate citation.\nThis document provides a strategy on how to facilitate a process in which the content of an online system is operated and archived following the FAIR principles."
-  },
-  {
-    "objectID": "use-cases/knowledge-hubs-and-websites.html#metadata-oriented-knowledge-hubs",
-    "href": "use-cases/knowledge-hubs-and-websites.html#metadata-oriented-knowledge-hubs",
-    "title": "Strategy for Adopting FAIR Principles in Project Websites and Knowledge Hubs",
-    "section": "Metadata oriented knowledge hubs",
-    "text": "Metadata oriented knowledge hubs\nIf a knowledge and/or data hub is oriented on metadata descring a set of resources, the final archive of the content will benefit from a structured format using a standardised ontology, such as Dublin Core. Consider for example a CSV format with each row describing a resource, with metadata fields as columns (title, abstract, subject, license, creator, date). In this scenario you can use the CSVW approach in the use case tabular data to describe the CSV in an interoperable way."
+    "objectID": "use-cases/inspire-xml.html#metadata-repository-deposit",
+    "href": "use-cases/inspire-xml.html#metadata-repository-deposit",
+    "title": "INSPIRE XML",
+    "section": "Metadata & repository deposit",
+    "text": "Metadata & repository deposit\n\nProduce ISO 19115/19139 metadata for the GML dataset and publish this alongside or embedded in the repository record. Also publish a DCAT or Dublin Core landing-page record for the academic repository. (INSPIRE Knowledge Base)\nRepository package should contain: canonical GML dump (.xml/.gml), XSDs used, mapping spec (HALE project or mapping files), validation report(s), a GeoPackage/CSV extract, README and license. Mint a DOI for the package."
   },
   {
     "objectID": "use-cases/soil-property-indicator-maps.html",
