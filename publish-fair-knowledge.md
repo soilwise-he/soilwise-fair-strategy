@@ -1,8 +1,14 @@
-*Guidelines on (Mission Soil) Data and Knowledge FAIRness and Findability*
 
- 
+---
+title: Guidelines on (Mission Soil) Data and Knowledge FAIRness and Findability
+authors:
+- Celine Blitz-Frayret
+- Paul van Genuchten
+date: 2025-07-20
+draft: true
+---
 
-1. Introduction 
+## Introduction 
 
 Soil is one of our most vital natural resources, yet it faces mounting pressures from climate change, land degradation, and unsustainable management. To protect and restore soils effectively, we need high-quality, accessible data and reliable knowledge. That’s where SoilWise Repository (SWR) comes in—the data and knowledge hub designed to gather all relevant resources across the soil domain, accessible through one access point. 
 
@@ -33,7 +39,7 @@ This document was created for Mission Soil projects as a guideline to summarise 
 
  
 
-2. General Information 
+## General Information 
 
 Notes: 
 
@@ -41,59 +47,18 @@ Notes:
 * SWR introduction   
 * Emphasis on metadata role   
 * Ensuring FAIRness requires the use of open formats, proper metadata, and appropriate repositories.   
-3. Data 
 
 Definitions, intro, how to make decisions on where to store, what is harvested to SWR 
 
 Divide data somehow? E.g. to soil measurements, spatial data analysis, other kinds of analysis… ?  
 
-1. Data management  
+### Knowledge management  
 
 (describe by metadata, standardisation, links to other sources and deliverables, recommended formats, versioning (?)…) 
 
  
 
-1. Raster Data 
-
-Raster data represent spatial information in a grid format and are commonly used for soil-related variables such as soil moisture, organic carbon, texture, land cover, and remote sensing derivatives. In Mission Soil projects, raster data often originate from field monitoring, remote sensing, or model outputs. 
-
-Raster data providers should store raster datasets in open, widely used formats, ensure spatial reference is correctly embedded, and accompany the data with complete metadata using recognized standards. Raster data should be findable via catalogues or repositories and accessible via persistent identifiers. 
-
-**Recommended Repositories** 
-
-Data repositories should be trustworthy \[link to what trustworthy means\], persistent, and compliant with FAIR principles. Ideally, they should support DOI assignment, long-term storage, and community standards. Choose domain-specific repositories or general-purpose open repositories that support environmental data. 
-
-* Zenodo – general-purpose repository supporting large files and FAIR compliance   
-* EUDAT B2SHARE / B2SAFE – supports long-term data preservation and metadata standards   
-* ESDAC – specialized repository for EU-scale soil-related datasets   
-* DEIMS-SDR – for site-based environmental observations 
-
- 
-
- 
-
-Notes: 
-
-* Persistent repositories, such as listed in:   
-* Registry of Research Data Repositories: [https://www.re3data.org](https://www.re3data.org/)    
-* Soil Sciences: [https://www.re3data.org/search?query=\&subjects\[\]=23101](https://www.re3data.org/search?query=&subjects%5b%5d=23101)   
-* Link to List of SWR harvested repositories 
-
-**Recommended Formats** 
-
-Prefer open, standardized (ideally OGC-compliant \[link\]) formats that ensure interoperability and long-term readability. Formats should support georeferencing and metadata embedding. Avoid proprietary or poorly documented formats. 
-
-* GeoTIFF (.tif) – open, widely used format for georeferenced raster data   
-* NetCDF (.nc) – suitable for time-series and multidimensional environmental data   
-* HDF5 – flexible and scalable for structured raster outputs (e.g. from models) 
-
- 
-
-Notes: 
-
-* SWR harvests only metadata 
-
-**Recommended Metadata standards** 
+### Recommended Metadata standards
 
 Use internationally recognized metadata standards that ensure discoverability, interoperability, and clarity. Metadata should describe the also raster dataset’s origin, scope, resolution, spatial and temporal extent, and processing history. Choose standards that are compatible with spatial data infrastructures and catalogue systems. 
 
@@ -109,7 +74,7 @@ Notes:
 
 * DC as a minimal requirement 
 
-**Metadata Management** 
+### Metadata Management
 
 Metadata are essential to making data FAIR. Projects should treat metadata creation and maintenance as an integral part of data workflows. Metadata should be created at the time of data generation, maintained throughout the project, and updated when changes occur.  
 
@@ -121,7 +86,7 @@ Notes:
 * List of recommended elements (link to more detailed descriptions and examples)   
 * Emphasis on interlinking with other assets, vocabularies, project, persistent identification  
 
-**Recommended Licences** 
+### Recommended Licences
 
 Licensing should be clear, standardized, and as open as possible. Use well-known licenses that facilitate reuse, attribution, and integration with other datasets. When data cannot be openly shared, clearly state the reasons and explore options for controlled access. 
 
@@ -132,25 +97,6 @@ Notes:
 * Standardised licences, such as CCs 
 
  
-
-2. Vector data 
-
-**Recommended Repositories** 
-
-**Recommended Formats** 
-
-**Recommended Metadata standards** 
-
-**Metadata Management** 
-
-**Recommended Licences** 
-
- 
-
-3. Geodatabase   
-4. Service   
-5. 3D Model   
-6. Tabular data 
 
  
 
@@ -308,11 +254,4 @@ TODO:
 
  
 
- 
-
-2-pager 
-
-[https://ilvo.sharepoint.com/:p:/r/sites/HESoilWiseProject/Gedeelde%20documenten/General/Meetings/External/2024%20EU%20Mission%20Soil%20Week%20Brussels%20(12-14%20November%202024)/20241114\_Cluster%20Data\_afternoon.pptx?d=w5eccc1be6dd24bf19d73f665f91e9069\&csf=1\&web=1\&e=sgwW85](https://ilvo.sharepoint.com/:p:/r/sites/HESoilWiseProject/Gedeelde%20documenten/General/Meetings/External/2024%20EU%20Mission%20Soil%20Week%20Brussels%20\(12-14%20November%202024\)/20241114_Cluster%20Data_afternoon.pptx?d=w5eccc1be6dd24bf19d73f665f91e9069&csf=1&web=1&e=sgwW85) 
-
- 
 

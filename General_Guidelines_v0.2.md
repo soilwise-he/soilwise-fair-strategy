@@ -10,7 +10,7 @@ Version: 0.2
 Project: An open access knowledge and data repository to safeguard soils (SoilWise) 
 ---
 
-# 6 Steps Towards FAIR Data and Knowledge in Mission Soil
+
 
 Soil-related data and knowledge are essential for understanding and improving soil health, guiding sustainable land management, informing policy, and enabling scientific progress. Yet, these resources are often scattered, poorly documented, hard to access, or locked in incompatible formats. This fragmentation hampers their reuse, reduces their impact, and creates inefficiencies across projects and disciplines.
 

@@ -2,6 +2,7 @@ project:
   type: website
   render:
     - "*.md"
+    - "*.qmd"
 
 website:
   title: "Soilwise project FAIR Strategy"

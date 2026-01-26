@@ -5,6 +5,7 @@ Audience: Researchers in Mission Soil Projects
 Date: June 2025   
 Version: 0.1   
 Project: An open access knowledge and data repository to safeguard soils (SoilWise) 
+draft: true
 ---
  
 Soil-related data and knowledge are essential for understanding and improving soil health, guiding sustainable land management, informing policy, and enabling scientific progress. Yet, these resources are often scattered, poorly documented, hard to access, or locked in incompatible formats. This fragmentation hampers their reuse, reduces their impact, and creates inefficiencies across projects and disciplines. 
