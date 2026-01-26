@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6 Steps Towards FAIR Data and Knowledge in Mission Soil – Soilwise project FAIR Strategy</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-8fd1faf6fd93e4e6d207ae0f9db51d78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://www.soilwise-he.eu" class="navbar-brand navbar-brand-logo">
+    <img src="https://avatars.githubusercontent.com/u/144736920?s=200&amp;v=4" alt="Soilwise logo" class="navbar-logo light-content">
+    <img src="https://avatars.githubusercontent.com/u/144736920?s=200&amp;v=4" alt="Soilwise logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./README.md"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./General_Guidelines_v0.2.html" aria-current="page"> 
+<span class="menu-text">General guidelines</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./publish-fair-data.html"> 
+<span class="menu-text">Fair Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./publish-fair-knowledge.html"> 
+<span class="menu-text">Fair Knowledge</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./use-cases/README.md"> 
+<span class="menu-text">Use Cases</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">6 Steps Towards FAIR Data and Knowledge in Mission Soil</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="steps-towards-fair-data-and-knowledge-in-mission-soil" class="level1">
+<h1>6 Steps Towards FAIR Data and Knowledge in Mission Soil</h1>
+<p>Soil-related data and knowledge are essential for understanding and improving soil health, guiding sustainable land management, informing policy, and enabling scientific progress. Yet, these resources are often scattered, poorly documented, hard to access, or locked in incompatible formats. This fragmentation hampers their reuse, reduces their impact, and creates inefficiencies across projects and disciplines.</p>
+<p>This strategy, developed within the <strong>SoilWise</strong> project, provides guidance to ensure that all data and knowledge generated, collected, or reused within Mission Soil projects are managed according to the <strong>FAIR principles</strong> – Findable, Accessible, Interoperable, and Reusable.</p>
+<p>By applying the FAIR principles, we can increase the visibility and value of soil-related data and knowledge. FAIRness enables:</p>
+<ul>
+<li><strong>Transparency</strong> – allowing others to understand how data were produced and under what conditions.<br>
+</li>
+<li><strong>Collaboration</strong> – making it easier to combine datasets across projects, regions, and domains.<br>
+</li>
+<li><strong>Efficiency</strong> – reducing duplication of efforts and enabling the reuse of existing data.<br>
+</li>
+<li><strong>Impact</strong> – enhancing the potential for innovation, decision support, and long-term use of project outputs.</li>
+</ul>
+<p>It is intended not only as a conceptual framework, but also as a practical tool to support project teams in developing their own Data Management Plans (DMPs). Each project or work package should describe how its data and knowledge will be handled, shared, and sustained in a FAIR-compliant way.</p>
+<p>Soil health knowledge is inherently diverse – ranging from field measurements and lab results to local experiences and spatial models. This strategy promotes coherence and openness while respecting contextual and disciplinary differences.</p>
+<p><strong>Metadata</strong> play a central role in this process: without clear and rich metadata, data cannot be truly findable or reusable. Metadata describe the context, origin, structure, and conditions of use of the data or knowledge asset, acting as the bridge between producers and users — whether human or machine.</p>
+<hr>
+<section id="approach-how-to-fairify-data-and-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="approach-how-to-fairify-data-and-knowledge">Approach: How to FAIRify Data and Knowledge</h2>
+<p>We recommend the following stepwise process for implementing FAIR principles during metadata population.</p>
+<hr>
+</section>
+<section id="step-1-inventory-typology" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-inventory-typology">Step 1: Inventory &amp; Typology</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 58%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Principles</strong></th>
+<th><strong>How to</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>• Identify what data and knowledge will be created or reused. <br> • Classify them by type, format, origin, and reuse potential.</td>
+<td>• During project planning or Data Management Plan (DMP) preparation, make a list of all expected outputs: datasets, reports, maps, models, code, workflows, protocols, websites, and other knowledge products.<br> • For each resource, note whether it is newly created, collected from partners, or reused from external sources.<br> • Record the data type and format (e.g., raster, tabular, text, time series).</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="step-2-choose-trustworthy-repositories" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-choose-trustworthy-repositories">Step 2: Choose Trustworthy Repositories</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Principles</strong></th>
+<th><strong>How to</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>• Use trustworthy platforms for archiving and sharing <br> • Prefer repositories that support persistent identifiers (e.g., DOI), machine-readable metadata, and open licenses. <br><br>Remember that FAIR doesn’t necessarily mean open. In most repositories, you can also safely store resources with restricted access.</td>
+<td>• Choose a repository before your project outputs are finalized, so you can prepare metadata accordingly. <br> • For academic outputs, use <a href="https://zenodo.org/">Zenodo</a> (linked to OpenAIRE). For other contexts, explore <a href="https://www.re3data.org/">re3data.org</a> to identify certified or domain-specific repositories. <br> • Verify that the repository supports persistent identifiers (PID, DOI) and offers clear license options (e.g., Creative Commons). <br> • Check repository policy: does it allow embargo periods or restricted access for sensitive data?</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How to be discoverable by Soil Wise harvesting strategies?</strong> For outputs of Horizon Europe research, verify that the selected repository is harvested by <a href="https://openaire.org/">OpenAire</a> and that the Grant number of the project can be added as part of the funding information. SoilWise and Cordis use this information to select relevant publications. For non-academic repositories, verify that the repository is harvested by <a href="https://data.europa.eu/">data.europa.eu</a> and add a keyword soil to the metadata record (in the relevant language of the record). Notice that data.europa.eu includes the contents of <a href="https://esdac.jrc.ec.europa.eu/">ESDAC</a> as well as <a href="https://inspire-geoportal.ec.europa.eu/">INSPIRE Geoportal</a>.</p>
+<hr>
+</section>
+<section id="step-3-choose-open-and-standardized-formats" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-choose-open-and-standardized-formats">Step 3: Choose Open and Standardized Formats</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 58%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Principles</strong></th>
+<th><strong>How to</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>• Use non-proprietary, open formats whenever possible. <br> • Ensure that data formats are machine-readable and suitable for long-term access.</td>
+<td>• If possible, when preparing data for sharing, export or convert them into open formats: <br> - CSV, TSV → for tabular data<br> - GeoJSON, GML → for vector spatial data<br> - GeoTIFF → for raster data<br> - PDF/A or TXT → for documents<br> - SQLite, PostgreSQL dumps → for databases<br> • Avoid file formats that depend on proprietary software (e.g., XLSX, MDB, DOCX).<br> • If necessary for reusability or additional description of your data, include a README.txt file in the dataset or archive describing:<br> - data structure, variable descriptions, units<br> - coordinate system (for spatial data)<br> - software used to create or open files<br> - known limitations or assumptions. <br> • Compress related files into a ZIP archive before uploading, ensuring all dependencies are included.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="step-4-metadata-design-and-management" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-metadata-design-and-management">Step 4: Metadata Design and Management</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 58%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Principles</strong></th>
+<th><strong>How to</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>• Populate as much metadata as you can and describe all the information needed to understand and use your data. You will support the Reusability of the resource. <br> • Assign persistent identifiers (PIDs) to data objects, documents, and authors whenever possible. <br> • Use metadata to interlink related resources.</td>
+<td>• Create metadata at the time of upload or using metadata templates provided by your repository. <br> • Fill in all key fields: title, creators (with ORCID if possible), description, keywords, publication date, funding, related resources, license, and version. <br> • Use clear, descriptive titles and structured abstracts that explain what the dataset contains, how it was produced, and its spatial/temporal coverage. <br> • Assign persistent identifiers (PIDs):<br> - Dataset → DOI<br> - People → ORCID<br> - Projects → Grant number / ROR (Research Organization Registry <br> • Interlink related resources, such as datasets, publications, methodologies, software or reports. Most repositories allow “Related identifiers”. <br> • Keep a local copy of metadata (e.g., in JSON, XML, or CSV format) as a backup for institutional archiving.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="step-5-use-controlled-vocabularies-and-ontologies" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-use-controlled-vocabularies-and-ontologies">Step 5: Use Controlled Vocabularies and Ontologies</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Principles</strong></th>
+<th><strong>How to</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>• Apply standardized vocabularies, code lists or established domain terms to describe data content and context. <br> • If possible, avoid creating new vocabularies and ontologies in your project. When local or project-specific terms are used, provide crosswalks or mappings to widely used vocabularies.</td>
+<td>• Identify the relevant vocabulary or established domain terms source early in the project: <br> - <a href="https://agrovoc.fao.org/">AGROVOC</a> – for agricultural concepts <br> - <a href="https://www.eionet.europa.eu/gemet/en/about/">GEMET</a> – for environmental terms <br> - <a href="https://knowledge-base.inspire.ec.europa.eu/tools/inspire-themes_en">INSPIRE themes</a> – for spatial data <br> - <a href="https://www.fao.org/soils-portal/data-hub/soil-classification/world-reference-base/en/">WRB soil classification</a> <br> - <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php/LUCAS_-_Land_use_and_land_cover_survey">LUCAS codes</a> <br> - <a href="https://www.eea.europa.eu/en/datahub/datahubitem-view/123d0c9a-a6fa-4f2d-b887-5d8e5468faed">EUNIS habitat codes</a><br>• Use the suggested keywords from your repository’s predefined list — this ensures linking to standard vocabularies automatically.<br> • For attributes or variables in datasets, provide code lists or lookup tables that explain categorical values (e.g., soil texture codes).<br> • When using project-specific terminology, create a mapping table linking local terms to standard equivalents (crosswalk). Store it with your dataset.<br>• For ontologies or semantic models, reference them by URI where possible (e.g., from <a href="https://catalogue.fair-impact.eu/resources/agroportal">AgroPortal</a> or <a href="https://bioportal.bioontology.org/">BioPortal</a>).</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="step-6-define-licensing-and-access-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-define-licensing-and-access-conditions">Step 6: Define Licensing and Access Conditions</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Principles</strong></th>
+<th><strong>How to</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>• Clearly specify the terms under which data and knowledge can be reused. Always use already existing, standardised licences. <br> • Provide machine-readable licensing information in metadata. <br> • FAIR doesn’t necessarily mean open. In most repositories, you can also safely store resources with restricted access.</td>
+<td>• Before publication, review whether your data contains personal, confidential, or sensitive information (e.g., farmer names, coordinates of private land). <br> • If necessary, anonymize or aggregate data before release.<br> • Choose a <a href="https://spdx.org/licenses">standard license</a> compatible with your data type (If possible, choose one of the <a href="https://creativecommons.org/licenses/">Creative Commons</a> licenses. They are widely used, and easy to understand), such as: <br>- <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> – requires attribution (recommended default)<br>- <a href="https://creativecommons.org/public-domain/cc0/">CC0</a> – public domain<br>- <a href="https://creativecommons.org/licenses/by-nc/4.0">CC-BY-NC</a> – non-commercial use<br>- <a href="https://opendatacommons.org/licenses/by/1-0">ODC-BY</a> – for databases<br> • Include the license text or identifier (e.g., <a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>) in your metadata record.<br> • Choose the most open license possible, while respecting privacy, ethical and legal constraints.<br> • Ensure the repository captures the license as machine-readable metadata.<br> • If access restrictions apply, specify the access level (open, embargoed, restricted) and provide contact information for requests.<br> • Mention licensing and access terms clearly in your DMP and README file.<br> • When in doubt, consult your institutional data steward or legal office before choosing the license.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>If you are part of a Mission Soil project and want your resources to be findable through the SoilWise Catalogue, the easiest way is to upload them to <a href="https://zenodo.org/">Zenodo</a> and link the assets to your project (in the “Funding” section).</strong> It will be automatically harvested and indexed in the SoilWise Catalogue within a few days.</p>
+<hr>
+<p>For more information on FAIR principles, you can visit guides at e.g.&nbsp;<a href="https://www.openaire.eu/guides">OpenAIRE</a> or <a href="https://www.go-fair.org/fair-principles/">GO FAIR</a>, or you can test your resource FAIRness at <a href="https://ardc.edu.au/resource/fair-data-self-assessment-tool/">FAIR Data Self-Assessment</a> or <a href="https://www.fairsfair.eu/tools-software">FAIRsFAIR</a> tools. See also the related official Horizon 2020 documents, <a href="https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf">Guidelines on FAIR Data Management in Horizon 2020</a>, and <a href="https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-pilot-guide_en.pdf">Guidelines to the Rules on Open Access to Scientific Publications and Open Access to Research Data in Horizon 2020</a>.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/soilwise-he\.github\.io\/soilwise-fair-strategy\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions"><ul><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/edit/main/General_Guidelines_v0.2.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://cordis.europa.eu/project/id/101112838">
+<p>The project receives funding from the European Union’s HORIZON Innovation Actions 2022 under grant agreement No.&nbsp;101112838</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

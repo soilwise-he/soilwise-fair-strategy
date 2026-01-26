@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>INSPIRE XML – Soilwise project FAIR Strategy</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-8fd1faf6fd93e4e6d207ae0f9db51d78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://www.soilwise-he.eu" class="navbar-brand navbar-brand-logo">
+    <img src="https://avatars.githubusercontent.com/u/144736920?s=200&amp;v=4" alt="Soilwise logo" class="navbar-logo light-content">
+    <img src="https://avatars.githubusercontent.com/u/144736920?s=200&amp;v=4" alt="Soilwise logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../README.md"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../General_Guidelines_v0.2.html"> 
+<span class="menu-text">General guidelines</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publish-fair-data.html"> 
+<span class="menu-text">Fair Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publish-fair-knowledge.html"> 
+<span class="menu-text">Fair Knowledge</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../use-cases/README.md"> 
+<span class="menu-text">Use Cases</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">INSPIRE XML</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="executive-summary" class="level1">
+<h1>Executive summary</h1>
+<p>Publish two complementary outputs:</p>
+<ol type="1">
+<li>An INSPIRE-compliant GML dataset + OGC services (WFS/WMS/Download), encoded using the INSPIRE Soil application schema (GML/XSD) and the associated technical guidelines. This enables interoperability with European infrastructures and geospatial clients. (<a href="https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf?utm_source=chatgpt.com" title="[PDF] D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines">inspire-mif.github.io</a>)</li>
+<li>A repository-grade package (RDF metadata / DCAT or Dublin Core + dataset landing page + DOI) containing the canonical INSPIRE GML dump, service endpoints, validation report and human-friendly exports (CSV, GeoPackage). Index the dataset in your institutional repository so non-GIS consumers can find and cite it.</li>
+</ol>
+<p>Together these make your soil observations discoverable, machine-actionable and citable across both geospatial and academic ecosystems. (<a href="https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf?utm_source=chatgpt.com" title="[PDF] D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines">inspire-mif.github.io</a>)</p>
+</section>
+<section id="key-objectives-success-metrics" class="level1">
+<h1>Key objectives &amp; success metrics</h1>
+<p>Objectives</p>
+<ul>
+<li>Encode sites, soil profiles/bodies, samples, measurements and derived products using the INSPIRE Soil UML / GML application schema and ISO/OGC observation standards. (<a href="https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf?utm_source=chatgpt.com" title="[PDF] D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines">inspire-mif.github.io</a>)</li>
+<li>Provide OGC services (WFS + Download) and dataset metadata (ISO 19115/19139 and DCAT) and mint a DOI for the canonical archive.</li>
+<li>Validate conformance using INSPIRE validation tools / Abstract Test Suite and publish the validation report.</li>
+</ul>
+<p>Success metrics (examples)</p>
+<ul>
+<li>100% of spatial features comply with the INSPIRE application schema XSD; validation report = PASS or documented exceptions. (<a href="https://github.com/inspire-eu-validation/data-so?utm_source=chatgpt.com" title="Abstract Test Suite for the Data Specification on Soil - GitHub">GitHub</a>)</li>
+<li>DOI + landing page with machine-readable metadata (ISO/19115 / DCAT).</li>
+<li>Public WFS returning correct feature counts for SoilProfile / SoilBody / SoilObservation queries within 5s.</li>
+</ul>
+</section>
+<section id="why-the-inspire-gml-route" class="level1">
+<h1>Why the INSPIRE GML route?</h1>
+<p>INSPIRE’s Soil technical guidelines and GML application schema define the interoperable UML/GML encoding and conformance classes that EU Member States and tools expect. Using the INSPIRE model ensures your data can be discovered and re-used in Europe-wide systems (geoportals, national INSPIRE services) and validated against standard test suites. (<a href="https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf?utm_source=chatgpt.com" title="[PDF] D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines">inspire-mif.github.io</a>)</p>
+</section>
+<section id="high-level-architecture-data-products" class="level1">
+<h1>High-level architecture &amp; data products</h1>
+<ol type="1">
+<li>Source systems — field CSVs, LIMS, spreadsheets, databases (Postgres/PostGIS).</li>
+<li>Harmonization &amp; Mapping — clean, normalize units/vocabularies, map to the INSPIRE UML → GML (tools: HALE, custom ETL). (<a href="https://www.isric.org/sites/default/files/Report05_ExportingDanubeBasinSOTERdatabases2INSPIREcompliantGML_SOTER.pdf?utm_source=chatgpt.com" title="[PDF] Collection of soil data in SOTER format from 14 Danube strategy ...">isric.org</a>)</li>
+<li>GML production — generate INSPIRE application-schema-conformant GML (feature instances) and XSD-validated outputs. (<a href="https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf?utm_source=chatgpt.com" title="[PDF] D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines">inspire-mif.github.io</a>)</li>
+<li>Validation — run the INSPIRE Abstract Test Suite &amp; local conformance tests; record reports. (<a href="https://github.com/inspire-eu-validation/data-so?utm_source=chatgpt.com" title="Abstract Test Suite for the Data Specification on Soil - GitHub">GitHub</a>)</li>
+<li>Service + Repository — host WFS (and WMS if needed), provide download services and deposit canonical GML + metadata + validation report in academic repository (DOI).</li>
+<li>Documentation &amp; examples — publish mapping documentation, example queries, and CSV/GeoPackage extracts for non-GIS users.</li>
+</ol>
+</section>
+<section id="detailed-technical-approach" class="level1">
+<h1>Detailed technical approach</h1>
+<section id="map-your-domain-to-inspire-feature-types" class="level2">
+<h2 class="anchored" data-anchor-id="map-your-domain-to-inspire-feature-types">Map your domain to INSPIRE feature types</h2>
+<p>Core INSPIRE Soil feature types (conceptual equivalents you should map to) include (see INSPIRE docs for exact class names / UML):</p>
+<ul>
+<li>SoilBody / SoilProfile — macroscopic bodies / profiles. Map your site/profile/horizon constructs here. (<a href="https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf?utm_source=chatgpt.com" title="[PDF] D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines">inspire-mif.github.io</a>)</li>
+<li>SoilObservation / SoilRelatedProperty — thematic observations and derived properties (may use ISO 19156/OM for measurement representation). (<a href="https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf?utm_source=chatgpt.com" title="[PDF] D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines">inspire-mif.github.io</a>)</li>
+<li>SamplingFeatures / Sample — link physical samples to SoilProfile and SoilBody features.</li>
+<li>Spatial features / geometries — use ISO/OGC geometry encodings in GML (boundedBy, geometryMember).</li>
+</ul>
+<p>Create a mapping table: your source column → INSPIRE UML attribute / association → target GML element / XSD element. (I can generate a starter mapping table for your CSV if you paste 3–8 sample rows.)</p>
+</section>
+<section id="units-vocabularies-controlled-lists" class="level2">
+<h2 class="anchored" data-anchor-id="units-vocabularies-controlled-lists">Units, vocabularies &amp; controlled lists</h2>
+<ul>
+<li>Normalise measurement units and codes before encoding. INSPIRE expects consistent vocabularies and enumerations where the application schema prescribes them. Where INSPIRE uses code lists, re-use those or document your extension. (<a href="https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf?utm_source=chatgpt.com" title="[PDF] D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines">inspire-mif.github.io</a>)</li>
+</ul>
+</section>
+<section id="gml-encoding-recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="gml-encoding-recommendations">GML encoding recommendations</h2>
+<ul>
+<li>Use the INSPIRE application schema XSD (provided with the technical guidelines) to encode feature instances. Validate generated GML against those XSDs. (<a href="https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf?utm_source=chatgpt.com" title="[PDF] D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines">inspire-mif.github.io</a>)</li>
+<li>Represent observations that are temporal or measured quantities following ISO 19156 (Observations &amp; Measurements) where possible (INSPIRE guidance refers to O&amp;M patterns). (<a href="https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf?utm_source=chatgpt.com" title="[PDF] D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines">inspire-mif.github.io</a>)</li>
+</ul>
+</section>
+<section id="transformation-tools-practical-tips" class="level2">
+<h2 class="anchored" data-anchor-id="transformation-tools-practical-tips">Transformation tools &amp; practical tips</h2>
+<ul>
+<li>HALE (HUMBOLDT Alignment Editor) — widely used to map relational/CSV source schemas to INSPIRE GML; can be automated and reused. See practical examples where SOTER→INSPIRE alignments used HALE. (<a href="https://www.isric.org/sites/default/files/Report05_ExportingDanubeBasinSOTERdatabases2INSPIREcompliantGML_SOTER.pdf?utm_source=chatgpt.com" title="[PDF] Collection of soil data in SOTER format from 14 Danube strategy ...">isric.org</a>)</li>
+<li>Scripting/ETL — Python (GDAL/OGR, lxml), FME, or custom tools can generate GML if you prefer code-based pipelines. For complex mappings, HALE + scripts work well.</li>
+<li>Datastore — keep canonical geometries and attributes in PostGIS; publish GML via GeoServer, pygeoapi or an INSPIRE-capable WFS provider.</li>
+</ul>
+</section>
+<section id="validation-testing" class="level2">
+<h2 class="anchored" data-anchor-id="validation-testing">Validation &amp; testing</h2>
+<ul>
+<li>Use the INSPIRE Abstract Test Suite and available validation services to check conformance to the Soil data specification and GML application schemas. Capture and publish validation reports with dataset DOI. (<a href="https://github.com/inspire-eu-validation/data-so?utm_source=chatgpt.com" title="Abstract Test Suite for the Data Specification on Soil - GitHub">GitHub</a>)</li>
+<li>Run XSD validation, schema-aware tests (cardinality, mandatory elements), and domain checks (units, allowed codes).</li>
+</ul>
+</section>
+<section id="metadata-repository-deposit" class="level2">
+<h2 class="anchored" data-anchor-id="metadata-repository-deposit">Metadata &amp; repository deposit</h2>
+<ul>
+<li>Produce ISO 19115/19139 metadata for the GML dataset and publish this alongside or embedded in the repository record. Also publish a DCAT or Dublin Core landing-page record for the academic repository. (<a href="https://knowledge-base.inspire.ec.europa.eu/soil_en?utm_source=chatgpt.com" title="Soil - European Commission - INSPIRE Knowledge Base">INSPIRE Knowledge Base</a>)</li>
+<li>Repository package should contain: canonical GML dump (.xml/.gml), XSDs used, mapping spec (HALE project or mapping files), validation report(s), a GeoPackage/CSV extract, README and license. Mint a DOI for the package.</li>
+</ul>
+</section>
+</section>
+<section id="publication-services" class="level1">
+<h1>Publication &amp; services</h1>
+<ul>
+<li>INSPIRE services: expose a WFS (GetFeature + GetFeatureById), WMS for visualization, and a download service (direct GML downloads). Make sure service metadata references the dataset and conformance class. (<a href="https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf?utm_source=chatgpt.com" title="[PDF] D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines">inspire-mif.github.io</a>)</li>
+<li>Landing page: human + machine readable (ISO metadata and DCAT RDF). Put links to WFS endpoints, download links, checksums and the DOI.</li>
+<li>Access control &amp; licensing: specify license clearly (e.g., CC0 / CC BY) and document any sensitive data restrictions (personal locational data, etc.).</li>
+</ul>
+</section>
+<section id="tools-resource-catalogue" class="level1">
+<h1>Tools &amp; resource catalogue</h1>
+<ul>
+<li>Documentation &amp; XSDs: INSPIRE Soil Technical Guidelines &amp; GML schemas (INSPIRE Knowledge Base + technical-guidelines repo). (<a href="https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf?utm_source=chatgpt.com" title="[PDF] D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines">inspire-mif.github.io</a>)</li>
+<li>Validation: INSPIRE Abstract Test Suite (GitHub + validation tooling). (<a href="https://github.com/inspire-eu-validation/data-so?utm_source=chatgpt.com" title="Abstract Test Suite for the Data Specification on Soil - GitHub">GitHub</a>)</li>
+<li>Mapping: HALE for schema-to-GML mappings; examples exist for SOTER→INSPIRE conversions. (<a href="https://www.isric.org/sites/default/files/Report05_ExportingDanubeBasinSOTERdatabases2INSPIREcompliantGML_SOTER.pdf?utm_source=chatgpt.com" title="[PDF] Collection of soil data in SOTER format from 14 Danube strategy ...">isric.org</a>)</li>
+<li>Publishing: GeoServer, pygeoapi, or other WFS providers for serving GML/WFS; institutional repository (Zenodo, Figshare, DSpace) for DOI-backed deposits. (<a href="https://zenodo.org/records/13970777/files/II3-INSPIRE-Soil.pdf?download=1&amp;utm_source=chatgpt.com" title="[PDF] II.3 INSPIRE Soil - Zenodo">zenodo.org</a>)</li>
+</ul>
+</section>
+<section id="sources-further-reading" class="level1">
+<h1>Sources &amp; further reading</h1>
+<ul>
+<li>INSPIRE Data Specification on Soil – Technical Guidelines (version 3.0) — technical guidelines &amp; GML application schema. (<a href="https://inspire-mif.github.io/technical-guidelines/data/so/dataspecification_so.pdf?utm_source=chatgpt.com" title="[PDF] D2.8.III.3 INSPIRE Data Specification on Soil – Technical Guidelines">inspire-mif.github.io</a>)</li>
+<li>INSPIRE Soil (Zenodo / downloadable PDF mirror). (<a href="https://zenodo.org/records/13970777/files/II3-INSPIRE-Soil.pdf?download=1&amp;utm_source=chatgpt.com" title="[PDF] II.3 INSPIRE Soil - Zenodo">zenodo.org</a>)</li>
+<li>INSPIRE Abstract Test Suite / validation resources (GitHub). (<a href="https://github.com/inspire-eu-validation/data-so?utm_source=chatgpt.com" title="Abstract Test Suite for the Data Specification on Soil - GitHub">GitHub</a>)</li>
+<li>Examples of SOTER → INSPIRE conversions (HALE workflows / case studies). (<a href="https://www.isric.org/sites/default/files/Report05_ExportingDanubeBasinSOTERdatabases2INSPIREcompliantGML_SOTER.pdf?utm_source=chatgpt.com" title="[PDF] Collection of soil data in SOTER format from 14 Danube strategy ...">isric.org</a>)</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/soilwise-he\.github\.io\/soilwise-fair-strategy\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions"><ul><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/edit/main/use-cases/inspire-xml.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://cordis.europa.eu/project/id/101112838">
+<p>The project receives funding from the European Union’s HORIZON Innovation Actions 2022 under grant agreement No.&nbsp;101112838</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

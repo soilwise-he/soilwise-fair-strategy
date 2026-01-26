@@ -1,1 +1,0 @@
-[Bonares](./bonares.md) is a repository for archiving results of long term field experiments. With each deposit contributors are invited to submit metadata at the dataset level, as well as at the column level; which phenomena is observed in the experiment, in which unit and with which procedure. 
