@@ -13,7 +13,7 @@ website:
     logo-alt: Soilwise logo
     title: false
     left:
-      - href: README.md
+      - href: index.md
         text: Home
       - text: General guidelines 
         href: General_Guidelines_v0.2.md
@@ -22,7 +22,7 @@ website:
       - text: Fair Knowledge 
         href: publish-fair-knowledge.md
       - text: Use Cases
-        href: use-cases/README.md
+        href: use-cases/index.md
 
   page-footer:
     right: 
