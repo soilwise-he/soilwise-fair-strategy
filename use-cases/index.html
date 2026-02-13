@@ -137,22 +137,42 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>A selection of use cases, combined with dedicated guidance on how to increase FAIR aspect of a data or knowledge publication.</p>
+<p>The cases are clustered in three topics - <a href="#soil-observation-data">Soil observation data</a> - <a href="#soil-maps">Soil Maps</a>, predicted distribution of soil properties or soil classifications. - <a href="#soil-data-related-resources">Soil data related resources</a></p>
+<section id="soil-observation-data" class="level1">
+<h1>Soil Observation data</h1>
+<section id="common-aspects-in-describing-observation-data" class="level2">
+<h2 class="anchored" data-anchor-id="common-aspects-in-describing-observation-data">Common aspects in describing observation data</h2>
+<p>While SoilWise supports an array of different encodings for observation data, each tailored for different usage areas, these models are united through the underlying conceptual OGC/ISO Observations, Measurements and Samples Standard, semantically formalized under W3C SSN/SOSA. This model entails the use of generic Observation concepts.</p>
+<p><a href="https://github.com/soilwise-he/soil-observation-data-encodings/blob/main/COMMON/Readme.md">Read more</a></p>
+</section>
 <section id="tabular-soil-observation-data" class="level2">
 <h2 class="anchored" data-anchor-id="tabular-soil-observation-data">Tabular Soil Observation Data</h2>
 <p><a href="../use-cases/tabular-data.html">Tabular Soil Observation Data</a> is a common format to share Soil data.</p>
+<p>This tutorial considers various aspects on existing practices and suggest minor optimisations and potential to these workflows.</p>
 </section>
-<section id="soil-property-and-indicator-maps" class="level2">
-<h2 class="anchored" data-anchor-id="soil-property-and-indicator-maps">Soil property and indicator maps</h2>
-<p><a href="../use-cases/soil-property-indicator-maps.html">Soil property and indicator maps</a>, such as soil property distribution predictions, agricultural decision support and soil health indicator changes are produced with conventional and pedometric approaches. An important factor to facilitate reuse is extensive description of lineage. Which source data and procedures have been used to derive the resulting product.</p>
+<section id="inspire-soil-data-in-a-geopackage-format" class="level2">
+<h2 class="anchored" data-anchor-id="inspire-soil-data-in-a-geopackage-format">INSPIRE Soil data in a GeoPackage format</h2>
+<p><a href="../use-cases/inspire-geopackage.html">GeoPackage format for sharing INSPIRE SOIL data</a> is an approach to store data in a relational database while conforming to the INSPIRE Soil conceptual model. Traditionally INSPIRE Soil Observation data and maps require to be shared using a dedicated GML encoding, which was quite a challenge for both data procucers and consumers. The INSPIRE Good Practice using GeoPackage specifically for Soil data has been prepared by the EJP Soil H2020 programme and is further developed in the SoilWise project. - <a href="https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/index.md">Introduction to the INSPIRE SOIL GeoPackage</a> - <a href="https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/data_loading.md">GeoPackage Data Loading &amp; Modelling Guide</a> - <a href="https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/index.md">Tutorial on how to use QGIS to populate the GeoPackage</a></p>
+</section>
+<section id="sharing-predicted-soil-properties-based-on-spectroscopy-data" class="level2">
+<h2 class="anchored" data-anchor-id="sharing-predicted-soil-properties-based-on-spectroscopy-data">Sharing predicted soil properties, based on spectroscopy data</h2>
+<p><a href="../use-cases/spectroscopy.html">Spectroscopy</a> is a relatively novel approach to observe soil properties on soil samples efficiently. The properties are predicted based on a library of reference samples which are assessed both with wet chemistry as well as spectroscopy. A common practice is to deposit the spectra of the observations as part of the data as well as a reference to the spectral library used for the prediction.</p>
 </section>
 <section id="earth-imagery" class="level2">
 <h2 class="anchored" data-anchor-id="earth-imagery">Earth imagery</h2>
 <p><a href="../use-cases/earth-imagery.html">Earth imagery</a> such as satelite and drone data are increasingly used to better understand soils and their interaction with climate, landscape and crops. Imagery data is often used as a predictor of soil property distribution. Due to their size and origin imagery data is usually not deposited in formal repositories, but available from mass storage such as Google Earth Engine, Copernicus or Amazon Cloud, which can be a challenge for citation of the material.</p>
 </section>
-<section id="inspire-soil-data-using-geopackage-format" class="level2">
-<h2 class="anchored" data-anchor-id="inspire-soil-data-using-geopackage-format">INSPIRE Soil data using GeoPackage format</h2>
-<p><a href="../use-cases/inspire-geopackage.html">GeoPackage format for sharing INSPIRE SOIL data</a> is an approach to store data in a relational database while conforming to the INSPIRE Soil conceptual model. Traditionally INSPIRE Soil Observation data and maps require to be shared using a dedicated GML encoding, which was quite a challenge for both data procucers and consumers. The INSPIRE Good Practice using GeoPackage specifically for Soil data has been prepared by the EJP Soil H2020 programme and is further developed in the SoilWise project. - <a href="https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/index.md">Introduction to the INSPIRE SOIL GeoPackage</a> - <a href="https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/data_loading.md">GeoPackage Data Loading &amp; Modelling Guide</a> - <a href="https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/index.md">Tutorial on how to use QGIS to populate the GeoPackage</a></p>
 </section>
+<section id="soil-maps" class="level1">
+<h1>Soil maps</h1>
+<p>Soil maps visualize the distribution of soil properties in space and time.</p>
+<section id="soil-property-and-indicator-maps" class="level2">
+<h2 class="anchored" data-anchor-id="soil-property-and-indicator-maps">Soil property and indicator maps</h2>
+<p><a href="../use-cases/soil-property-indicator-maps.html">Soil property and indicator maps</a>, such as soil property distribution predictions, agricultural decision support and soil health indicator changes are produced with conventional and pedometric approaches. An important factor to facilitate reuse is extensive description of lineage. Which source data and procedures have been used to derive the resulting product.</p>
+</section>
+</section>
+<section id="soil-data-related-resources" class="level1">
+<h1>Soil data related resources</h1>
 <section id="archiving-project-websites-and-knowledge-hubs" class="level2">
 <h2 class="anchored" data-anchor-id="archiving-project-websites-and-knowledge-hubs">Archiving Project Websites and Knowledge Hubs</h2>
 <p><a href="../use-cases/knowledge-hubs-and-websites.html">Project Websites and Knowledge Hubs</a> benefit from archival of their content at various stages during and after the realisation and maintenance of the website. A deposit of the website content is persistently citable using DOI and the risk of information loss at website discontinuation is limited.</p>
@@ -161,15 +181,12 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="reuse-of-common-soil-vocabularies">Reuse of common Soil vocabularies</h2>
 <p><a href="../use-cases/vocabularies.html">Soil vocabularies</a> (glossaries) are commonly produced at the start of projects, to align definitions between project partners. Vocabularies are also an important driver of findability and interoperabilty.</p>
 </section>
-<section id="sharing-predicted-soil-properties-based-on-spectroscopy-data" class="level2">
-<h2 class="anchored" data-anchor-id="sharing-predicted-soil-properties-based-on-spectroscopy-data">Sharing predicted soil properties, based on spectroscopy data</h2>
-<p><a href="../use-cases/spectroscopy.html">Spectroscopy</a> is a relatively novel approach to observe soil properties on soil samples efficiently. The properties are predicted based on a library of reference samples which are assessed both with wet chemistry as well as spectroscopy. A common practice is to deposit the spectra of the observations as part of the data as well as a reference to the spectral library used for the prediction.</p>
-</section>
 <section id="harmonizing-soil-observation-data-using-pedo-transfer-funtions" class="level2">
 <h2 class="anchored" data-anchor-id="harmonizing-soil-observation-data-using-pedo-transfer-funtions">Harmonizing Soil Observation data using Pedo Transfer Funtions</h2>
-<p>Soil observation datasets are often heterogeneous due to differences in sampling depth, measurement techniques, laboratory methods, temporal coverage, and reported soil properties. Harmonization is the process of transforming these disparate observations into a consistent and comparable form suitable for integrated analysis, modeling, and decision-making. <a href="../use-cases/harmonise-ptf.html">This document</a> describes the current state on this topic</p>
+<p>Soil observation datasets are often heterogeneous due to differences in sampling depth, measurement techniques, laboratory methods, temporal coverage, and reported soil properties. Harmonization is the process of transforming these disparate observations into a consistent and comparable form suitable for integrated analysis, modeling, and decision-making. <a href="../use-cases/harmonise-ptf.html">This document</a> describes the current state on this topic.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
