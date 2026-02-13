@@ -31,6 +31,10 @@ A selection of use cases, combined with dedicated guidance on how to increase FA
 
 [Soil vocabularies](./vocabularies.md) (glossaries) are commonly produced at the start of projects, to align definitions between project partners. Vocabularies are also an important driver of findability and interoperabilty.
 
-## Sharing Soil spectroscopy data
+## Sharing predicted soil properties, based on spectroscopy data
 
-[Spectroscopy](./spectroscopy.md) is a novel approach to observe soil properties on a soil samples efficiently. The properties are predicted based on a library of reference samples which are assessed both with wet chemistry as well as spectrometry. A common practice is to deposit the spectra of the observations as part of the data as well as a reference to the spectral library used for the prediction. 
+[Spectroscopy](./spectroscopy.md) is a relatively novel approach to observe soil properties on soil samples efficiently. The properties are predicted based on a library of reference samples which are assessed both with wet chemistry as well as spectroscopy. A common practice is to deposit the spectra of the observations as part of the data as well as a reference to the spectral library used for the prediction. 
+
+## Harmonizing Soil Observation data using Pedo Transfer Funtions
+
+Soil observation datasets are often heterogeneous due to differences in sampling depth, measurement techniques, laboratory methods, temporal coverage, and reported soil properties. Harmonization is the process of transforming these disparate observations into a consistent and comparable form suitable for integrated analysis, modeling, and decision-making. [This document](./harmonise-ptf.md) describes the current state on this topic
