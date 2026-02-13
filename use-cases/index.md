@@ -18,11 +18,10 @@ A selection of use cases, combined with dedicated guidance on how to increase FA
 
 ## INSPIRE Soil data using GeoPackage format
 
-[GeoPackage format for sharing INSPIRE SOIL data](./inspire-geopackage.md) is an approach to store data in a relational database while conforming to the INSPIRE Soil datamodel. Traditionally INSPIRE Soil Observation data were required to be shared using a dedicated xml encoding, which was quite a challenge for both data procucers and consumers. The Good Practice using GeoPackage specifically for soil data has been prepared by the EJP Soil H2020 programme. 
-
-## Collect soil data in GeoPackage using QGIS
-
-QGIS is a popular Desktop GIS software. This tutorial introduces an approach to use QGIS to populate the INSPIRE GeoPackage format. [Read the tutorial here](https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/index.md)
+[GeoPackage format for sharing INSPIRE SOIL data](./inspire-geopackage.md) is an approach to store data in a relational database while conforming to the INSPIRE Soil conceptual model. Traditionally INSPIRE Soil Observation data and maps require to be shared using a dedicated GML encoding, which was quite a challenge for both data procucers and consumers. The INSPIRE Good Practice using GeoPackage specifically for Soil data has been prepared by the EJP Soil H2020 programme and is further developed in the SoilWise project. 
+- [Introduction to the INSPIRE SOIL GeoPackage](https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/index.md)
+- [GeoPackage Data Loading & Modelling Guide](https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/data_loading.md)
+- [Tutorial on how to use QGIS to populate the GeoPackage](https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/index.md)
 
 ## Archiving Project Websites and Knowledge Hubs
 
