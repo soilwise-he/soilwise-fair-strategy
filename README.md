@@ -1,6 +1,7 @@
 # Soilwise FAIR Strategy
 
 Repository for SoilWise FAIR data and knowledge guidances. 
+Check the content at [github.io](https://soilwise-he.github.io/soilwise-fair-strategy)
 
 Guidances are split up in various levels of detail
 
