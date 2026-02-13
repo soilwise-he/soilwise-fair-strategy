@@ -14,10 +14,8 @@ The handbook bridges conceptual frameworks and hands-on workflows, from choosing
 
 ## Contents:
 
-- [General Guidelines](./General_Guidelines_v0.2.md)
-- [Publish fair data](./publish-fair-data.md)
-- [Publish fair knowledge](./publish-fair-knowledge.md)
-- [Set of use cases in data and knowledge sharing](./use-cases/index.md)
+- [Guideline Overview](./General_Guidelines.md) A comprehensive overview of the FAIR principles and their application in soil science, including best practices for data management, metadata standards, and licensing.
+- [Set of use cases in FAIR sharing](./use-cases/index.md) A collection of practical examples demonstrating how to implement FAIR principles in various soil science contexts, such as field data, remote sensing, and modeling outputs.
 
 ## Presentations based on the handbook
 

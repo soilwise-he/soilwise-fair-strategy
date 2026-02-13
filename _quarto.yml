@@ -14,14 +14,10 @@ website:
     logo-alt: Soilwise logo
     title: false
     left:
-      - href: index.md
+      - href: index.qmd
         text: Home
-      - text: General guidelines 
-        href: General_Guidelines_v0.2.md
-      - text: Fair Data 
-        href: publish-fair-data.md
-      - text: Fair Knowledge 
-        href: publish-fair-knowledge.md
+      - text: Guideline Overview 
+        href: General_Guidelines.md
       - text: Use Cases
         href: use-cases/index.md
 
