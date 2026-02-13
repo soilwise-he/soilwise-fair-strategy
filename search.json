@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "WarningDraft Version\n\n\n\nThis document is a work in progress and not the final version.\nThis Handbook on Data and Knowledge Publication in the Soil Domain equips researchers with essential strategies and practical steps to publish soil-related data in a way that maximizes its value, visibility, and reuse across disciplines. Rooted in the FAIR (Findable, Accessible, Interoperable, Reusable) principles, it responds to the growing need for coherent, transparent, and collaborative soil science data practice. By ensuring that datasets and knowledge assets are well documented, richly described, and sustainably archived, the guidelines help overcome fragmentation and enhance research impact. The handbook bridges conceptual frameworks and hands-on workflows, from choosing repositories to metadata design and licensing. It supports researchers throughout the data lifecycle — from planning and management to publication and long-term stewardship. Emphasis is placed on community standards, persistent identifiers (such as DOIs), and machine-actionable metadata to unlock broader interoperability. By following these guidelines, soil scientists will contribute to a more open, efficiently shared, and more robust scientific record. The principles also underpin compliance with funding policies and international research infrastructures. Whether producing field measurements, models, or derived data products, authors will find clear direction here. This handbook encourages a culture of responsible data stewardship that fosters innovation, reproducibility, and cross-project synthesis. Welcome to a resource designed to make your soil data FAIR, valuable and enduring."
+    "text": "WarningDraft Version\n\n\n\nThis document is a work in progress and not the final version.\nThis Handbook on Data and Knowledge Publication in the Soil Domain equips researchers with essential strategies and practical steps to publish soil-related data in a way that maximizes its value, visibility, and reuse across disciplines. Rooted in the FAIR (Findable, Accessible, Interoperable, Reusable) principles, it responds to the growing need for coherent, transparent, and collaborative soil science data practice. By ensuring that datasets and knowledge assets are well documented, richly described, and sustainably archived, the guidelines help overcome fragmentation and enhance research impact.\nThe handbook bridges conceptual frameworks and hands-on workflows, from choosing repositories to metadata design and licensing. It supports researchers throughout the data lifecycle — from planning and management to publication and long-term stewardship. Emphasis is placed on community standards, persistent identifiers (such as DOIs), and machine-actionable metadata to unlock broader interoperability. By following these guidelines, soil scientists will contribute to a more open, efficiently shared, and more robust scientific record. The principles also underpin compliance with funding policies and international research infrastructures. Whether producing field measurements, models, or derived data products, authors will find clear direction here. This handbook encourages a culture of responsible data stewardship that fosters innovation, reproducibility, and cross-project synthesis. Welcome to a resource designed to make your soil data FAIR, valuable and enduring."
   },
   {
     "objectID": "index.html#contents",
@@ -12,6 +12,13 @@
     "title": "Home",
     "section": "Contents:",
     "text": "Contents:\n\nGeneral Guidelines\nPublish fair data\nPublish fair knowledge\nSet of use cases in data and knowledge sharing"
+  },
+  {
+    "objectID": "index.html#presentations-based-on-the-handbook",
+    "href": "index.html#presentations-based-on-the-handbook",
+    "title": "Home",
+    "section": "Presentations based on the handbook",
+    "text": "Presentations based on the handbook\nThe content of the handbook is regularly presented at relevent events. Slides of these presentations are readily available.\n\nFAIR publications using Zenodo, application to observational data and websites"
   },
   {
     "objectID": "use-cases/tabular-data.html",
