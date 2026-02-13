@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Use cases soil data – Soilwise project FAIR Strategy</title>
+<title>harmonise-ptf – Soilwise project FAIR Strategy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -99,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Guideline Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../use-cases/index.html" aria-current="page"> 
+    <a class="nav-link" href="../use-cases/index.html"> 
 <span class="menu-text">Use Cases</span></a>
   </li>  
 </ul>
@@ -115,61 +115,196 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Use cases soil data</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>A selection of use cases, combined with dedicated guidance on how to increase FAIR aspect of a data or knowledge publication.</p>
-<section id="tabular-soil-observation-data" class="level2">
-<h2 class="anchored" data-anchor-id="tabular-soil-observation-data">Tabular Soil Observation Data</h2>
-<p><a href="../use-cases/tabular-data.html">Tabular Soil Observation Data</a> is a common format to share Soil data.</p>
+<section id="guidance-on-harmonizing-soil-observation-data-using-pedotransfer-functions-ptfs" class="level1">
+<h1>Guidance on Harmonizing Soil Observation Data Using Pedotransfer Functions (PTFs)</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Soil observation datasets are often heterogeneous due to differences in sampling depth, measurement techniques, laboratory methods, temporal coverage, and reported soil properties. Harmonization is the process of transforming these disparate observations into a consistent and comparable form suitable for integrated analysis, modeling, and decision-making.</p>
+<p>Pedotransfer Functions (PTFs) are empirical or semi-empirical relationships that estimate difficult-to-measure soil properties (e.g., hydraulic conductivity, water retention parameters) from more readily available attributes (e.g., texture, bulk density, organic carbon). When applied carefully, PTFs are a powerful tool for harmonizing soil datasets across spatial scales and data sources.</p>
+<p>This document outlines:</p>
+<ul>
+<li>Preconditions for harmonization using PTFs</li>
+<li>Recommended workflows</li>
+<li>Use of existing PTF libraries</li>
+<li>Statistical validation of harmonized outputs</li>
+</ul>
 </section>
-<section id="soil-property-and-indicator-maps" class="level2">
-<h2 class="anchored" data-anchor-id="soil-property-and-indicator-maps">Soil property and indicator maps</h2>
-<p><a href="../use-cases/soil-property-indicator-maps.html">Soil property and indicator maps</a>, such as soil property distribution predictions, agricultural decision support and soil health indicator changes are produced with conventional and pedometric approaches. An important factor to facilitate reuse is extensive description of lineage. Which source data and procedures have been used to derive the resulting product.</p>
+<section id="prerequisites-for-harmonization" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites-for-harmonization">Prerequisites for Harmonization</h2>
+<section id="data-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="data-requirements">Data Requirements</h3>
+<p>Before applying PTFs, ensure the following minimum conditions are met:</p>
+<ul>
+<li><p><strong>Metadata completeness</strong></p>
+<ul>
+<li>Identification of the observed soil property</li>
+<li>Sampling depth and method</li>
+<li>Laboratory analysis protocols</li>
+<li>Unit of measurement</li>
+</ul></li>
+<li><p><strong>Spatial and temporal context</strong></p>
+<ul>
+<li>Geographic coordinates (with uncertainty if possible)</li>
+<li>Sampling date or period</li>
+</ul></li>
+</ul>
 </section>
-<section id="earth-imagery" class="level2">
-<h2 class="anchored" data-anchor-id="earth-imagery">Earth imagery</h2>
-<p><a href="../use-cases/earth-imagery.html">Earth imagery</a> such as satelite and drone data are increasingly used to better understand soils and their interaction with climate, landscape and crops. Imagery data is often used as a predictor of soil property distribution. Due to their size and origin imagery data is usually not deposited in formal repositories, but available from mass storage such as Google Earth Engine, Copernicus or Amazon Cloud, which can be a challenge for citation of the material.</p>
+<section id="data-standardization" class="level3">
+<h3 class="anchored" data-anchor-id="data-standardization">Data Standardization</h3>
+<p>All input datasets should be standardized prior to PTF application:</p>
+<ul>
+<li><strong>Units harmonization</strong> (e.g., % vs g kg⁻¹, cm vs mm)</li>
+<li><strong>Depth normalization</strong> (e.g., fixed layers such as 0–5, 5–15, 15–30 cm)</li>
+<li><strong>Textural class consistency</strong> (e.g., USDA vs FAO systems)</li>
+<li><strong>Outlier screening</strong> using robust statistics or expert thresholds</li>
+</ul>
 </section>
-<section id="inspire-soil-data-using-geopackage-format" class="level2">
-<h2 class="anchored" data-anchor-id="inspire-soil-data-using-geopackage-format">INSPIRE Soil data using GeoPackage format</h2>
-<p><a href="../use-cases/inspire-geopackage.html">GeoPackage format for sharing INSPIRE SOIL data</a> is an approach to store data in a relational database while conforming to the INSPIRE Soil conceptual model. Traditionally INSPIRE Soil Observation data and maps require to be shared using a dedicated GML encoding, which was quite a challenge for both data procucers and consumers. The INSPIRE Good Practice using GeoPackage specifically for Soil data has been prepared by the EJP Soil H2020 programme and is further developed in the SoilWise project. - <a href="https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/index.md">Introduction to the INSPIRE SOIL GeoPackage</a> - <a href="https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/data_loading.md">GeoPackage Data Loading &amp; Modelling Guide</a> - <a href="https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/index.md">Tutorial on how to use QGIS to populate the GeoPackage</a></p>
 </section>
-<section id="archiving-project-websites-and-knowledge-hubs" class="level2">
-<h2 class="anchored" data-anchor-id="archiving-project-websites-and-knowledge-hubs">Archiving Project Websites and Knowledge Hubs</h2>
-<p><a href="../use-cases/knowledge-hubs-and-websites.html">Project Websites and Knowledge Hubs</a> benefit from archival of their content at various stages during and after the realisation and maintenance of the website. A deposit of the website content is persistently citable using DOI and the risk of information loss at website discontinuation is limited.</p>
+<section id="conceptual-framework-for-using-pedotransfer-functions" class="level2">
+<h2 class="anchored" data-anchor-id="conceptual-framework-for-using-pedotransfer-functions">Conceptual Framework for Using Pedotransfer Functions</h2>
+<section id="purpose-of-ptf-based-harmonization" class="level3">
+<h3 class="anchored" data-anchor-id="purpose-of-ptf-based-harmonization">Purpose of PTF-Based Harmonization</h3>
+<p>PTFs can be used to:</p>
+<ul>
+<li>Fill gaps in missing soil properties</li>
+<li>Translate measurements between methods</li>
+<li>Produce standardized soil hydraulic or physical parameters</li>
+<li>Enable cross-dataset comparability</li>
+</ul>
 </section>
-<section id="reuse-of-common-soil-vocabularies" class="level2">
-<h2 class="anchored" data-anchor-id="reuse-of-common-soil-vocabularies">Reuse of common Soil vocabularies</h2>
-<p><a href="../use-cases/vocabularies.html">Soil vocabularies</a> (glossaries) are commonly produced at the start of projects, to align definitions between project partners. Vocabularies are also an important driver of findability and interoperabilty.</p>
+<section id="types-of-pedotransfer-functions" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-pedotransfer-functions">Types of Pedotransfer Functions</h3>
+<ul>
+<li><p><strong>Class PTFs</strong> Based on soil textural or taxonomic classes</p></li>
+<li><p><strong>Continuous PTFs</strong> Regression-based functions using continuous predictors</p></li>
+<li><p><strong>Machine-learning PTFs</strong> Neural networks, random forests, or ensemble approaches trained on large soil databases</p></li>
+</ul>
+<p>Each type implies different uncertainty characteristics and validation requirements.</p>
 </section>
-<section id="sharing-predicted-soil-properties-based-on-spectroscopy-data" class="level2">
-<h2 class="anchored" data-anchor-id="sharing-predicted-soil-properties-based-on-spectroscopy-data">Sharing predicted soil properties, based on spectroscopy data</h2>
-<p><a href="../use-cases/spectroscopy.html">Spectroscopy</a> is a relatively novel approach to observe soil properties on soil samples efficiently. The properties are predicted based on a library of reference samples which are assessed both with wet chemistry as well as spectroscopy. A common practice is to deposit the spectra of the observations as part of the data as well as a reference to the spectral library used for the prediction.</p>
 </section>
-<section id="harmonizing-soil-observation-data-using-pedo-transfer-funtions" class="level2">
-<h2 class="anchored" data-anchor-id="harmonizing-soil-observation-data-using-pedo-transfer-funtions">Harmonizing Soil Observation data using Pedo Transfer Funtions</h2>
-<p>Soil observation datasets are often heterogeneous due to differences in sampling depth, measurement techniques, laboratory methods, temporal coverage, and reported soil properties. Harmonization is the process of transforming these disparate observations into a consistent and comparable form suitable for integrated analysis, modeling, and decision-making. <a href="../use-cases/harmonise-ptf.html">This document</a> describes the current state on this topic</p>
+<section id="workflow-for-harmonization-using-ptfs" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-for-harmonization-using-ptfs">Workflow for Harmonization Using PTFs</h2>
+<section id="step-1-define-target-soil-properties" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-define-target-soil-properties">Step 1: Define Target Soil Properties</h3>
+<p>Clearly specify which soil variables are required for harmonization (e.g., field capacity, wilting point, saturated hydraulic conductivity).</p>
+</section>
+<section id="step-2-select-appropriate-ptfs" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-select-appropriate-ptfs">Step 2: Select Appropriate PTFs</h3>
+<p>Selection criteria should include:</p>
+<ul>
+<li>Compatibility with available predictors</li>
+<li>Geographic or climatic relevance</li>
+<li>Transparency and documentation</li>
+<li>Peer-reviewed validation history</li>
+</ul>
+</section>
+<section id="step-3-apply-ptfs-consistently" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-apply-ptfs-consistently">Step 3: Apply PTFs Consistently</h3>
+<ul>
+<li>Use identical input preprocessing across datasets</li>
+<li>Apply depth-specific PTFs where applicable</li>
+<li>Record model versions and parameter settings</li>
+</ul>
+</section>
+<section id="step-4-propagate-uncertainty" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-propagate-uncertainty">Step 4: Propagate Uncertainty</h3>
+<p>Where possible:</p>
+<ul>
+<li>Use PTFs that provide prediction intervals</li>
+<li>Apply Monte Carlo simulations with input uncertainty ranges</li>
+<li>Store uncertainty metrics alongside predictions</li>
+</ul>
+</section>
+</section>
+<section id="using-known-libraries-of-pedotransfer-functions" class="level2">
+<h2 class="anchored" data-anchor-id="using-known-libraries-of-pedotransfer-functions">Using Known Libraries of Pedotransfer Functions</h2>
+<p>Several well-established libraries and tools are commonly used for soil data harmonization:</p>
+<ul>
+<li><p><strong>ROSETTA</strong> Estimates soil hydraulic parameters from texture, bulk density, and water retention data.</p></li>
+<li><p><strong>HYPRES PTFs</strong> Developed for European soils, particularly suited for large-scale modeling.</p></li>
+<li><p><strong>SoilGrids-derived PTF frameworks</strong> Combine global soil predictions with machine-learning-based PTFs.</p></li>
+<li><p><strong>R and Python ecosystems</strong></p>
+<ul>
+<li>R packages: <code>soiltexture</code>, <code>hydroGOF</code>, <code>caret</code></li>
+<li>Python libraries: <code>scikit-learn</code>, <code>pandas</code>, <code>numpy</code></li>
+</ul></li>
+</ul>
+<p>When using external libraries:</p>
+<ul>
+<li>Verify the training dataset and domain of applicability</li>
+<li>Avoid extrapolation beyond original soil conditions</li>
+<li>Document assumptions explicitly</li>
+</ul>
+</section>
+<section id="statistical-validation-of-harmonized-results" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-validation-of-harmonized-results">Statistical Validation of Harmonized Results</h2>
+<p>Validation is essential to ensure harmonized data are fit for purpose.</p>
+<section id="validation-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="validation-strategies">Validation Strategies</h3>
+<ul>
+<li><p><strong>Internal validation</strong></p>
+<ul>
+<li>Cross-validation within the source dataset</li>
+<li>Bootstrapping to assess model stability</li>
+</ul></li>
+<li><p><strong>External validation</strong></p>
+<ul>
+<li>Independent soil datasets</li>
+<li>Benchmarking against measured values</li>
+</ul></li>
+</ul>
+</section>
+<section id="performance-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="performance-metrics">Performance Metrics</h3>
+<p>Commonly used statistical indicators include:</p>
+<ul>
+<li>Bias and Mean Error (ME)</li>
+<li>Root Mean Square Error (RMSE)</li>
+<li>Mean Absolute Error (MAE)</li>
+<li>Coefficient of Determination (R²)</li>
+<li>Nash–Sutcliffe Efficiency (NSE)</li>
+</ul>
+<p>Metrics should be reported by soil depth and, where possible, by soil class.</p>
+</section>
+<section id="diagnostic-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="diagnostic-analysis">Diagnostic Analysis</h3>
+<ul>
+<li>Residual plots vs predictors and depth</li>
+<li>Sensitivity analysis of input variables</li>
+<li>Spatial autocorrelation of errors</li>
+</ul>
+</section>
+</section>
+<section id="documentation-and-reproducibility" class="level2">
+<h2 class="anchored" data-anchor-id="documentation-and-reproducibility">Documentation and Reproducibility</h2>
+<p>For transparency and reuse:</p>
+<ul>
+<li>Record PTF names, equations, or model identifiers</li>
+<li>Archive preprocessing scripts and configuration files</li>
+<li>Store harmonized outputs with uncertainty metadata</li>
+<li>Use version control and persistent identifiers where possible</li>
+</ul>
+</section>
+<section id="limitations-and-best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="limitations-and-best-practices">Limitations and Best Practices</h2>
+<ul>
+<li>PTFs are context-dependent and not universal</li>
+<li>Harmonization reduces heterogeneity but does not eliminate uncertainty</li>
+<li>Avoid mixing PTF outputs with direct measurements without clear labeling</li>
+<li>Always match PTF complexity to data quality and project scale</li>
+</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Harmonizing soil observation data using pedotransfer functions is a powerful, but non-trivial, process. Success depends on careful preprocessing, informed PTF selection, rigorous validation, and transparent documentation. When applied responsibly, PTF-based harmonization enables integrated soil analyses across regions, scales, and data sources while preserving scientific credibility.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -581,7 +716,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/edit/main/use-cases/index.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/edit/main/use-cases/harmonise-ptf.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
