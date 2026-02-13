@@ -49,6 +49,10 @@ Soil maps visualize the distribution of soil properties in space and time.
 
 # Soil data related resources
 
+## A Soil Health Knowledge Graph
+
+What is soil health? how does it relate to soil threads and  ecosystem functions? Common questions when entering our domain. Answers to these questions are captured in the [Soil Health Knowlegde graph](https://soilwise-he.github.io/soil-health/) and the related [Soil-vocabulary](https://soilwise-he.github.io/soil-vocabs).
+
 ## Archiving Project Websites and Knowledge Hubs
 
 [Project Websites and Knowledge Hubs](./knowledge-hubs-and-websites.md) benefit from archival of their content at various stages during and after the realisation and maintenance of the website. A deposit of the website content is persistently citable using DOI and the risk of information loss at website discontinuation is limited.
