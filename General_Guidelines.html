@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Guidelines on (Mission Soil) Data and Knowledge FAIRness and Findability – Soilwise project FAIR Strategy</title>
+<title>6 Steps Towards FAIR Data and Knowledge in Mission Soil – Soilwise project FAIR Strategy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -91,20 +91,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.md"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./General_Guidelines_v0.2.html"> 
-<span class="menu-text">General guidelines</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./publish-fair-data.html"> 
-<span class="menu-text">Fair Data</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./publish-fair-knowledge.html" aria-current="page"> 
-<span class="menu-text">Fair Knowledge</span></a>
+    <a class="nav-link active" href="./General_Guidelines.html" aria-current="page"> 
+<span class="menu-text">Guideline Overview</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./use-cases/index.html"> 
@@ -127,20 +119,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Guidelines on (Mission Soil) Data and Knowledge FAIRness and Findability</h1>
+<h1 class="title">6 Steps Towards FAIR Data and Knowledge in Mission Soil</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Authors</div>
-    <div class="quarto-title-meta-contents">
-             <p>Celine Blitz-Frayret </p>
-             <p>Paul van Genuchten </p>
-          </div>
-  </div>
     
   
     
@@ -164,235 +149,152 @@ ul.task-list li input[type="checkbox"] {
 <p>This document is a work in progress and not the final version.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Draft Version
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This document is a work in progress and not the final version.</p>
-</div>
-</div>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Soil is one of our most vital natural resources, yet it faces mounting pressures from climate change, land degradation, and unsustainable management. To protect and restore soils effectively, we need high-quality, accessible data and reliable knowledge. That’s where SoilWise Repository (SWR) comes in—the data and knowledge hub designed to gather all relevant resources across the soil domain, accessible through one access point.</p>
-<p>This document lays out clear guidelines for all soil data publishers, mainly Mission Soil projects, to structure their data, knowledge and metadata in a way that makes them seamlessly discoverable through the SoilWise metadata catalogue. But this isn’t just about compliance—it’s about building a soil data and knowledge ecosystem where information flows freely, connects across disciplines, and drives meaningful action.</p>
-<p>In the following sections, you’ll find practical recommendations on how to:</p>
+<p>Soil-related data and knowledge are essential for understanding and improving soil health, guiding sustainable land management, informing policy, and enabling scientific progress. Yet, these resources are often scattered, poorly documented, hard to access, or locked in incompatible formats. This fragmentation hampers their reuse, reduces their impact, and creates inefficiencies across projects and disciplines.</p>
+<p>This strategy, developed within the <strong>SoilWise</strong> project, provides guidance to ensure that all data and knowledge generated, collected, or reused within Mission Soil projects are managed according to the <strong>FAIR principles</strong> – Findable, Accessible, Interoperable, and Reusable.</p>
+<p>By applying the FAIR principles, we can increase the visibility and value of soil-related data and knowledge. FAIRness enables:</p>
 <ul>
-<li>…</li>
+<li><strong>Transparency</strong> – allowing others to understand how data were produced and under what conditions.<br>
+</li>
+<li><strong>Collaboration</strong> – making it easier to combine datasets across projects, regions, and domains.<br>
+</li>
+<li><strong>Efficiency</strong> – reducing duplication of efforts and enabling the reuse of existing data.<br>
+</li>
+<li><strong>Impact</strong> – enhancing the potential for innovation, decision support, and long-term use of project outputs.</li>
 </ul>
-<p>Too often, valuable soil data and knowledge remains fragmented, inaccessible, or incompatible with other resources—limiting its potential impact. A common approach to data and knowledge management is essential. <strong>Effective data and knowledge are only as powerful as the metadata that describes it.</strong> Without clear, standardised metadata, even the most valuable resources remain hidden, disconnected, or misinterpreted. Metadata acts as the bridge between data providers and users, ensuring that soil data can be easily found, understood, and integrated across different platforms and disciplines.</p>
-<p>TODO:<br>
-- Purpose of SWR as a crossroad and single access point SWR harvests only Metadata</p>
-<ul>
-<li>What is in scope of this document and what is not</li>
-</ul>
-<p>This document was created for Mission Soil projects as a guideline to summarise the approaches towards soil data and knowledge FAIRness and support the findability through SWR.</p>
-<p><strong>Target groups (?)</strong></p>
+<p>It is intended not only as a conceptual framework, but also as a practical tool to support project teams in developing their own Data Management Plans (DMPs). Each project or work package should describe how its data and knowledge will be handled, shared, and sustained in a FAIR-compliant way.</p>
+<p>Soil health knowledge is inherently diverse – ranging from field measurements and lab results to local experiences and spatial models. This strategy promotes coherence and openness while respecting contextual and disciplinary differences.</p>
+<p><strong>Metadata</strong> play a central role in this process: without clear and rich metadata, data cannot be truly findable or reusable. Metadata describe the context, origin, structure, and conditions of use of the data or knowledge asset, acting as the bridge between producers and users — whether human or machine.</p>
+<hr>
+<section id="approach-how-to-fairify-data-and-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="approach-how-to-fairify-data-and-knowledge">Approach: How to FAIRify Data and Knowledge</h2>
+<p>We recommend the following stepwise process for implementing FAIR principles during metadata population.</p>
+<hr>
 </section>
-<section id="general-information" class="level2">
-<h2 class="anchored" data-anchor-id="general-information">General Information</h2>
-<p>Notes:</p>
-<ul>
-<li>This section will be at the beginning of every “result-document”<br>
-</li>
-<li>SWR introduction<br>
-</li>
-<li>Emphasis on metadata role<br>
-</li>
-<li>Ensuring FAIRness requires the use of open formats, proper metadata, and appropriate repositories.</li>
-</ul>
-<p>Definitions, intro, how to make decisions on where to store, what is harvested to SWR</p>
-<p>Divide data somehow? E.g. to soil measurements, spatial data analysis, other kinds of analysis… ?</p>
-<section id="knowledge-management" class="level3">
-<h3 class="anchored" data-anchor-id="knowledge-management">Knowledge management</h3>
-<p>(describe by metadata, standardisation, links to other sources and deliverables, recommended formats, versioning (?)…)</p>
+<section id="step-1-inventory-typology" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-inventory-typology">Step 1: Inventory &amp; Typology</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 58%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Principles</strong></th>
+<th><strong>How to</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>- Identify what data and knowledge will be created or reused. <br> - Classify them by type, format, origin, and reuse potential.</td>
+<td>- During project planning or Data Management Plan (DMP) preparation, make a list of all expected outputs: datasets, reports, maps, models, code, workflows, protocols, websites, and other knowledge products.<br> - For each resource, note whether it is newly created, collected from partners, or reused from external sources.<br> - Record the data type and format (e.g., raster, tabular, text, time series).</td>
+</tr>
+</tbody>
+</table>
+<hr>
 </section>
-<section id="recommended-metadata-standards" class="level3">
-<h3 class="anchored" data-anchor-id="recommended-metadata-standards">Recommended Metadata standards</h3>
-<p>Use internationally recognized metadata standards that ensure discoverability, interoperability, and clarity. Metadata should describe the also raster dataset’s origin, scope, resolution, spatial and temporal extent, and processing history. Choose standards that are compatible with spatial data infrastructures and catalogue systems.</p>
-<ul>
-<li>ISO 19115 / 19139 – robust and widely adopted geospatial metadata standards<br>
-</li>
-<li>INSPIRE Metadata – for alignment with European environmental directives<br>
-</li>
-<li>Dublin Core – useful for basic descriptive metadata<br>
-</li>
-<li>GeoTIFF internal tags – allow embedding georeferencing directly in the data file<br>
-</li>
-<li>DataCite</li>
-</ul>
-<p>Notes:</p>
-<ul>
-<li>DC as a minimal requirement</li>
-</ul>
+<section id="step-2-choose-trustworthy-repositories" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-choose-trustworthy-repositories">Step 2: Choose Trustworthy Repositories</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Principles</strong></th>
+<th><strong>How to</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>- Use trustworthy platforms for archiving and sharing <br> - Prefer repositories that support persistent identifiers (e.g., DOI), machine-readable metadata, and open licenses. <br><br>Remember that FAIR doesn’t necessarily mean open. In most repositories, you can also safely store resources with restricted access.</td>
+<td>- Choose a repository before your project outputs are finalized, so you can prepare metadata accordingly. <br> - For academic outputs, use <a href="https://zenodo.org/">Zenodo</a> (linked to OpenAIRE). For other contexts, explore <a href="https://www.re3data.org/">re3data.org</a> to identify certified or domain-specific repositories. <br> - Verify that the repository supports persistent identifiers (PID, DOI) and offers clear license options (e.g., Creative Commons). <br> - Check repository policy: does it allow embargo periods or restricted access for sensitive data?</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How to be discoverable by Soil Wise harvesting strategies?</strong> For outputs of Horizon Europe research, verify that the selected repository is harvested by <a href="https://openaire.org/">OpenAire</a> and that the Grant number of the project can be added as part of the funding information. SoilWise and Cordis use this information to select relevant publications. For non-academic repositories, verify that the repository is harvested by <a href="https://data.europa.eu/">data.europa.eu</a> and add a keyword soil to the metadata record (in the relevant language of the record). Notice that data.europa.eu includes the contents of <a href="https://esdac.jrc.ec.europa.eu/">ESDAC</a> as well as <a href="https://inspire-geoportal.ec.europa.eu/">INSPIRE Geoportal</a>.</p>
+<hr>
 </section>
-<section id="metadata-management" class="level3">
-<h3 class="anchored" data-anchor-id="metadata-management">Metadata Management</h3>
-<p>Metadata are essential to making data FAIR. Projects should treat metadata creation and maintenance as an integral part of data workflows. Metadata should be created at the time of data generation, maintained throughout the project, and updated when changes occur.</p>
-<p>Notes:</p>
-<ul>
-<li>Link to metadata filling manual<br>
-</li>
-<li>List of recommended elements (link to more detailed descriptions and examples)<br>
-</li>
-<li>Emphasis on interlinking with other assets, vocabularies, project, persistent identification</li>
-</ul>
+<section id="step-3-choose-open-and-standardized-formats" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-choose-open-and-standardized-formats">Step 3: Choose Open and Standardized Formats</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 58%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Principles</strong></th>
+<th><strong>How to</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>- Use non-proprietary, open formats whenever possible. <br> - Ensure that data formats are machine-readable and suitable for long-term access.</td>
+<td>- If possible, when preparing data for sharing, export or convert them into open formats: <br> - CSV, TSV → for tabular data<br> - GeoJSON, GML → for vector spatial data<br> - GeoTIFF → for raster data<br> - PDF/A or TXT → for documents<br> - SQLite, PostgreSQL dumps → for databases<br> - Avoid file formats that depend on proprietary software (e.g., XLSX, MDB, DOCX).<br> - If necessary for reusability or additional description of your data, include a README.txt file in the dataset or archive describing:<br> - data structure, variable descriptions, units<br> - coordinate system (for spatial data)<br> - software used to create or open files<br> - known limitations or assumptions. <br> - Compress related files into a ZIP archive before uploading, ensuring all dependencies are included.</td>
+</tr>
+</tbody>
+</table>
+<hr>
 </section>
-<section id="recommended-licences" class="level3">
-<h3 class="anchored" data-anchor-id="recommended-licences">Recommended Licences</h3>
-<p>Licensing should be clear, standardized, and as open as possible. Use well-known licenses that facilitate reuse, attribution, and integration with other datasets. When data cannot be openly shared, clearly state the reasons and explore options for controlled access.</p>
-<p>Notes:</p>
-<ul>
-<li>Standardised licences, such as CCs</li>
-</ul>
-<p>Notes from UC2:</p>
-<p><em>Various approaches exist to annotate CSV data to match the above user story </em></p>
-<ul>
-<li><em>In the research community a convention is used to add a readme.txt to the zip file with the data, the readme.txt contains definitions for the columns in a semi-structured format. It’s a start, but preferably a fully structured format is used. </em><br>
-</li>
-<li><a href="https://csvw.org/"><em>https://csvw.org</em></a> <em>and <a href="https://www.w3.org/TR/tabular-data-primer">https://www.w3.org/TR/tabular-data-primer</a> are similar initiatives with a json-ld approach to tabular data (CSV) </em><br>
-</li>
-<li><em>Various metadata communities offer an approach to embed metadata about the data model into the metadata document that describes the dataset, such as: <a href="https://schema.org/variableMeasured">https://schema.org/variableMeasured</a>, <a href="https://datapackage.org/standard/table-schema,">https://datapackage.org/standard/table-schema,</a>  <a href="https://www.iso.org/standard/57303.html">https://www.iso.org/standard/57303.html</a>  </em></li>
-</ul>
-<ol start="4" type="1">
-<li>Knowledge</li>
-</ol>
-<p>Definitions (What is knowledge?), intro, how to make decisions on where to store, what is harvested to SWR</p>
-<ol type="1">
-<li>Knowledge management</li>
-</ol>
-<p>+ Recommended persistent repositories for each subchapter</p>
-<ol type="1">
-<li>Publication or Journal Papers<br>
-</li>
-<li>Guideline or Manual<br>
-</li>
-<li>Methodology<br>
-</li>
-<li>Ontology</li>
-</ol>
-<p>Note: Do not establish new ontologies</p>
-<ol start="5" type="1">
-<li>Repository</li>
-</ol>
-<p>Note: Do not establish new repositories</p>
-<ol start="6" type="1">
-<li>Model<br>
-</li>
-<li>Deliverable<br>
-</li>
-<li>Text<br>
-</li>
-<li>Website<br>
-</li>
-<li>Video</li>
-</ol>
-<p>Note:</p>
-<ul>
-<li>Not to endorse YouTube as an only repository<br>
-</li>
-</ul>
-<ol start="11" type="1">
-<li>Audio<br>
-</li>
-<li>Image<br>
-</li>
-<li>Presentation<br>
-</li>
-<li>Best Practices and Tools<br>
-</li>
-<li>Interview<br>
-</li>
-<li>Policy Documents<br>
-</li>
-<li>Software</li>
-</ol>
-<p><em>+ include MIT licences</em></p>
-<ol start="18" type="1">
-<li><p>Validation results (?)<br>
-Data and metadata validations, indicated in metadata</p></li>
-<li><p>Metadata</p></li>
-</ol>
-<p>Definitions, intro, how to make decisions on where to store, what is harvested (list of repositories?)</p>
-<ol type="1">
-<li>Metadata management</li>
-</ol>
-<p>(minimum metadata profile, formats, elements…)</p>
-<p>recommendation could be to submit deliverable to official repositories e.g.&nbsp;Zenodo and reference it in CORDIS (where are wider options for metadata)</p>
-<p>Which MD standards should be used?</p>
-<ol start="6" type="1">
-<li>Mission Soil Indication</li>
-</ol>
-<p>How should projects indicate in metadata the link to their project</p>
-<p>(possibly part of subchapters above)</p>
-<ol start="7" type="1">
-<li>Support materials<br>
-</li>
-<li>How to fill metadata<br>
-</li>
-<li>General persistency guidelines</li>
-</ol>
-<p>What should be stored in a persistent repository? (web, manuals, videos, guidelines… store not only metadata, but think about the persistency of the products)</p>
-<p>DOIs and how to use them</p>
-<p>Linking to other knowledge (deliverables, …).</p>
-<p>.. see JRC meeting from 12. 2. 2025 for more details (cca between 20-50 min.)</p>
-<p>To ensure FAIRness, raster data should be stored in open, standardized formats (preferably OGC-compliant), documented with complete metadata based on established standards, and shared through trustworthy repositories. Projects should assign clear and appropriate licenses that support data reuse, and whenever possible, enable open access.</p>
-<ol start="3" type="1">
-<li><p>Sensitive metadata handling<br>
-</p></li>
-<li><p>Versioning<br>
-</p></li>
-<li><p>Vocabularies<br>
-</p></li>
-<li><p>List of SWR harvested repositories</p></li>
-<li><p>FAQ<br>
-</p></li>
-</ol>
-<ul>
-<li>What should I do to be findable in SWR?<br>
-</li>
-<li>What should I do if I have a specific Metadata profile (e.g.&nbsp;with Ph measurements)<br>
-</li>
-<li>How should I reposit the sensitive assets?<br>
-</li>
-<li>What is a definition of persistent repository?</li>
-</ul>
-<ol start="9" type="1">
-<li>Other useful information</li>
-</ol>
-<p>(openAIRE guidelines, standards, metadata manuals, <a href="https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf">EC H2020 FAIR DM</a><a href="https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-pilot-guide_en.pdf">, Guidelines to the Rules on OA to Scientific Publications and OA to Research Data in Horizon 2020</a>, <a href="https://fairtoolkit.pistoiaalliance.org/methods/findability-maturity-indicators/">FAIR Maturity Indicators</a>, <a href="https://www.go-fair.org/fair-principles/">go-fair.org</a> principles, <a href="https://eudat.eu/service-catalogue/b2share-0">EUDAT B2share</a>, <a href="https://fairsharing.org/">fairsharing.org</a>, <a href="https://ardc.edu.au/resource/fair-data-self-assessment-tool/">FAIR Data Self-Assessment Tool</a> (!), <a href="https://www.fairsfair.eu/tools-software">FAIRsFAIR</a> tools …)</p>
-<p>Open Questions:</p>
-<ul>
-<li>Should we focus only on Mission Soil projects, or any potential Soil data/knowledge providers?<br>
-</li>
-<li>General guidelines, or SWR-oriented?<br>
-</li>
-<li>What content should be included?<br>
-</li>
-<li>To what detail should we get (i.e.&nbsp;<a href="https://ejpsoil.github.io/soildata-assimilation-guidance/cookbook/zenodo.html">manuals for uploading</a> / general description)?<br>
-</li>
-<li>How to handle big data?<br>
-</li>
-<li>Software is Data (code) or Knowledge? (not relevant for end users)<br>
-</li>
-<li>How to store whole system (e.g.&nbsp;running platform with various content, such as Curiosoil Learning Hub)<br>
-</li>
-<li>How to handle big data?</li>
-</ul>
-<p>TODO:</p>
-<ul>
-<li>Create guidelines on how to use existing vocabs and how to create their own when the existing is not sufficient<br>
-</li>
-<li>We will not create new</li>
-</ul>
+<section id="step-4-metadata-design-and-management" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-metadata-design-and-management">Step 4: Metadata Design and Management</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 58%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Principles</strong></th>
+<th><strong>How to</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>- Populate as much metadata as you can and describe all the information needed to understand and use your data. You will support the Reusability of the resource. <br> - Assign persistent identifiers (PIDs) to data objects, documents, and authors whenever possible. <br> - Use metadata to interlink related resources.</td>
+<td>- Create metadata at the time of upload or using metadata templates provided by your repository. <br> - Fill in all key fields: title, creators (with ORCID if possible), description, keywords, publication date, funding, related resources, license, and version. <br> - Use clear, descriptive titles and structured abstracts that explain what the dataset contains, how it was produced, and its spatial/temporal coverage. <br> - Assign persistent identifiers (PIDs):<br> - Dataset → DOI<br> - People → ORCID<br> - Projects → Grant number / ROR (Research Organization Registry <br> - Interlink related resources, such as datasets, publications, methodologies, software or reports. Most repositories allow “Related identifiers”. <br> - Keep a local copy of metadata (e.g., in JSON, XML, or CSV format) as a backup for institutional archiving.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="step-5-use-controlled-vocabularies-and-ontologies" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-use-controlled-vocabularies-and-ontologies">Step 5: Use Controlled Vocabularies and Ontologies</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Principles</strong></th>
+<th><strong>How to</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>- Apply standardized vocabularies, code lists or established domain terms to describe data content and context. <br> - If possible, avoid creating new vocabularies and ontologies in your project. When local or project-specific terms are used, provide crosswalks or mappings to widely used vocabularies.</td>
+<td>- Identify the relevant vocabulary or established domain terms source early in the project: <br> - <a href="https://agrovoc.fao.org/">AGROVOC</a> – for agricultural concepts <br> - <a href="https://www.eionet.europa.eu/gemet/en/about/">GEMET</a> – for environmental terms <br> - <a href="https://knowledge-base.inspire.ec.europa.eu/tools/inspire-themes_en">INSPIRE themes</a> – for spatial data <br> - <a href="https://www.fao.org/soils-portal/data-hub/soil-classification/world-reference-base/en/">WRB soil classification</a> <br> - <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php/LUCAS_-_Land_use_and_land_cover_survey">LUCAS codes</a> <br> - <a href="https://www.eea.europa.eu/en/datahub/datahubitem-view/123d0c9a-a6fa-4f2d-b887-5d8e5468faed">EUNIS habitat codes</a><br>- Use the suggested keywords from your repository’s predefined list — this ensures linking to standard vocabularies automatically.<br> - For attributes or variables in datasets, provide code lists or lookup tables that explain categorical values (e.g., soil texture codes).<br> - When using project-specific terminology, create a mapping table linking local terms to standard equivalents (crosswalk). Store it with your dataset.<br>- For ontologies or semantic models, reference them by URI where possible (e.g., from <a href="https://catalogue.fair-impact.eu/resources/agroportal">AgroPortal</a> or <a href="https://bioportal.bioontology.org/">BioPortal</a>).</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="step-6-define-licensing-and-access-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-define-licensing-and-access-conditions">Step 6: Define Licensing and Access Conditions</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Principles</strong></th>
+<th><strong>How to</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>- Clearly specify the terms under which data and knowledge can be reused. Always use already existing, standardised licences. <br> - Provide machine-readable licensing information in metadata. <br> - FAIR doesn’t necessarily mean open. In most repositories, you can also safely store resources with restricted access.</td>
+<td>- Before publication, review whether your data contains personal, confidential, or sensitive information (e.g., farmer names, coordinates of private land). <br> - If necessary, anonymize or aggregate data before release.<br> - Choose a <a href="https://spdx.org/licenses">standard license</a> compatible with your data type (If possible, choose one of the <a href="https://creativecommons.org/licenses/">Creative Commons</a> licenses. They are widely used, and easy to understand), such as: <br>- <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> – requires attribution (recommended default)<br>- <a href="https://creativecommons.org/public-domain/cc0/">CC0</a> – public domain<br>- <a href="https://creativecommons.org/licenses/by-nc/4.0">CC-BY-NC</a> – non-commercial use<br>- <a href="https://opendatacommons.org/licenses/by/1-0">ODC-BY</a> – for databases<br> - Include the license text or identifier (e.g., <a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>) in your metadata record.<br> - Choose the most open license possible, while respecting privacy, ethical and legal constraints.<br> - Ensure the repository captures the license as machine-readable metadata.<br> - If access restrictions apply, specify the access level (open, embargoed, restricted) and provide contact information for requests.<br> - Mention licensing and access terms clearly in your DMP and README file.<br> - When in doubt, consult your institutional data steward or legal office before choosing the license.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>If you are part of a Mission Soil project and want your resources to be findable through the SoilWise Catalogue, the easiest way is to upload them to <a href="https://zenodo.org/">Zenodo</a> and link the assets to your project (in the “Funding” section).</strong> It will be automatically harvested and indexed in the SoilWise Catalogue within a few days.</p>
+<hr>
+<p>For more information on FAIR principles, you can visit guides at e.g.&nbsp;<a href="https://www.openaire.eu/guides">OpenAIRE</a> or <a href="https://www.go-fair.org/fair-principles/">GO FAIR</a>, or you can test your resource FAIRness at <a href="https://ardc.edu.au/resource/fair-data-self-assessment-tool/">FAIR Data Self-Assessment</a> or <a href="https://www.fairsfair.eu/tools-software">FAIRsFAIR</a> tools. See also the related official Horizon 2020 documents, <a href="https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf">Guidelines on FAIR Data Management in Horizon 2020</a>, and <a href="https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-pilot-guide_en.pdf">Guidelines to the Rules on Open Access to Scientific Publications and Open Access to Research Data in Horizon 2020</a>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -804,7 +706,7 @@ Data and metadata validations, indicated in metadata</p></li>
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/edit/main/publish-fair-knowledge.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/edit/main/General_Guidelines.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
