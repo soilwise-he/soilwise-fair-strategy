@@ -23,42 +23,42 @@
   {
     "objectID": "use-cases/tabular-data.html",
     "href": "use-cases/tabular-data.html",
-    "title": "Sharing Soil Observation Data on the Web Using tabular formats",
+    "title": "Sharing Soil Observation Data using tabular formats",
     "section": "",
-    "text": "Soil observation data is often shared in tabular formats, such as Excel, Access, CSV, Sqlite. This document provides a strategy on how to increase the interoperability of tabular datasets.\nWhich phenomena are observed, using which procedure, in which unit? These aspects are often explained in a related report or readme.txt document. Unfortunately this information can not easily be read by machines. To increase findability and interoperability of tabular datasets this document provides a strategy on how to encode this information using a standardised approach. The document also provides more generic information about capturing data in tabular formats."
+    "text": "Soil observation data is often shared in tabular formats, such as Excel, Access, CSV, Sqlite, ESRI Shapefile. This document provides a strategy on how to increase the interoperability of tabular datasets.\nWhich phenomena are observed, using which procedure, in which unit? These aspects are often explained in a related report or readme.txt document. Unfortunately this information can not easily be read by machines. To increase findability and interoperability of tabular datasets this document provides a strategy on how to encode this information using a standardised approach. The document also provides more generic information about capturing data in tabular formats."
   },
   {
     "objectID": "use-cases/tabular-data.html#workflow",
     "href": "use-cases/tabular-data.html#workflow",
-    "title": "Sharing Soil Observation Data on the Web Using tabular formats",
+    "title": "Sharing Soil Observation Data using tabular formats",
     "section": "Workflow",
     "text": "Workflow\nStep 1: Annotate a CSV using CSV on the Web (CSVW)\n\nCreate a CSVW metadata JSON file, describing the CSV structure and semantics. Tools, such as CoW exist to create a minimal context file.\nUse the CSVW standard to define:\n\nColumn datatypes\n\nColumn meanings using URIs from ontologies\n\nPrimary keys\n\nRow-level subject generation pattern (e.g., http://example.org/soilobs/{Sample.ID})"
   },
   {
     "objectID": "use-cases/tabular-data.html#step-2-use-standard-vocabulariesontologies",
     "href": "use-cases/tabular-data.html#step-2-use-standard-vocabulariesontologies",
-    "title": "Sharing Soil Observation Data on the Web Using tabular formats",
+    "title": "Sharing Soil Observation Data using tabular formats",
     "section": "Step 2: Use Standard Vocabularies/Ontologies",
     "text": "Step 2: Use Standard Vocabularies/Ontologies\nAlign the properties and structure to well-known vocabularies:\n\nGeo (WKT, GeoSPARQL) for location\n\nQUDT or OM (Ontology of Units of Measure) for measurement values\n\nSOSA/SSN (Semantic Sensor Network Ontology) for observations\n\nPROV for provenance (e.g., who collected the sample and when)"
   },
   {
     "objectID": "use-cases/tabular-data.html#step-3-convert-to-rdf-or-json-ld",
     "href": "use-cases/tabular-data.html#step-3-convert-to-rdf-or-json-ld",
-    "title": "Sharing Soil Observation Data on the Web Using tabular formats",
+    "title": "Sharing Soil Observation Data using tabular formats",
     "section": "Step 3: Convert to RDF or JSON-LD",
-    "text": "Step 3: Convert to RDF or JSON-LD\nUse tools like:\n\ncsvwlib python\nRDFTabular - java\ncsv2rdf - r\n\nConvert annotated CSV to RDF Turtle or JSON-LD for publishing."
+    "text": "Step 3: Convert to RDF or JSON-LD\nIn this step you will validate if the CSVW is properly structured, by serializing the data+metadata to a knowledge grap, and validate the graph using SHACL. You could upload the knowledge graph to the data repository, but it is not neccesary, because it contains the same content as the CSV+metadata.\nUse one of these tools to generate the knowledge graph (RDF):\n\ncsvwlib - python\ncsv2rdf - java\nRDFTabular - ruby\n\ncsvwr - r - Tutorial"
   },
   {
     "objectID": "use-cases/tabular-data.html#step-4-validate-the-data",
     "href": "use-cases/tabular-data.html#step-4-validate-the-data",
-    "title": "Sharing Soil Observation Data on the Web Using tabular formats",
+    "title": "Sharing Soil Observation Data using tabular formats",
     "section": "Step 4: Validate the Data",
     "text": "Step 4: Validate the Data\nYou can use SHACL or schema.org validator to validate the generated RDF."
   },
   {
     "objectID": "use-cases/tabular-data.html#step-5-publish-the-data",
     "href": "use-cases/tabular-data.html#step-5-publish-the-data",
-    "title": "Sharing Soil Observation Data on the Web Using tabular formats",
+    "title": "Sharing Soil Observation Data using tabular formats",
     "section": "Step 5: Publish the Data",
     "text": "Step 5: Publish the Data\n\nHost the original CSV, the context file and the RDF/JSON-LD on a repository (zenodo/dataverse)\nAs part of the publication, provide sensible metadata (keywords, authors, license, dates, references)"
   },

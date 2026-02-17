@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Paul van Genuchten">
-<meta name="dcterms.date" content="2025-03-12">
 
-<title>Sharing Soil Observation Data on the Web Using tabular formats – Soilwise project FAIR Strategy</title>
+<title>Sharing Soil Observation Data using tabular formats – Soilwise project FAIR Strategy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,26 +119,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sharing Soil Observation Data on the Web Using tabular formats</h1>
+<h1 class="title">Sharing Soil Observation Data using tabular formats</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Paul van Genuchten </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 12, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -152,28 +138,32 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>Soil observation data is often shared in tabular formats, such as Excel, Access, CSV, Sqlite. This document provides a strategy on how to increase the interoperability of tabular datasets.</p>
+<p>Soil observation data is often shared in tabular formats, such as Excel, Access, CSV, Sqlite, ESRI Shapefile. This document provides a strategy on how to increase the interoperability of tabular datasets.</p>
 <p>Which phenomena are observed, using which procedure, in which unit? These aspects are often explained in a related report or readme.txt document. Unfortunately this information can not easily be read by machines. To increase findability and interoperability of tabular datasets this document provides a strategy on how to encode this information using a standardised approach. The document also provides more generic information about capturing data in tabular formats.</p>
 </section>
 <section id="excel-as-a-dataformat" class="level1">
 <h1>Excel as a dataformat</h1>
-<p>Excel is a popular format to share data in the academic soil domain. The Excel format is however not endorsed by the FAIR principles, because it is a proprietary format. Another challenge of Excel is that the format is semi-structured.</p>
-<p>In order to use the excel format as a data exchange format, consider the following aspects in order to facilitate data consumption in an automated way.</p>
+<p>Excel is a popular format to share data in the soil domain. The Excel format is not optimal from the prespective of the FAIR principles:</p>
+<ul>
+<li>Excel is a proprietary format (requires proprietary software to modify it)</li>
+<li>The format is semi-structured (it does not enforce table structure and data types)</li>
+</ul>
+<p>As alternative formats, consider <a href="https://sqlite.org/">Sqlite</a>, CSV, JSON, XML. Various desktop and online tools exist to transform data. Consider for example Python Pandas, R, GDAL, <a href="https://table.studio/convert">table.studio</a>.</p>
+<p>In order to use the excel format as a data exchange format, consider the following aspects in order to facilitate data consumption.</p>
 <ul>
 <li>An Excel document can have multiple sheets, each sheet is considered as a single table, a typical case is one sheet describing the sampling locations and next sheets providing observations made at those locations.</li>
 <li>The first line of the sheet is used to define the column headers of the table</li>
-<li>Column headers are machine readible (no spaces and special characters)</li>
+<li>Column headers are machine readible (prevent special characters)</li>
 <li>Sheets do not use merged cells</li>
 <li>All values in a column (except the header) have a single common type (date, numeric, string)</li>
 <li>Cells with textual content do not contain ‘new line’ characters</li>
 <li>One of the sheets best contains metadata about the other sheets (description of column headers, unit of measure, etc)</li>
 </ul>
-<p>As alternative formats, consider MS Access, Sqlite, CSV, Parquet, JSON, XML. Various desktop and online tools exist to transform the data. Consider for example Python Pandas, R, GDAL, <a href="https://table.studio/convert">table.studio</a>.</p>
 </section>
-<section id="column-metadata-using-csvw" class="level1">
-<h1>Column metadata using CSVW</h1>
-<p>The W3C standard <a href="https://csvw.org/">CSV on the Web</a> enables interoperability of data via a sidecar file which is stored along side your tabular CSV. The csv-metadata file is a JSON encoded file which contains annotations for each of the columns in the dataset. Dedicated parsers are able to parse an annotated CSV to RDF. The CSV itself will not change, so in theory anyone can annotate an existing CSV to make it interoperable.</p>
-<p>Interoperability is increased if established ontologies are used, such as schema.org, dublin core, foaf and skos and common vocabularies such as agrovoc, eurovoc and gemet.</p>
+<section id="column-metadata-as-csvw" class="level1">
+<h1>Column metadata as CSVW</h1>
+<p>The W3C standard <a href="https://csvw.org/">CSV on the Web</a> enables interoperability of data via a sidecar file which is stored along side your tabular CSV. The csv-metadata file is a JSON encoded file which contains annotations for each of the columns in the dataset. For each column you can indicate the property which the column represents, the unit of measure used to express the value and relevant other metadata. Dedicated parsers are able to parse an annotated CSV. The CSV itself will not change, so in theory anyone can annotate an existing CSV to make it interoperable.</p>
+<p>Interoperability is increased if established ontologies are used, such as <a href="https://schema.org">schema.org</a>, <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">dublin core</a>, <a href="https://www.w3.org/2004/02/skos/">skos</a>. And common vocabularies such as <a href="https://agrovoc.fao.org/">Agrovoc</a> and <a href="https://www.eionet.europa.eu/gemet/en/about/">Gemet</a> as well as unit of measure vocabularies such as <a href="https://ucum.org/">UCUM</a> and <a href="https://github.com/HajoRijgersberg/OM">OM</a>.</p>
 <section id="workflow" class="level2">
 <h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
 <p>Step 1: Annotate a CSV using CSV on the Web (CSVW)</p>
@@ -206,13 +196,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="step-3-convert-to-rdf-or-json-ld" class="level2">
 <h2 class="anchored" data-anchor-id="step-3-convert-to-rdf-or-json-ld">Step 3: Convert to RDF or JSON-LD</h2>
-<p>Use tools like:</p>
+<p>In this step you will validate if the CSVW is properly structured, by serializing the data+metadata to a knowledge grap, and validate the graph using SHACL. You could upload the knowledge graph to the data repository, but it is not neccesary, because it contains the same content as the CSV+metadata.</p>
+<p>Use one of these tools to generate the knowledge graph (RDF):</p>
 <ul>
-<li><a href="https://pypi.org/project/csvwlib">csvwlib</a> python</li>
-<li><a href="https://github.com/atomgraph/RDFTabular">RDFTabular</a> - java</li>
-<li><a href="https://www.w3.org/2012/pyRdfa/">csv2rdf</a> - r</li>
+<li><a href="https://pypi.org/project/csvwlib">csvwlib</a> - python</li>
+<li><a href="https://github.com/Swirrl/csv2rdf/">csv2rdf</a> - java</li>
+<li><a href="https://ruby-rdf.github.io/rdf-tabular/">RDFTabular</a> - ruby<br>
+</li>
+<li><a href="https://cran.r-project.org/web/packages/csvwr">csvwr</a> - r - <a href="https://cran.r-project.org/web/packages/csvwr/vignettes/read-write-csvw.html">Tutorial</a></li>
 </ul>
-<p>Convert annotated CSV to RDF Turtle or JSON-LD for publishing.</p>
 </section>
 <section id="step-4-validate-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="step-4-validate-the-data">Step 4: Validate the Data</h2>
@@ -224,22 +216,9 @@ ul.task-list li input[type="checkbox"] {
 <li>Host the original CSV, the context file and the RDF/JSON-LD on a repository (zenodo/dataverse)</li>
 <li>As part of the publication, provide sensible metadata (keywords, authors, license, dates, references)</li>
 </ul>
-</section>
-</section>
-<section id="best-practices" class="level1">
-<h1>Best Practices</h1>
-<ul>
-<li>Use open and structured formats</li>
-<li>Use standardized ontologies and units<br>
-</li>
-<li>Include provenance and temporal information<br>
-</li>
-<li>Provide versioning and licensing information<br>
-</li>
-<li>Validate data with CSVW validators and RDF validators</li>
-</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
