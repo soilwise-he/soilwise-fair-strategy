@@ -1,0 +1,47 @@
+{
+  "title": "SoilWise FAIR Strategy: Data and Knowledge Guidances",
+  "description": "<p>This repository contains the official guidelines and strategies for implementing FAIR (Findable, Accessible, Interoperable, and Reusable) principles for data and knowledge within the SoilWise Horizon Europe project. It includes overarching general guidelines, specific publication strategies, and dedicated use cases for knowledge hubs, project websites, tabular data, and controlled vocabularies.</p>",
+  "upload_type": "publication",
+  "publication_type": "report",
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "publication_date": "2026-02-24",
+  "version": "0.2.0",
+  "keywords": [
+    "Soil data",
+    "FAIR principles",
+    "SoilWise",
+    "Data publication",
+    "Knowledge management"
+  ],
+  "creators": [
+    {
+      "name": "Pavelka, Tomas",
+      "affiliation": "Masaryk University",
+      "orcid": "0000-0003-4928-6831"
+    },
+    {
+      "name": "van Genuchten, Paul",
+      "affiliation": "ISRIC World Soil Information",
+      "orcid": "0000-0002-4789-174X"
+    }
+  ],
+  "grants": [
+    {
+      "id": "101112838"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/soilwise-he/soilwise-fair-strategy",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://soilwise-he.github.io/soilwise-fair-strategy",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-report"
+    }
+  ],
+  "language": "eng"
+}
