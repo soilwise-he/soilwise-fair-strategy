@@ -31,6 +31,11 @@
       "id": "101112838"
     }
   ],
+  "communities": [
+    {
+      "identifier": "soilwise-he"
+    }
+  ],
   "related_identifiers": [
     {
       "identifier": "https://github.com/soilwise-he/soilwise-fair-strategy",
