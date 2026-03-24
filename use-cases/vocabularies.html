@@ -167,11 +167,10 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li>broader: Shows a hierarchical relationship where one term is more general.<br>
 </li>
-<li>narrower: Shows a more specific concept within a broader term.<br>
-</li>
+<li>narrower: Shows a more specific concept within a broader term.</li>
 </ul></li>
-<li>Alignment with Existing Standards: Reuse and align with established vocabularies (e.g., SKOS, Dublin Core, schema.org) whenever possible.</li>
 </ul>
+<p>A typical example of the introduction of a close match relationship is the common scenario that a project decides to adopt a definition for a term which is slightly different then the definition used in common vocabularies. Alternative consideration could be to contact the administrators of the common vocabulary, to see if there is an interest to adopt the refinement in the definition upstream.</p>
 </section>
 <section id="steps-for-vocabulary-management" class="level2">
 <h2 class="anchored" data-anchor-id="steps-for-vocabulary-management">Steps for Vocabulary Management</h2>
@@ -259,20 +258,26 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="provide-a-machine-readable-interface" class="level2">
-<h2 class="anchored" data-anchor-id="provide-a-machine-readable-interface">Provide a machine readable interface</h2>
-<p>Simple Knowledge Organization System (<a href="https://www.w3.org/2004/02/skos/">SKOS</a>) is a commonly used approach to organise concepts their definitions and relations. Various guidances and tools exist which are able to produce a SKOS concept scheme from a spreadsheet. The result is a json-ld, xml/rdf or turtle file, which can be deposited at a vocabulary repository, such as:</p>
+<section id="provide-the-vocabulary-in-a-machine-readable-format" class="level2">
+<h2 class="anchored" data-anchor-id="provide-the-vocabulary-in-a-machine-readable-format">Provide the vocabulary in a machine readable format</h2>
+<p>Simple Knowledge Organization System (<a href="https://www.w3.org/2004/02/skos/">SKOS</a>) is a commonly used ontology to organise concepts their definitions and relations. Various guidances and tools exist which are able to produce a vocabulary following the SKOS ontology from a spreadsheet. The result is a json-ld, xml/rdf or turtle file, which can be deposited in a vocabulary repository or date repository, such as:</p>
 <ul>
-<li><a href="https://agroportal.eu/">agroportal.eu</a></li>
+<li><a href="https://agroportal.eu/">Agroportal.eu</a></li>
 <li><a href="zenodo.org">Zenodo.org</a></li>
 </ul>
-<p>Concepts are identified by an identifier which preferably resolves to the definition of the concept, when used as web address in a browser or data tool. The prefix of the identifier (<a href="https://example.com/vocab">https://example.com/vocab</a>#) references the actual document or a proxy is placed in between, which forwards users to where the document is hosted.</p>
-<p>Commonly available proxy solutions are <a href="https://w3id.org/">w3id.org</a> and <a href="https://doi.org/">doi.org</a>.</p>
-<p>Vocabulary repositories such as <a href="https://agroportal.lirmm.fr/">AgroPortal</a> typically facilitate the full process of deposit and handling of concept identifiers.</p>
 </section>
-<section id="providing-an-html-interface-for-human-browsing" class="level2">
-<h2 class="anchored" data-anchor-id="providing-an-html-interface-for-human-browsing">Providing an HTML Interface for Human Browsing</h2>
-<p>To ensure accessibility and usability of the vocabulary by non-technical users, an HTML interface should be developed. This interface should:</p>
+<section id="persistent-intelligent-identification-of-terms" class="level2">
+<h2 class="anchored" data-anchor-id="persistent-intelligent-identification-of-terms">Persistent &amp; intelligent identification of terms</h2>
+<p>Users aim to reference terms by a unique persistent identification. This persistence of vocabularies is facilitated by repositories. The voacabulary as a whole can be accessed via a DOI. However to reference a term within that vocabulary often is a challenge, because a DOI usually references a landing page for the document, not the document itself.</p>
+<p>The mechanism of referencing a sub section with a document with a hash ‘#’ character, e.g.&nbsp;<code>https://example.com/vocab#section2</code> provides a mechanism to reference a term within a bigger document. This mechanism is available for most web pages, rdf formats (such as json-ld, ttl, rdf-xml), and can even be implemented in pdf documents. However the mechanism is not very flexible and intelligent.</p>
+<p>Proxy services such as <a href="w3id.org">w3id.org</a> facilitate intelligent handling of identifiers. This proxy software can typically be configured to identify if the visiting client is a web browser or a machine, and forward the client to the relevant representation of the term (rdf or html). Also, if for some reason a vocabulary needs to be moved to another domain, the proxy configuration enables the migration without altering the w3id.org identifiers.</p>
+<p>The w3id proxy mechanism is used by Glosis Web Ontology. Depending on the type of client a request to <a href="http://w3id.org/glosis/model/layerhorizon/ManganeseExtractableElements">http://w3id.org/glosis/model/layerhorizon/ManganeseExtractableElements</a> is forwarded to the relevant location.</p>
+<p>Vocabulary repositories such as <a href="https://agroportal.lirmm.fr/">AgroPortal</a> typically facilitate the full process of deposit and intelligent handling of concept identifiers.</p>
+<p>A combination of a repository (for persistence) and proxy (for rich identification options) is optimal for vocabulary deposits.</p>
+</section>
+<section id="providing-a-html-interface-for-human-browsing" class="level2">
+<h2 class="anchored" data-anchor-id="providing-a-html-interface-for-human-browsing">Providing a HTML Interface for Human Browsing</h2>
+<p>To ensure accessibility and usability of the vocabulary by non-technical users, a HTML interface should be available. This interface should:</p>
 <ul>
 <li>Present vocabulary entries in an intuitive, searchable, and hierarchical format.<br>
 </li>
@@ -286,12 +291,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Recommended approaches include:</p>
 <ul>
-<li>Using tools such as <a href="https://skosmos.org/">Skosmos</a>, <a href="https://github.com/dgarijo/Widoco">Widoco</a> or <a href="https://github.com/ternaustralia/vocview">VocView</a> to render SKOS vocabularies as user-friendly HTML pages.<br>
-</li>
-<li>Embedding RDFa or JSON-LD in the HTML to maintain machine-readability alongside human-readability.</li>
+<li>Using tools such as <a href="https://skosmos.org/">Skosmos</a>, <a href="https://github.com/dgarijo/Widoco">Widoco</a> or <a href="https://github.com/ternaustralia/vocview">VocView</a> to render SKOS vocabularies as user-friendly HTML pages.</li>
+<li>Use a vocabulary repository such as <a href="https://agroportal.lirmm.fr/">AgroPortal</a></li>
+<li>Embedding RDFa or JSON-LD in the vocabulary web page to maintain machine-readability alongside human-readability.</li>
 </ul>
-<p>If proxy software is used, the proxy can be configured to identify if the visiting client is a web browser or a machine, and forward the client to the relevant representation of the concept.</p>
-<p>This mechanism is used by Glosis Web Ontology. Depending on the type of client a request to <a href="http://w3id.org/glosis/model/layerhorizon/ManganeseExtractableElements">http://w3id.org/glosis/model/layerhorizon/ManganeseExtractableElements</a> is forwarded to the relevant location.</p>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
