@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "SoilWise FAIR Strategy: Data and Knowledge Guidances"
+authors:
+- family-names: "Pavelka"
+  given-names: "Tomas"
+  email: "tomas.pavelka@geogr.muni.cz"
+  affiliation: "Masaryk University"
+  orcid: "https://orcid.org/0000-0003-4928-6831"
+- family-names: "van Genuchten"
+  given-names: "Paul"
+  email: "paul.vangenuchten@wur.nl"
+  affiliation: "ISRIC World Soil Information"
+  orcid: "https://orcid.org/0000-0002-4789-174X"
+repository-code: "https://github.com/soilwise-he/soilwise-fair-strategy"
+url: "https://soilwise-he.github.io/soilwise-fair-strategy"
+abstract: >-
+  This repository contains the official guidelines and strategies for 
+  implementing FAIR (Findable, Accessible, Interoperable, and Reusable) 
+  principles for data and knowledge within the SoilWise Horizon Europe project. 
+  It includes overarching general guidelines, specific publication strategies, 
+  and dedicated use cases for knowledge hubs, project websites, tabular data, 
+  and controlled vocabularies.
+keywords:
+  - "Soil data"
+  - "FAIR principles"
+  - "SoilWise"
+  - "Data publication"
+  - "Knowledge management"
+license: "CC-BY-4.0"
+version: 0.2.0
+date-released: 2026-02-24
+url: "https://github.com/soilwise-he/soilwise-fair-strategy"
+identifiers:
+  - type: doi
+    value: ""
+    description: "DOI for the guidelines (to be assigned)"
+  - type: other
+    value: "101112838"
+    description: "EU Horizon grant agreement number"
+references:
+  - type: grant
+    title: "SoilWise — Enabling Soil Data and Knowledge for Informed Decision-Making"
+    authors:
+  - name: "European Commission"
+    number: "101112838"
+    institution:
+    name: "European Union"
+    url: "https://doi.org/10.3030/101112838"
+
+  
