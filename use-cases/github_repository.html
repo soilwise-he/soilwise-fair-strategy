@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>gbif-biodiversity-data – Soilwise project FAIR Strategy</title>
+<title>github_repository – Soilwise project FAIR Strategy</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -122,187 +122,140 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="strategy-for-ensuring-fair-biodiversiy-data-via-gbif" class="level1">
-<h1>Strategy for ensuring FAIR biodiversiy data via GBIF</h1>
-<p>Platforms like <a href="https://gbif.org">GBIF</a> can strongly support <a href="https://go-fair.org">FAIR data</a>. But only if data providers set things up properly and users reference their data downloads properly. This documents presents a strategy to help you make your biodiversity data as Findable, Accessible, Interoperable, and Reusable (FAIR) as possible.</p>
-<p>By design, datasets in GBIF are incremental, new biodiversity observations can arrive at a daily basis. An identifier is assigned to incremental datasets, and the datasets are findable through OpenAire. However for users to reference the state of the dataset, when using it in their research. they can make an explicit download of the dataset. GBIF will create a persistent identifiation to that snapshot, which can be used as a reference. There is no need to deposit the extracted dataset separately.</p>
-<section id="before-publishing-prepare-your-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="before-publishing-prepare-your-dataset">1. Before Publishing: Prepare Your Dataset</h2>
-<section id="choose-a-stable-data-management-setup" class="level3">
-<h3 class="anchored" data-anchor-id="choose-a-stable-data-management-setup">Choose a stable data management setup</h3>
+<section id="github-repository-publication-on-zenodo" class="level1">
+<h1><strong>GitHub Repository Publication on Zenodo</strong></h1>
+<p>This document serves as a universal guide for users and researchers on how to properly set up a repository and automatically archive it on the Zenodo platform. Connecting GitHub and Zenodo will provide your software or data with a permanent DOI (Digital Object Identifier), which is key for their easy citation, sharing, and long-term preservation in the scientific environment.</p>
+<p>Before publishing your repository, it is important to describe the content to enhance its FAIRness and transparency.</p>
+<section id="adding-a-repository-description" class="level2">
+<h2 class="anchored" data-anchor-id="adding-a-repository-description"><strong>1. Adding a Repository Description</strong></h2>
+<p>For the components released as a part of the project, it is essential to add a coherent description. A clear description helps other developers and researchers instantly understand what your project does, its main purpose, and its context. This description is also vital because metadata from GitHub is often used by Zenodo when generating the archive record.</p>
+<p>There are two primary places where you should add your repository description:</p>
+<section id="the-github-about-section" class="level3">
+<h3 class="anchored" data-anchor-id="the-github-about-section"><strong>1.1 The GitHub “About” Section</strong></h3>
+<p>This is the short, prominent text displayed on the right sidebar of your repository’s main page.</p>
+<ol type="1">
+<li>Navigate to the main page of your repository on GitHub.<br>
+</li>
+<li>Look for the About section on the right side of the screen.<br>
+</li>
+<li>Click the gear icon next to “About”.<br>
+</li>
+<li>Fill in the Description field with a concise summary of your project (usually 1-2 sentences).<br>
+</li>
+<li>Click Save changes.</li>
+</ol>
+</section>
+<section id="the-readme.md-file" class="level3">
+<h3 class="anchored" data-anchor-id="the-readme.md-file"><strong>1.2 The README.md File</strong></h3>
+<p>While the “About” section provides a quick glance, the README.md file is where you provide a comprehensive explanation.</p>
+<ol type="1">
+<li><p>If you don’t have one, create a file named README.md in the root directory of your repository.</p></li>
+<li><p>Start with an H1 heading (# Project Name).</p></li>
+<li><p>Follow it with a well-written descriptive paragraph that explains what the software or dataset is, who it is for, and what problem it solves.</p></li>
+<li><p>Structure the Content. Use clear subheadings (##) to organize other essential information. A good README typically includes sections like Installation, Usage, or additional information about the content of your repository.</p></li>
+</ol>
+<p>Keep the description in the “About” section brief and use the README.md for detailed context, installation guides, and usage examples.</p>
+<p>Once your repository is successfully published and assigned a DOI, it is highly recommended to display this information in your repository. Navigate to your new record on Zenodo, scroll down to the bottom of the right sidebar, and find the Badge section. Copy the provided Markdown code and paste it at the very top of your README.md file. This instantly shows visitors that your project is permanently archived and provides them with a direct link to cite it.</p>
+</section>
+</section>
+<section id="prerequisites-preparing-your-repository" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites-preparing-your-repository"><strong>2. Prerequisites: Preparing Your Repository</strong></h2>
+<p>Before publishing on Zenodo, ensure your repository contains the necessary files to define legal usage, citation rules, and metadata.</p>
+<p><strong>Requirement for SoilWise:</strong> To ensure your repository metadata is successfully harvested into the SoilWise catalogue, your Zenodo record must include the Grant Number. Standard files LICENSE.txt or CITATION.cff do not support funding metadata, creating a .zenodo.json file is the only way to automate this inclusion. If you skip this file, you must add the Grant Number manually to Zenodo after publication.</p>
+<section id="adding-a-license" class="level3">
+<h3 class="anchored" data-anchor-id="adding-a-license"><strong>2.1 Adding a License</strong></h3>
+<p>A license is mandatory. Without it, the community cannot legally use your work, and Zenodo requires it for proper archiving.</p>
 <ul>
-<li>Maintain your source data in a version-controlled or otherwise documented system.</li>
-<li>Keep track of changes so you can update GBIF intentionally and transparently.</li>
+<li><p>Create a new file in the root directory (‘Add file’ &gt; ‘Create new file’) and name it LICENSE.md or LICENSE.txt.</p></li>
+<li><p>Method A (Software): When you type “LICENSE” as the filename on GitHub, a “Choose a license template” button appears. This is ideal for standard software licenses (e.g., MIT, Apache).</p></li>
+<li><p>Method B (Data/Other): If you need a license not listed (e.g., Creative Commons for data), copy the official license text and paste it into the file manually. You can link to the official source if the text is too long.</p></li>
 </ul>
+<p>Include the copyright notice in your license file, such as the following line: <em>Copyright (c) 2026 SoilWise Horizon Europe</em>.</p>
+<p>Example of LICENSE.txt with MIT License: <a href="https://github.com/soilwise-he/link-liveliness-assessment?tab=MIT-1-ov-file">https://github.com/soilwise-he/link-liveliness-assessment?tab=MIT-1-ov-file</a></p>
+<p>Example of LICENSE.txt with CC-BY-4.0 License: <a href="https://github.com/soilwise-he/soilwise-fair-strategy/blob/main/LICENSE.txt">https://github.com/soilwise-he/soilwise-fair-strategy/blob/main/LICENSE.txt</a></p>
 </section>
-<section id="use-the-darwin-core-standard" class="level3">
-<h3 class="anchored" data-anchor-id="use-the-darwin-core-standard">Use the Darwin Core standard</h3>
+<section id="adding-citation-metadata-citation.cff" class="level3">
+<h3 class="anchored" data-anchor-id="adding-citation-metadata-citation.cff"><strong>2.2 Adding Citation Metadata (CITATION.cff)</strong></h3>
+<p>To ensure your software or dataset is cited correctly, use the Citation File Format.</p>
 <ul>
-<li>Structure data clearly using DwC terms (e.g., <em>occurrenceID, eventDate, scientificName</em>).</li>
-<li>Avoid custom field names unless necessary—and document them.</li>
+<li>Create the file: Create a file named CITATION.cff. GitHub will offer an “Insert example” option to help you get started.</li>
 </ul>
-</section>
-<section id="apply-a-persistent-license" class="level3">
-<h3 class="anchored" data-anchor-id="apply-a-persistent-license">Apply a persistent license</h3>
+<p>Note that in the license field, you must use the exact SPDX identifier. For example, use CC-BY-4.0 for “Creative Commons Attribution 4.0 International”.</p>
+<p>The CFF format is primarily designed for software and datasets. If you are publishing other resource types, or need to add e.g.&nbsp;Funding information, you will need to edit these metadata fields manually in Zenodo after publication.</p>
+<p>You can find more information about CITATION.cff files in manuals on the following links:</p>
 <ul>
-<li>Use a standard open license like CC0 or CC BY 4.0, as required by GBIF.</li>
-<li>Clearly define attribution expectations in your metadata.</li>
+<li>Zenodo: <a href="https://help.zenodo.org/docs/github/describe-software/citation-file/">https://help.zenodo.org/docs/github/describe-software/citation-file/</a><br>
+</li>
+<li>GitHub: <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files">https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files</a></li>
 </ul>
+<p>Example of CITATION.cff file: <a href="https://github.com/soilwise-he/soilwise-fair-strategy/blob/main/CITATION.cff">https://github.com/soilwise-he/soilwise-fair-strategy/blob/main/CITATION.cff</a></p>
 </section>
-<section id="assign-globally-unique-identifiers" class="level3">
-<h3 class="anchored" data-anchor-id="assign-globally-unique-identifiers">Assign globally unique identifiers</h3>
+<section id="metadata-for-zenodo-.zenodo.json" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-for-zenodo-.zenodo.json"><strong>2.3 Metadata for Zenodo (.zenodo.json)</strong></h3>
+<p>If you want the most precise control over your metadata, you can create a .zenodo.json file. However, keep in mind that this file is exclusively for Zenodo. Other platforms or citation managers will not use it, but Zenodo prioritizes it over all other metadata files (including CITATION.cff).</p>
+<p>Because it is designed specifically for Zenodo, it provides the most complete metadata structure. It allows you to automatically include complex details like funding, which are otherwise difficult to automate.</p>
+<p>Creating this file can be more complex, so it is entirely voluntary. The standard alternative is to skip this file and manually edit the metadata directly in the Zenodo web interface after your repository is published.</p>
+<p>You can find more information about .zenodo.json files in manuals on the following link:</p>
 <ul>
-<li>Use stable, provider-managed occurrenceIDs, not row numbers or UUIDs that change.</li>
-<li>Avoid reassigning IDs across updates.</li>
+<li>Zenodo: <a href="https://help.zenodo.org/docs/github/describe-software/zenodo-json/">https://help.zenodo.org/docs/github/describe-software/zenodo-json/</a></li>
 </ul>
+<p>Example of .zenodo.json file: <a href="https://github.com/soilwise-he/soilwise-fair-strategy/blob/main/.zenodo.json">https://github.com/soilwise-he/soilwise-fair-strategy/blob/main/.zenodo.json</a></p>
 </section>
 </section>
-<section id="publishing-to-gbif-do-it-the-fair-way" class="level2">
-<h2 class="anchored" data-anchor-id="publishing-to-gbif-do-it-the-fair-way">2. Publishing to GBIF: Do It the FAIR Way</h2>
-<section id="register-through-ipt-or-another-trusted-mechanism" class="level3">
-<h3 class="anchored" data-anchor-id="register-through-ipt-or-another-trusted-mechanism">Register through IPT or another trusted mechanism</h3>
+<section id="linking-and-publishing-to-zenodo" class="level2">
+<h2 class="anchored" data-anchor-id="linking-and-publishing-to-zenodo"><strong>3. Linking and Publishing to Zenodo</strong></h2>
+<p>You can automatically publish your own repositories to Zenodo. This ensures that every time you release a new version of your work, it is securely archived and assigned a DOI.</p>
+<section id="enabling-the-repository-in-zenodo" class="level3">
+<h3 class="anchored" data-anchor-id="enabling-the-repository-in-zenodo"><strong>3.1 Enabling the Repository in Zenodo</strong></h3>
+<p>First, you need to tell Zenodo to start “watching” your specific repository. The manual is also available here: <a href="https://help.zenodo.org/docs/github/enable-repository/">https://help.zenodo.org/docs/github/enable-repository/</a></p>
+<p>Follow these steps to link your accounts and enable tracking:</p>
+<ol type="1">
+<li><p>Go to <a href="https://zenodo.org/">Zenodo.org</a> and log in. Ideally, log in directly using your GitHub account, as this automatically links both accounts together.</p></li>
+<li><p>In the top right corner, click on your profile (your account icon) and select GitHub from the dropdown menu.</p></li>
+<li><p>You will see a list of your repositories. If you do not see the specific repository you want to publish, click the “Sync now” button at the top of the page.</p></li>
+<li><p>Enable tracking. Find your repository in the list and flip the toggle switch next to it to “ON”.</p></li>
+</ol>
+<p>Note that to successfully enabling the Sync on Zenodo, you must have Owner (for personal repositories) or Admin (for organization repositories) privileges. If you have a lower role, you will not be able to turn the sync toggle “ON”. Once an Admin or Owner has enabled the sync in Zenodo, anyone with write access to the repository (roles such as Maintain, Write, or Collaborator) can create a new release on GitHub and trigger the publication.</p>
+</section>
+<section id="creating-a-release-on-github" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-release-on-github"><strong>3.2 Creating a “Release” on GitHub</strong></h3>
+<p>Simply turning on the toggle switch in Zenodo does not upload anything to the platform yet. Zenodo is waiting for you to publish a new version of your work, known as Release.</p>
+<p>To trigger the publication process, follow these steps:</p>
+<ol type="1">
+<li><p>Go to your repository on GitHub.</p></li>
+<li><p>In the right-hand panel, click on Releases (or “Create a new release”).</p></li>
+<li><p>Click on the Draft a new release button.</p></li>
+<li><p>Choose a tag for your version (e.g., v1.0.0), fill in a release title (such as “First Release”), and add a short description if needed.</p></li>
+<li><p>Click the green Publish release button.</p></li>
+</ol>
+<p>As soon as you click Publish on GitHub, a signal is sent directly to Zenodo. Zenodo immediately downloads your entire repository as a .zip archive, reads your CITATION.cff or .zenodo.json file, generates a new record, and assigns it a unique DOI. Be aware that Zenodo instantly “locks” the files into a permanent archive. It does not create a draft waiting for your approval.</p>
+<p>The new version is created on Zenodo every time you create a new Release on GitHub, with different versions linked together.</p>
+<p>When you navigate back to the GitHub section in Zenodo, you will now see an icon displaying the newly generated DOI next to your repository.</p>
+<p>Because publishing on Zenodo creates a permanent, un-deletable record, you might want to test your configuration first. You can use the <a href="https://sandbox.zenodo.org">Zenodo Sandbox</a>, which is a safe testing environment. It works identically to the main site, allowing you to verify that your CITATION.cff or .zenodo.json files are parsed correctly without creating a permanent public record.</p>
+</section>
+</section>
+<section id="post-publication-editing-and-versioning" class="level2">
+<h2 class="anchored" data-anchor-id="post-publication-editing-and-versioning"><strong>4. Post-Publication: Editing and Versioning</strong></h2>
+<p>Because the publication process is automatic and immediate, there are two important rules regarding what can and cannot be changed afterward.</p>
+<section id="what-can-be-edited-anytime-metadata" class="level3">
+<h3 class="anchored" data-anchor-id="what-can-be-edited-anytime-metadata"><strong>4.1 What CAN Be Edited Anytime (Metadata)</strong></h3>
+<p>Even after the record is published, you can go to the Zenodo website, click the Edit button on your record, and modify the text information. Your DOI will remain exactly the same. You are allowed to edit:</p>
 <ul>
-<li>Ensure the source repository (IPT, DiGIR, BioCASE, etc.) is up-to-date and maintained.</li>
-<li>Use HTTPS endpoints where possible.</li>
+<li><p>The project title</p></li>
+<li><p>Author names, their order, and affiliations (university/company)</p></li>
+<li><p>Description of the project (abstract)</p></li>
+<li><p>The license (in case it didn’t load correctly from GitHub)</p></li>
+<li><p>Grants (funding), keywords, or links to related articles</p></li>
 </ul>
+<p>Note that if you did not use a .zenodo.json file during setup, you must manually add the Grant Number here. Without the associated grant information, your metadata cannot be automatically harvested by the SoilWise catalogue.</p>
 </section>
-<section id="provide-rich-curated-metadata" class="level3">
-<h3 class="anchored" data-anchor-id="provide-rich-curated-metadata">Provide rich, curated metadata</h3>
-<p>Include:</p>
-<ul>
-<li>Dataset purpose and scope</li>
-<li>Geographic and taxonomic coverage</li>
-<li>Methods, sampling protocols, and data quality notes</li>
-<li>Contact details and institutional information</li>
-<li>Update frequency and version history</li>
-</ul>
-</section>
-<section id="request-or-verify-a-dataset-doi" class="level3">
-<h3 class="anchored" data-anchor-id="request-or-verify-a-dataset-doi">Request or verify a dataset DOI</h3>
-<ul>
-<li>GBIF assigns a concept DOI for the dataset.</li>
-<li>Confirm the DOI resolves correctly and includes citation guidance.</li>
-<li>If you publish major revisions, consider creating a new versioned DOI.</li>
-</ul>
-</section>
-</section>
-<section id="after-publishing-maintain-fairness-over-time" class="level2">
-<h2 class="anchored" data-anchor-id="after-publishing-maintain-fairness-over-time">3. After Publishing: Maintain FAIRness Over Time</h2>
-<section id="keep-metadata-in-sync-with-the-data" class="level3">
-<h3 class="anchored" data-anchor-id="keep-metadata-in-sync-with-the-data">Keep metadata in sync with the data</h3>
-<ul>
-<li>If you update content (records, taxonomy, or coverage), revise the metadata too.</li>
-<li>Annotate major updates with version numbers or changelogs.</li>
-</ul>
-</section>
-<section id="monitor-quality-feedback" class="level3">
-<h3 class="anchored" data-anchor-id="monitor-quality-feedback">Monitor quality feedback</h3>
-<p>GBIF may flag:</p>
-<ul>
-<li>Duplicate IDs</li>
-<li>Invalid coordinates</li>
-<li>Taxonomic mismatches</li>
-<li>Missing fields</li>
-</ul>
-<p>Respond and correct issues promptly to preserve usability.</p>
-</section>
-<section id="support-reproducibility" class="level3">
-<h3 class="anchored" data-anchor-id="support-reproducibility">Support reproducibility</h3>
-<p>Encourage users to:</p>
-<ul>
-<li>Cite download DOIs for snapshots (not just the dataset DOI).</li>
-<li>Reach out if clarifications are needed.</li>
-</ul>
-</section>
-</section>
-<section id="enhancing-reuse-and-interoperability" class="level2">
-<h2 class="anchored" data-anchor-id="enhancing-reuse-and-interoperability">4. Enhancing Reuse and Interoperability</h2>
-<section id="use-controlled-vocabularies-and-standards" class="level3">
-<h3 class="anchored" data-anchor-id="use-controlled-vocabularies-and-standards">Use controlled vocabularies and standards</h3>
-<ul>
-<li>Taxonomy: match to recognised checklists whenever appropriate.</li>
-<li>Locations: use standardized coordinate systems and georeferencing protocols.</li>
-<li>Dates: follow ISO 8601 (e.g., <code>YYYY-MM-DD</code>).</li>
-</ul>
-</section>
-<section id="include-contextual-data-where-available" class="level3">
-<h3 class="anchored" data-anchor-id="include-contextual-data-where-available">Include contextual data where available</h3>
-<p>Example additions:</p>
-<ul>
-<li>Sampling methods (<em>samplingProtocol</em>)</li>
-<li>Basis of record (<em>materialSample</em>, <em>humanObservation</em>, etc.)</li>
-<li>Life stage, sex, habitat</li>
-<li>Citations or related literature</li>
-</ul>
-</section>
-<section id="link-to-external-resources" class="level3">
-<h3 class="anchored" data-anchor-id="link-to-external-resources">Link to external resources</h3>
-<p>When possible, connect:</p>
-<ul>
-<li>Specimen records → collection codes (GRBio, CETAF IDs)</li>
-<li>Taxon concepts → WoRMS, Catalogue of Life</li>
-<li>Projects → institutional repositories or scientific publications</li>
-</ul>
-</section>
-</section>
-<section id="communicate-with-gbif-as-a-partner" class="level2">
-<h2 class="anchored" data-anchor-id="communicate-with-gbif-as-a-partner">5. Communicate with GBIF as a Partner</h2>
-<section id="clarify-how-users-should-cite-your-data" class="level3">
-<h3 class="anchored" data-anchor-id="clarify-how-users-should-cite-your-data">Clarify how users should cite your data</h3>
-<ul>
-<li>Provide a preferred citation format in the metadata.</li>
-<li>Encourage users to use download DOIs for stability.</li>
-</ul>
-</section>
-<section id="declare-update-policies" class="level3">
-<h3 class="anchored" data-anchor-id="declare-update-policies">Declare update policies</h3>
-<p>State whether data will be:</p>
-<ul>
-<li>Static (no updates)</li>
-<li>Periodically updated</li>
-<li>Continuously synchronized</li>
-</ul>
-</section>
-</section>
-<section id="evaluate-your-fairness" class="level2">
-<h2 class="anchored" data-anchor-id="evaluate-your-fairness">6. Evaluate Your FAIRness</h2>
-<p>Use this quick checklist:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>FAIR Principle</th>
-<th>You’re doing well if…</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Findable</td>
-<td>The dataset has a DOI, clear title, and searchable metadata.</td>
-</tr>
-<tr class="even">
-<td>Accessible</td>
-<td>Data can be downloaded without barriers and has an open license.</td>
-</tr>
-<tr class="odd">
-<td>Interoperable</td>
-<td>Darwin Core terms and standard vocabularies are used consistently.</td>
-</tr>
-<tr class="even">
-<td>Reusable</td>
-<td>Metadata explains methods, identifiers are stable, and updates are traceable.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="final-takeaway" class="level2">
-<h2 class="anchored" data-anchor-id="final-takeaway">Final Takeaway</h2>
-<p>GBIF provides the infrastructure for FAIR data, but providers control the quality and longevity. By supplying structured data, rich metadata, stable identifiers, and clear versioning, you ensure users can reliably find, cite, and reuse your dataset far into the future.</p>
+<section id="what-cannot-be-edited-after-publication-files" class="level3">
+<h3 class="anchored" data-anchor-id="what-cannot-be-edited-after-publication-files"><strong>4.2 What CANNOT Be Edited After Publication (Files)</strong></h3>
+<p>Once Zenodo publishes the record, the actual files (your code, data, etc.) can no longer be changed. Zenodo records are inherently permanent to ensure they can be reliably cited in scientific papers.</p>
+<p>If you discover after publishing that a file is missing or there is a bug in your code, you cannot simply overwrite the existing files in Zenodo. Instead, you must fix the error in Git, and publish a new Release on GitHub (e.g., version v1.0.1). Zenodo will automatically catch this new release and create “Version 2”. It will share the same base DOI but receive a new version-specific DOI. Zenodo neatly links these versions together, so users will always be notified that a newer version exists.</p>
 
 
+</section>
 </section>
 </section>
 
@@ -715,7 +668,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/edit/main/use-cases/gbif-biodiversity-data.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/edit/main/use-cases/github_repository.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soilwise-he/soilwise-fair-strategy/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
