@@ -25,11 +25,8 @@ This is the short, prominent text displayed on the right sidebar of your reposit
 While the "About" section provides a quick glance, the README.md file is where you provide a comprehensive explanation.
 
 1. If you don't have one, create a file named README.md in the root directory of your repository.
-
 2. Start with an H1 heading (\# Project Name).
-
 3. Follow it with a well-written descriptive paragraph that explains what the software or dataset is, who it is for, and what problem it solves.
-
 4. Structure the Content. Use clear subheadings (\#\#) to organize other essential information. A good README typically includes sections like Installation, Usage, or additional information about the content of your repository. 
 
 Keep the description in the "About" section brief and use the README.md for detailed context, installation guides, and usage examples.
@@ -48,15 +45,12 @@ Before publishing on Zenodo, ensure your repository contains the necessary files
 A license is mandatory. Without it, the community cannot legally use your work, and Zenodo requires it for proper archiving.
 
 * Create a new file in the root directory (‘Add file’ \> ‘Create new file’) and name it LICENSE.md or LICENSE.txt.
-
 * Method A (Software): When you type "LICENSE" as the filename on GitHub, a "Choose a license template" button appears. This is ideal for standard software licenses (e.g., MIT, Apache).
-
 * Method B (Data/Other): If you need a license not listed (e.g., Creative Commons for data), copy the official license text and paste it into the file manually. You can link to the official source if the text is too long.
 
 Include the copyright notice in your license file, such as the following line: *Copyright (c) 2026 SoilWise Horizon Europe*.
 
 Example of LICENSE.txt with MIT License: [https://github.com/soilwise-he/link-liveliness-assessment?tab=MIT-1-ov-file](https://github.com/soilwise-he/link-liveliness-assessment?tab=MIT-1-ov-file) 
-
 Example of LICENSE.txt with CC-BY-4.0 License: [https://github.com/soilwise-he/soilwise-fair-strategy/blob/main/LICENSE.txt](https://github.com/soilwise-he/soilwise-fair-strategy/blob/main/LICENSE.txt) 
 
 ### **2.2 Adding Citation Metadata (CITATION.cff)**
@@ -86,8 +80,8 @@ Creating this file can be more complex, so it is entirely voluntary. The standar
 
 You can find more information about .zenodo.json files in manuals on the following link: 
 
-- Zenodo: [https://help.zenodo.org/docs/github/describe-software/zenodo-json/](https://help.zenodo.org/docs/github/describe-software/zenodo-json/) 
-
+- Zenodo: [https://help.zenodo.org/docs/github/describe-software/zenodo-json/](https://help.zenodo.org/docs/github/describe-software/zenodo-json/)
+  
 Example of .zenodo.json file: [https://github.com/soilwise-he/soilwise-fair-strategy/blob/main/.zenodo.json](https://github.com/soilwise-he/soilwise-fair-strategy/blob/main/.zenodo.json) 
 
 ## **3\. Linking and Publishing to Zenodo**
@@ -101,11 +95,8 @@ First, you need to tell Zenodo to start "watching" your specific repository. The
 Follow these steps to link your accounts and enable tracking:
 
 1. Go to [Zenodo.org](https://zenodo.org/) and log in. Ideally, log in directly using your GitHub account, as this automatically links both accounts together.
-
 2. In the top right corner, click on your profile (your account icon) and select GitHub from the dropdown menu.
-
 3. You will see a list of your repositories. If you do not see the specific repository you want to publish, click the "Sync now" button at the top of the page.
-
 4. Enable tracking. Find your repository in the list and flip the toggle switch next to it to "ON".
 
 Note that to successfully enabling the Sync on Zenodo, you must have Owner (for personal repositories) or Admin (for organization repositories) privileges. If you have a lower role, you will not be able to turn the sync toggle "ON". Once an Admin or Owner has enabled the sync in Zenodo, anyone with write access to the repository (roles such as Maintain, Write, or Collaborator) can create a new release on GitHub and trigger the publication.
@@ -117,13 +108,9 @@ Simply turning on the toggle switch in Zenodo does not upload anything to the pl
 To trigger the publication process, follow these steps:
 
 1. Go to your repository on GitHub.
-
 2. In the right-hand panel, click on Releases (or "Create a new release").
-
 3. Click on the Draft a new release button.
-
 4. Choose a tag for your version (e.g., v1.0.0), fill in a release title (such as "First Release"), and add a short description if needed.
-
 5. Click the green Publish release button.
 
 As soon as you click Publish on GitHub, a signal is sent directly to Zenodo. Zenodo immediately downloads your entire repository as a .zip archive, reads your CITATION.cff or .zenodo.json file, generates a new record, and assigns it a unique DOI. Be aware that Zenodo instantly "locks" the files into a permanent archive. It does not create a draft waiting for your approval. 
@@ -143,13 +130,9 @@ Because the publication process is automatic and immediate, there are two import
 Even after the record is published, you can go to the Zenodo website, click the Edit button on your record, and modify the text information. Your DOI will remain exactly the same. You are allowed to edit:
 
 * The project title 
-
 * Author names, their order, and affiliations (university/company) 
-
 * Description of the project (abstract) 
-
 * The license (in case it didn't load correctly from GitHub) 
-
 * Grants (funding), keywords, or links to related articles 
 
 Note that if you did not use a .zenodo.json file during setup, you must manually add the Grant Number here. Without the associated grant information, your metadata cannot be automatically harvested by the SoilWise catalogue.
