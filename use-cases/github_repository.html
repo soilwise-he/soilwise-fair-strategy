@@ -149,10 +149,10 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="the-readme.md-file"><strong>1.2 The README.md File</strong></h3>
 <p>While the “About” section provides a quick glance, the README.md file is where you provide a comprehensive explanation.</p>
 <ol type="1">
-<li><p>If you don’t have one, create a file named README.md in the root directory of your repository.</p></li>
-<li><p>Start with an H1 heading (# Project Name).</p></li>
-<li><p>Follow it with a well-written descriptive paragraph that explains what the software or dataset is, who it is for, and what problem it solves.</p></li>
-<li><p>Structure the Content. Use clear subheadings (##) to organize other essential information. A good README typically includes sections like Installation, Usage, or additional information about the content of your repository.</p></li>
+<li>If you don’t have one, create a file named README.md in the root directory of your repository.</li>
+<li>Start with an H1 heading (# Project Name).</li>
+<li>Follow it with a well-written descriptive paragraph that explains what the software or dataset is, who it is for, and what problem it solves.</li>
+<li>Structure the Content. Use clear subheadings (##) to organize other essential information. A good README typically includes sections like Installation, Usage, or additional information about the content of your repository.</li>
 </ol>
 <p>Keep the description in the “About” section brief and use the README.md for detailed context, installation guides, and usage examples.</p>
 <p>Once your repository is successfully published and assigned a DOI, it is highly recommended to display this information in your repository. Navigate to your new record on Zenodo, scroll down to the bottom of the right sidebar, and find the Badge section. Copy the provided Markdown code and paste it at the very top of your README.md file. This instantly shows visitors that your project is permanently archived and provides them with a direct link to cite it.</p>
@@ -166,13 +166,12 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="adding-a-license"><strong>2.1 Adding a License</strong></h3>
 <p>A license is mandatory. Without it, the community cannot legally use your work, and Zenodo requires it for proper archiving.</p>
 <ul>
-<li><p>Create a new file in the root directory (‘Add file’ &gt; ‘Create new file’) and name it LICENSE.md or LICENSE.txt.</p></li>
-<li><p>Method A (Software): When you type “LICENSE” as the filename on GitHub, a “Choose a license template” button appears. This is ideal for standard software licenses (e.g., MIT, Apache).</p></li>
-<li><p>Method B (Data/Other): If you need a license not listed (e.g., Creative Commons for data), copy the official license text and paste it into the file manually. You can link to the official source if the text is too long.</p></li>
+<li>Create a new file in the root directory (‘Add file’ &gt; ‘Create new file’) and name it LICENSE.md or LICENSE.txt.</li>
+<li>Method A (Software): When you type “LICENSE” as the filename on GitHub, a “Choose a license template” button appears. This is ideal for standard software licenses (e.g., MIT, Apache).</li>
+<li>Method B (Data/Other): If you need a license not listed (e.g., Creative Commons for data), copy the official license text and paste it into the file manually. You can link to the official source if the text is too long.</li>
 </ul>
 <p>Include the copyright notice in your license file, such as the following line: <em>Copyright (c) 2026 SoilWise Horizon Europe</em>.</p>
-<p>Example of LICENSE.txt with MIT License: <a href="https://github.com/soilwise-he/link-liveliness-assessment?tab=MIT-1-ov-file">https://github.com/soilwise-he/link-liveliness-assessment?tab=MIT-1-ov-file</a></p>
-<p>Example of LICENSE.txt with CC-BY-4.0 License: <a href="https://github.com/soilwise-he/soilwise-fair-strategy/blob/main/LICENSE.txt">https://github.com/soilwise-he/soilwise-fair-strategy/blob/main/LICENSE.txt</a></p>
+<p>Example of LICENSE.txt with MIT License: <a href="https://github.com/soilwise-he/link-liveliness-assessment?tab=MIT-1-ov-file">https://github.com/soilwise-he/link-liveliness-assessment?tab=MIT-1-ov-file</a> Example of LICENSE.txt with CC-BY-4.0 License: <a href="https://github.com/soilwise-he/soilwise-fair-strategy/blob/main/LICENSE.txt">https://github.com/soilwise-he/soilwise-fair-strategy/blob/main/LICENSE.txt</a></p>
 </section>
 <section id="adding-citation-metadata-citation.cff" class="level3">
 <h3 class="anchored" data-anchor-id="adding-citation-metadata-citation.cff"><strong>2.2 Adding Citation Metadata (CITATION.cff)</strong></h3>
@@ -210,10 +209,10 @@ ul.task-list li input[type="checkbox"] {
 <p>First, you need to tell Zenodo to start “watching” your specific repository. The manual is also available here: <a href="https://help.zenodo.org/docs/github/enable-repository/">https://help.zenodo.org/docs/github/enable-repository/</a></p>
 <p>Follow these steps to link your accounts and enable tracking:</p>
 <ol type="1">
-<li><p>Go to <a href="https://zenodo.org/">Zenodo.org</a> and log in. Ideally, log in directly using your GitHub account, as this automatically links both accounts together.</p></li>
-<li><p>In the top right corner, click on your profile (your account icon) and select GitHub from the dropdown menu.</p></li>
-<li><p>You will see a list of your repositories. If you do not see the specific repository you want to publish, click the “Sync now” button at the top of the page.</p></li>
-<li><p>Enable tracking. Find your repository in the list and flip the toggle switch next to it to “ON”.</p></li>
+<li>Go to <a href="https://zenodo.org/">Zenodo.org</a> and log in. Ideally, log in directly using your GitHub account, as this automatically links both accounts together.</li>
+<li>In the top right corner, click on your profile (your account icon) and select GitHub from the dropdown menu.</li>
+<li>You will see a list of your repositories. If you do not see the specific repository you want to publish, click the “Sync now” button at the top of the page.</li>
+<li>Enable tracking. Find your repository in the list and flip the toggle switch next to it to “ON”.</li>
 </ol>
 <p>Note that to successfully enabling the Sync on Zenodo, you must have Owner (for personal repositories) or Admin (for organization repositories) privileges. If you have a lower role, you will not be able to turn the sync toggle “ON”. Once an Admin or Owner has enabled the sync in Zenodo, anyone with write access to the repository (roles such as Maintain, Write, or Collaborator) can create a new release on GitHub and trigger the publication.</p>
 </section>
@@ -222,11 +221,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Simply turning on the toggle switch in Zenodo does not upload anything to the platform yet. Zenodo is waiting for you to publish a new version of your work, known as Release.</p>
 <p>To trigger the publication process, follow these steps:</p>
 <ol type="1">
-<li><p>Go to your repository on GitHub.</p></li>
-<li><p>In the right-hand panel, click on Releases (or “Create a new release”).</p></li>
-<li><p>Click on the Draft a new release button.</p></li>
-<li><p>Choose a tag for your version (e.g., v1.0.0), fill in a release title (such as “First Release”), and add a short description if needed.</p></li>
-<li><p>Click the green Publish release button.</p></li>
+<li>Go to your repository on GitHub.</li>
+<li>In the right-hand panel, click on Releases (or “Create a new release”).</li>
+<li>Click on the Draft a new release button.</li>
+<li>Choose a tag for your version (e.g., v1.0.0), fill in a release title (such as “First Release”), and add a short description if needed.</li>
+<li>Click the green Publish release button.</li>
 </ol>
 <p>As soon as you click Publish on GitHub, a signal is sent directly to Zenodo. Zenodo immediately downloads your entire repository as a .zip archive, reads your CITATION.cff or .zenodo.json file, generates a new record, and assigns it a unique DOI. Be aware that Zenodo instantly “locks” the files into a permanent archive. It does not create a draft waiting for your approval.</p>
 <p>The new version is created on Zenodo every time you create a new Release on GitHub, with different versions linked together.</p>
@@ -241,11 +240,11 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="what-can-be-edited-anytime-metadata"><strong>4.1 What CAN Be Edited Anytime (Metadata)</strong></h3>
 <p>Even after the record is published, you can go to the Zenodo website, click the Edit button on your record, and modify the text information. Your DOI will remain exactly the same. You are allowed to edit:</p>
 <ul>
-<li><p>The project title</p></li>
-<li><p>Author names, their order, and affiliations (university/company)</p></li>
-<li><p>Description of the project (abstract)</p></li>
-<li><p>The license (in case it didn’t load correctly from GitHub)</p></li>
-<li><p>Grants (funding), keywords, or links to related articles</p></li>
+<li>The project title</li>
+<li>Author names, their order, and affiliations (university/company)</li>
+<li>Description of the project (abstract)</li>
+<li>The license (in case it didn’t load correctly from GitHub)</li>
+<li>Grants (funding), keywords, or links to related articles</li>
 </ul>
 <p>Note that if you did not use a .zenodo.json file during setup, you must manually add the Grant Number here. Without the associated grant information, your metadata cannot be automatically harvested by the SoilWise catalogue.</p>
 </section>
