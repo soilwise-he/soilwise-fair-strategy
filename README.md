@@ -5,6 +5,6 @@ Check the content at [github.io](https://soilwise-he.github.io/soilwise-fair-str
 
 Guidances are split up in various levels of detail
 
-- the [General_Guidelines_v0.2.md](./General_Guidelines_v0.2.md) provides an intro to the FAIR strategy in general
+- the [General_Guidelines.md](./General_Guidelines.md) provides an intro to the FAIR strategy in general
 - Strategy on [data](publish-fair-data.md) and [knowledge](publish-fair-knowledge.md) publication guide the user in these specific topics
 - The [use cases](./use-cases) folder contains a list of dedicated cases, about the publication of [project websites](./use-cases/knowledge-hubs-and-websites.md), [tabular data](./use-cases/tabular-data.md), [vocabularies](./use-cases/vocabularies.md).
