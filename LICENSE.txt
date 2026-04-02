@@ -1,6 +1,6 @@
 Creative Commons Attribution 4.0 International Public License
 
-Copyright (c) 2026 SoilWise Horizon Europe
+Copyright (c) 2026 Masaryk University, ISRIC World Soil Information
 
 =======================================================================
 
