@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1062543502.svg)](https://doi.org/10.5281/zenodo.18759085)
+
 # Soilwise FAIR Strategy
 
 Repository for SoilWise FAIR data and knowledge guidances. 
