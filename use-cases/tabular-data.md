@@ -46,7 +46,7 @@ the value and relevant other metadata.
 Dedicated parsers are able to parse an annotated CSV. The CSV itself will not change, so in theory anyone can 
 annotate an existing CSV to make it interoperable. 
 
-Interoperability is increased if established ontologies are used, such as [schema.org](https://schema.org), [dublin core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/), [skos](https://www.w3.org/2004/02/skos/). And common vocabularies such as [Agrovoc](https://agrovoc.fao.org/) and [Gemet](https://www.eionet.europa.eu/gemet/en/about/) as well as unit of measure vocabularies such as [UCUM](https://ucum.org/) and [OM](https://github.com/HajoRijgersberg/OM).
+Interoperability is increased if established ontologies are used, such as [schema.org](https://schema.org), [SOSA/SSN](https://www.w3.org/TR/vocab-ssn/), [dublin core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/), [skos](https://www.w3.org/2004/02/skos/). And common vocabularies such as [Agrovoc](https://agrovoc.fao.org/) and [Gemet](https://www.eionet.europa.eu/gemet/en/about/) as well as unit of measure vocabularies such as [UCUM](https://ucum.org/) and [QUDT](https://qudt.org).
 
 ## Workflow 
 
