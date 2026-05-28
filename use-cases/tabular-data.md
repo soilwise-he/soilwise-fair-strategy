@@ -4,13 +4,13 @@ title: Sharing Soil Observation Data using tabular formats
 
 # Introduction 
 
-Soil observation data is often shared in tabular formats, such as Excel, Access, CSV, Sqlite, ESRI Shapefile. 
+Soil observation data is often maintained and shared in tabular formats, such as Excel, Access, CSV, Sqlite, ESRI Shapefile. 
 This document provides a strategy on how to increase the interoperability of tabular datasets.
 
 Which phenomena are observed, using which procedure, in which unit? These aspects are often explained in a related 
 report or readme.txt document. Unfortunately this information can not easily be read by machines. To increase findability 
-and interoperability of tabular datasets this document provides a strategy on how to encode this information 
-using a standardised approach. The document also provides more generic information about capturing data in tabular formats.
+and interoperability of tabular datasets this document provides strategies on how to encode this extra information 
+using standardised approaches. The document also provides more generic information about capturing data in tabular formats.
 
 
 # Excel as a dataformat
@@ -33,10 +33,13 @@ In order to use the excel format as a data exchange format, consider the followi
 - One of the sheets best contains metadata about the other sheets (description of column headers, unit of measure, etc)
 
 
+For CSV data the Fair data station team created a tool to validate a tabular dataset on common data conventions, 
+before publishing it. The [raw2ready](https://raw2ready.streamlit.app/) validates and sanatizes any CSV file.
+
 # Column metadata as CSVW
 
 The W3C standard [CSV on the Web](https://csvw.org/) enables interoperability of data via a sidecar file which is 
-stored along side your tabular CSV. 
+stored alongside your tabular data. 
 The csv-metadata file is a JSON encoded file which contains annotations for each of the columns in the dataset. 
 For each column you can indicate the property which the column represents, the unit of measure used to express 
 the value and relevant other metadata.
@@ -49,12 +52,12 @@ Interoperability is increased if established ontologies are used, such as [schem
 
 Step 1: Annotate a CSV using CSV on the Web (CSVW) 
 
-- Create a CSVW metadata JSON file, describing the CSV structure and semantics. Tools, such as [CoW](http://cattle.datalegend.net) exist to create a minimal context file. 
-- Use the [CSVW standard](https://www.w3.org/TR/tabular-data-primer/) to define:   
-  - Column datatypes   
-  - Column meanings using URIs from ontologies   
-  - Primary keys   
-  - Row-level subject generation pattern (e.g., http://example.org/soilobs/{Sample.ID}) 
+- Create a CSVW metadata JSON file, describing the CSV structure and semantics. Various tools exist to generate a metadata file from your table structure.
+  - The [SoilWise metadata annotator](https://dataannotator-swr.streamlit.app/) is a webbased tool where you upload your CSV. The tool will then guide you through a series of steps to annotate your data, llm supported.
+  - The [Soilwise SimpleCSV](https://github.com/soilwise-he/soil-observation-data-encodings/blob/main/CSVW/CSVW-Excel-Template) is an excel template which you can use to prepare your data.    
+- The [CSVW standard](https://www.w3.org/TR/tabular-data-primer/) expresses aspects such as: 
+  - Column datatype and semantics   
+  - Primary and foreign keys
 
 ## Step 2: Use Standard Vocabularies/Ontologies 
 
@@ -67,7 +70,7 @@ Align the properties and structure to well-known vocabularies:
 
 ## Step 3: Convert to RDF or JSON-LD 
 
-In this step you will validate if the CSVW is properly structured, by serializing the 
+In this step you can validate if the CSVW is properly structured, by serializing the 
 data+metadata to a knowledge grap, and validate the graph using SHACL. You could upload the knowledge graph 
 to the data repository, but it is not neccesary, because it contains the same content as the CSV+metadata.
 
@@ -87,6 +90,9 @@ You can use SHACL or schema.org validator to validate the generated RDF.
 - Host the original CSV, the context file and the RDF/JSON-LD on a repository (zenodo/dataverse) 
 - As part of the publication, provide sensible metadata (keywords, authors, license, dates, references)  
 
+## Read more
+
+The [soil-observation-data-encodings](https://github.com/soilwise-he/soil-observation-data-encodings) contains more detailed instructions on how to use the tools presented in this guidance.
 
  
 
