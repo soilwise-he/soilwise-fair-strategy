@@ -32,6 +32,8 @@ In order to use the excel format as a data exchange format, consider the followi
 - Cells with textual content do not contain 'new line' characters
 - One of the sheets best contains metadata about the other sheets (description of column headers, unit of measure, etc)
 
+Soilwise has prepared a [data template](https://github.com/soilwise-he/soil-observation-data-encodings/tree/main/SimpleCSV) for soil observation data, which you can publish as-is, 
+or convert to csv or rdf following the method introduced below.
 
 For CSV data the Fair data station team created a tool to validate a tabular dataset on common data conventions, 
 before publishing it. The [raw2ready](https://raw2ready.streamlit.app/) validates and sanatizes any CSV file.
