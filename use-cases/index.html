@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b9c91b1e117c879de662b9ae260051b4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-7db87aff3d14028862e8d47add95a991.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -159,13 +159,16 @@ ul.task-list li input[type="checkbox"] {
 <p>Soilwise prepared a tutorial which considers various aspects on existing practices and suggest minor optimisations and potential to this approach.</p>
 <p><a href="../use-cases/tabular-data.html">Continue reading</a></p>
 </section>
-<section id="inspire-soil-data-in-a-geopackage-format" class="level2">
-<h2 class="anchored" data-anchor-id="inspire-soil-data-in-a-geopackage-format">INSPIRE Soil data in a GeoPackage format</h2>
-<p>The GeoPackage format for sharing INSPIRE SOIL data is an approach to store data in a relational database while conforming to the INSPIRE Soil conceptual model. Traditionally INSPIRE Soil Observation data and maps require to be shared using a dedicated GML encoding, which was quite a challenge for both data procucers and consumers. The INSPIRE Good Practice using GeoPackage specifically for Soil data has been prepared by the EJP Soil H2020 programme and is further developed in the SoilWise project.</p>
+<section id="soil-data-in-a-standardized-geopackage-format" class="level2">
+<h2 class="anchored" data-anchor-id="soil-data-in-a-standardized-geopackage-format">Soil data in a Standardized GeoPackage format</h2>
+<p>The GeoPackage format for sharing SOIL data is an approach to store data in a file-based relational database while conforming to the INSPIRE Soil conceptual model, enabling simple data exchange. In contrast, to date, Soil Observation data and maps have been shared using a dedicated GML encoding, challenging for both data providers and consumers; the GeoPakage approach bypasses this issue, enabling simple SQL access.</p>
+<p>The GeoPackage has been created for easy use within QGIS, providing the user with form-based entry of observational data in addition to traditional spatial functionality. In addition, a QField module has been created, to enable easy data entry in the field.</p>
+<p>Conversion tools have been to transform data stored in the GeoPackage format into various compatible formats, e.g.&nbsp;an OGC SensorThings API instance. Additionally, the INSPIRE Good Practice using GeoPackage specifically for Soil data has been prepared by the EJP Soil H2020 programme and is further developed in the SoilWise project, enabling transformation of the contained soil data to XML based GML.</p>
+<p>By utilizing the SoilWise GeoPackage approach, soil related projects can save time in reimplementing data management and storage tools, relying on these standardized tools for their soil data requirements.</p>
 <ul>
 <li><a href="https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/index.md">Introduction to the INSPIRE SOIL GeoPackage</a></li>
 <li><a href="https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/data_loading.md">GeoPackage Data Loading &amp; Modelling Guide</a></li>
-<li><a href="https://github.com/soilwise-he/Geopackage-so/blob/main/documentation/index.md">Tutorial on how to use QGIS to populate the GeoPackage</a></li>
+<li><a href="https://soilwise-he.github.io/Geopackage-so/qgis/">Tutorial on how to use QGIS to populate the GeoPackage</a></li>
 </ul>
 </section>
 <section id="sharing-predicted-soil-properties-based-on-spectroscopy" class="level2">
