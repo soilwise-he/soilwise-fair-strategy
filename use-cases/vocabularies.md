@@ -11,10 +11,7 @@ Project: An open access knowledge and data repository to safeguard soils (Soilwi
 
 ## Introduction 
 
-   
 The effective use of vocabularies and glossaries is critical in Horizon Europe research projects to ensure interoperability, clarity, and reuse of knowledge. This strategy outlines best practices for the creation, adoption, and maintenance of vocabularies throughout the project lifecycle. 
-
- 
 
 ## Why Agree on a Vocabulary at the Start of the Project 
 
@@ -26,14 +23,17 @@ The effective use of vocabularies and glossaries is critical in Horizon Europe r
 ## Characteristics of Effective Vocabularies 
 
 - Uniquely Identifiable Terms: Each concept or term should be assigned a persistent, globally unique identifier (e.g., URI) to avoid confusion and enable precise referencing.   
-- Rich Semantic Relationships: Terms should be connected through relations with eligible vocabularies, such as AgroVoc, Gemet, EuroVoc, ISO11074 via relations such as:   
+- Rich Semantic Relationships: Terms should be connected through relations with eligible vocabularies, such as [AgroVoc](https://www.fao.org/agrovoc/), [Gemet](https://www.eionet.europa.eu/gemet), [EuroVoc](https://data.europa.eu/data/datasets/eurovoc), [ISO11074](https://data.geoscience.earth/ncl/_ISO11074v2025), [Glosis LD](https://w3id.org/glosis), [EU SoilVoc](https://w3id.org/eusoilvoc), via relations such as:   
    - exactMatch: Indicates that two terms can be used interchangeably.   
    - closeMatch: Suggests the terms are similar but not interchangeable in all contexts.   
    - broader: Shows a hierarchical relationship where one term is more general.   
    - narrower: Shows a more specific concept within a broader term.   
 
-A typical example of the introduction of a close match relationship is the common scenario that a project decides to adopt a definition for a term which is slightly different then
-the definition used in common vocabularies. Alternative consideration could be to contact the administrators of the common vocabulary, to see if there is an interest to adopt the refinement in the definition upstream.
+A typical example of the introduction of a close match relationship is the common scenario that a 
+project decides to adopt a definition for a term which is slightly different then
+the definition used in common vocabularies. Alternative consideration could be to contact the 
+administrators of the common vocabulary, to see if there is an interest to adopt the refinement 
+in the definition upstream.
 
 ## Steps for Vocabulary Management 
 
@@ -41,12 +41,14 @@ the definition used in common vocabularies. Alternative consideration could be t
 2. Term Collection: Gather terms from partners, existing ontologies, and relevant documentation.   
 3. Consensus Building: Facilitate workshops to agree on preferred terms and definitions.   
 4. Modeling and Encoding: Represent the vocabulary using semantic web standards (e.g., RDF, SKOS).   
-5. Publishing: Publish the vocabulary on a persistent, accessible platform with both human-readable and machine-readable views. Register the published vocabulary in vocabulary catalogues, such as    
-6. Maintenance: Regularly review and update the vocabulary to reflect project developments. 
+5. Publishing: Publish the vocabulary on a persistent, accessible platform with both human-readable
+6. and machine-readable views. Register the published vocabulary in vocabulary catalogues, such as    
+7. Maintenance: Regularly review and update the vocabulary to reflect project developments. 
 
 ## Terms collection in a spreadsheet 
 
-Spreadsheets are an effective tool to collect and discuss terms with contributors. The spreadsheet is either hosted on a shared environment (sharepoint, google docs) with multiple editors, or hosted as a CSV in Github. 
+Spreadsheets are an effective tool to collect and discuss terms with contributors. The spreadsheet is 
+either hosted on a shared environment (sharepoint, google docs) with multiple editors, or hosted as a CSV in Github. 
 
 A typical structure for the spreadsheet is: 
 
@@ -66,18 +68,28 @@ Labels and Definition can be captured in various languages, either as extra colu
 
 ## Provide the vocabulary in a machine readable format 
 
-Simple Knowledge Organization System ([SKOS](https://www.w3.org/2004/02/skos/)) is a commonly used ontology to organise concepts their definitions and relations. Various guidances and tools exist which are able to produce a vocabulary following the SKOS ontology from a spreadsheet. The result is a json-ld, xml/rdf or turtle file, which can be deposited in a vocabulary repository or date repository, such as:
+Simple Knowledge Organization System ([SKOS](https://www.w3.org/2004/02/skos/)) is a commonly used ontology to 
+organise concepts their definitions and relations. Various guidances and tools exist which are able to produce 
+a vocabulary following the SKOS ontology from a spreadsheet. The result is a json-ld, xml/rdf or turtle file, 
+which can be deposited in a vocabulary repository or date repository, such as:
 
 - [Agroportal.eu](https://agroportal.eu/)
 - [Zenodo.org](zenodo.org)
 
 ## Persistent & intelligent identification of terms
 
-Users aim to reference terms by a unique persistent identification. This persistence of vocabularies is facilitated by repositories. The voacabulary as a whole can be accessed via a DOI. However to reference a term within that vocabulary often is a challenge, because a DOI usually references a landing page for the document, not the document itself. 
+Users aim to reference terms by a unique persistent identification. This persistence of vocabularies is facilitated 
+by repositories. The voacabulary as a whole can be accessed via a DOI. However to reference a term within that 
+vocabulary often is a challenge, because a DOI usually references a landing page for the document, not the document itself. 
 
-The mechanism of referencing a sub section with a document with a hash '#' character, e.g. `https://example.com/vocab#section2` provides a mechanism to reference a term within a bigger document. This mechanism is available for most web pages, rdf formats (such as json-ld, ttl, rdf-xml), and can even be implemented in pdf documents. However the mechanism is not very flexible and intelligent.
+The mechanism of referencing a sub section with a document with a hash '#' character, e.g. `https://example.com/vocab#section2` 
+provides a mechanism to reference a term within a bigger document. This mechanism is available for most web pages, rdf formats 
+(such as json-ld, ttl, rdf-xml), and can even be implemented in pdf documents. However the mechanism is not very flexible and intelligent.
 
-Proxy services such as [w3id.org](w3id.org) facilitate intelligent handling of identifiers. This proxy software can typically be configured to identify if the visiting client is a web browser or a machine, and forward the client to the relevant representation of the term (rdf or html). Also, if for some reason a vocabulary needs to be moved to another domain, the proxy configuration enables the migration without altering the w3id.org identifiers.
+Proxy services such as [w3id.org](w3id.org) facilitate intelligent handling of identifiers. This proxy software can typically 
+be configured to identify if the visiting client is a web browser or a machine, and forward the client to the relevant 
+representation of the term (rdf or html). Also, if for some reason a vocabulary needs to be moved to another domain, the 
+proxy configuration enables the migration without altering the w3id.org identifiers.
 
 The w3id proxy mechanism is used by Glosis Web Ontology. Depending on the type of client a request to [http://w3id.org/glosis/model/layerhorizon/ManganeseExtractableElements](http://w3id.org/glosis/model/layerhorizon/ManganeseExtractableElements) is forwarded to the relevant location. 
 
@@ -104,6 +116,8 @@ Recommended approaches include:
 
 ## Conclusion   
 
-Agreeing on and managing vocabularies is foundational to the success of Horizon Europe research projects. By ensuring consistency, discoverability, and interoperability of terms, research outputs become more usable and impactful within and beyond the project consortium. 
+Agreeing on and managing vocabularies is foundational to the success of Horizon Europe research projects. 
+By ensuring consistency, discoverability, and interoperability of terms, research outputs become more usable 
+and impactful within and beyond the project consortium. 
 
 
